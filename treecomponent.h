@@ -1,6 +1,7 @@
 #ifndef TREECOMPONENT_H
 #define TREECOMPONENT_H
 
+#include "serialization.h"
 #include <QString>
 
 class TreeComposite;
@@ -9,7 +10,8 @@ class QVariant;
 class TreeComponent
 {
 public:
-    TreeComponent(QString title, TreeComponent *parent = nullptr);
+    explicit TreeComponent();
+    explicit TreeComponent(QString title, TreeComponent *parent = nullptr);
     virtual ~TreeComponent() = 0;
 
     virtual void add(TreeComponent* /*component*/);
@@ -29,7 +31,16 @@ protected:
     TreeComponent* m_parent;
     QString m_title;
 
+    template<class Archive>
+    void serialize(Archive & ar, const unsigned int /*version*/)
+    {
+     //   ar & BOOST_SERIALIZATION_NVP(m_parent);
+        ar & BOOST_SERIALIZATION_NVP(m_title);
+    }
+
+    friend class boost::serialization::access;
 };
 
-#endif // TREECOMPONENT_H
+BOOST_SERIALIZATION_ASSUME_ABSTRACT(TreeComponent)
 
+#endif // TREECOMPONENT_H

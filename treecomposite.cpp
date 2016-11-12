@@ -1,5 +1,7 @@
 #include "treecomposite.h"
 
+BOOST_CLASS_EXPORT_IMPLEMENT(TreeComposite)
+
 TreeComposite::TreeComposite(QString title, TreeComponent *parent) : TreeComponent(title, parent)
 {
 }

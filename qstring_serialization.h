@@ -6,6 +6,7 @@
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 // downloaded from http://flo.mueckeimnetz.de/2010/01/boostserialization-und-qstring/
+// with changes by Kamil Strzempowicz
 
 #ifndef QSTRING_SERIALIZATION_H
 #define QSTRING_SERIALIZATION_H
@@ -19,19 +20,18 @@
 namespace boost {
 namespace serialization {
 
+using boost::serialization::make_nvp;
 
 template<class Archive>
 inline void save( Archive& ar, const QString& s, const unsigned int /*version*/ )
 {
-    using boost::serialization::make_nvp;
-    ar << make_nvp("value", s.toStdString());
+    std::string stdStr = s.toStdString();
+    ar << make_nvp("value", stdStr);
 }
 
 template<class Archive>
 inline void load( Archive& ar, QString& s, const unsigned int /*version*/ )
 {
-    using boost::serialization::make_nvp;
-
     std::string stdStr;
     ar >> make_nvp("value", stdStr);
     s = QString::fromStdString(stdStr);

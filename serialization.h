@@ -3,15 +3,15 @@
 
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/xml_oarchive.hpp>
+
 #include <boost/serialization/serialization.hpp>
-/*
 #include <boost/serialization/nvp.hpp>
 #include <boost/serialization/base_object.hpp>
 #include <boost/serialization/list.hpp>
 #include <boost/serialization/export.hpp>
-#include <boost/serialization/deque.hpp>
-#include <boost/serialization/shared_ptr.hpp>
-*/
+//#include <boost/serialization/deque.hpp>
+//#include <boost/serialization/shared_ptr.hpp>
+
 #include "qstring_serialization.h"
 
 /*

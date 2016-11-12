@@ -18,6 +18,15 @@ public:
 
 protected:
    QList<TreeComponent*> m_children;
+
+    friend class boost::serialization::access;
+    template<class Archive>
+    void serialize(Archive & ar, const unsigned int version)
+    {
+        Q_UNUSED(version)
+        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
+        ar & BOOST_SERIALIZATION_NVP(m_children);
+    }
 };
 
 #endif // TREECOMPOSITE_H

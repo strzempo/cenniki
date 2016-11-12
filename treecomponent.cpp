@@ -3,6 +3,13 @@
 #include <QVariant>
 #include <QtDebug>
 
+BOOST_CLASS_EXPORT_IMPLEMENT(TreeComponent)
+
+TreeComponent::TreeComponent()
+{
+    m_parent = nullptr;
+}
+
 TreeComponent::TreeComponent(QString title, TreeComponent *parent)
 {
     m_parent = parent;

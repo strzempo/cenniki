@@ -115,5 +115,5 @@ void MainTreeModel::load()
     assert(ifs.good());
     boost::archive::xml_iarchive ia(ifs);
     ia >> BOOST_SERIALIZATION_NVP(m_rootComponent);
-    assert(m_rootComponent);
+    assert(m_rootComponent	);
 }
