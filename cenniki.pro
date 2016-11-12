@@ -19,7 +19,7 @@ HEADERS += \
     treecomposite.h \
     itempdf.h \
     qstring_serialization.h \
-    serializable.h
+    serialization.h
 
 SOURCES += \
     main.cpp \
@@ -27,5 +27,4 @@ SOURCES += \
     maintreemodel.cpp \
     treecomposite.cpp \
     treecomponent.cpp \
-    itempdf.cpp \
-    serializable.cpp
+    itempdf.cpp

@@ -1,6 +1,8 @@
 #include "maintreemodel.h"
 #include "treecomposite.h"
 #include "itempdf.h"
+#include "serialization.h"
+#include <fstream>
 
 MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
@@ -97,4 +99,21 @@ Qt::ItemFlags MainTreeModel::flags(const QModelIndex &index) const
         return 0;
 
     return QAbstractItemModel::flags(index);
+}
+
+void MainTreeModel::save()
+{
+    std::ofstream ofs("layout.xml");
+    assert(ofs.good());
+    boost::archive::xml_oarchive oa(ofs);
+    oa << BOOST_SERIALIZATION_NVP(m_rootComponent);
+}
+
+void MainTreeModel::load()
+{
+    std::ifstream ifs("layout.xml");
+    assert(ifs.good());
+    boost::archive::xml_iarchive ia(ifs);
+    ia >> BOOST_SERIALIZATION_NVP(m_rootComponent);
+    assert(m_rootComponent);
 }

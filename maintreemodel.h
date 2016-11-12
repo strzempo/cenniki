@@ -26,6 +26,10 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+    //serialization
+    void save();
+    void load();
+
 private:
     TreeComponent* m_rootComponent;
 };

@@ -1,39 +1,33 @@
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef SERIALIZATION_H
+#define SERIALIZATION_H
 
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/xml_oarchive.hpp>
-
+#include <boost/serialization/serialization.hpp>
+/*
 #include <boost/serialization/nvp.hpp>
 #include <boost/serialization/base_object.hpp>
 #include <boost/serialization/list.hpp>
 #include <boost/serialization/export.hpp>
 #include <boost/serialization/deque.hpp>
 #include <boost/serialization/shared_ptr.hpp>
-
+*/
 #include "qstring_serialization.h"
 
-class Serializable
-{
-public:
-    Serializable();
-    virtual ~Serializable()=0;
-
-    void save(const char *fileName);
-    static Serializable* load(const char *fileName);
+/*
+in h:
 
 protected:
-
     friend class boost::serialization::access;
     template<class Archive>
     void serialize(Archive & ar, const unsigned int version)
     {
         Q_UNUSED(version)
-        ar & BOOST_SERIALIZATION_NVP(i);
-    }
-    int i;
-};
+        ar & BOOST_SERIALIZATION_NVP(member);
+    } 
 
-BOOST_SERIALIZATION_ASSUME_ABSTRACT(Serializable)
+in cpp;
 
-#endif // OBJECT_H
+BOOST_CLASS_EXPORT_IMPLEMENT(class)
+*/
+#endif
