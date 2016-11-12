@@ -1,13 +1,6 @@
 QT += qml quick widgets
-
 CONFIG += c++11
-
-SOURCES += main.cpp \
-    iconprovider.cpp \
-    maintreemodel.cpp \
-    treecomposite.cpp \
-    treecomponent.cpp \
-    itempdf.cpp
+LIBS += -L/usr/lib/ -lboost_serialization
 
 RESOURCES += qml.qrc
 
@@ -24,4 +17,15 @@ HEADERS += \
     maintreemodel.h \
     treecomponent.h \
     treecomposite.h \
-    itempdf.h
+    itempdf.h \
+    qstring_serialization.h \
+    serializable.h
+
+SOURCES += \
+    main.cpp \
+    iconprovider.cpp \
+    maintreemodel.cpp \
+    treecomposite.cpp \
+    treecomponent.cpp \
+    itempdf.cpp \
+    serializable.cpp

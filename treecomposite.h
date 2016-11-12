@@ -15,6 +15,7 @@ public:
     virtual int childCount() const;
 
     virtual int findRowOf(TreeComponent* child) const;
+
 protected:
    QList<TreeComponent*> m_children;
 };
