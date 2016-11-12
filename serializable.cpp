@@ -5,32 +5,18 @@ BOOST_CLASS_EXPORT_IMPLEMENT(Serializable)
 
 Serializable::Serializable()
 {
+    i = 1;
 }
 
-Serializable::Serializable(const std::string &name)
+void Serializable::save(const char * fileName)
 {
-    m_name = name;
-}
-
-const std::string& Serializable::name() const
-{
-    return m_name;
-}
-
-void Serializable::setName(const std::string &name)
-{
-    m_name = name;
-}
-
-void Serializable::save()
-{
-    std::ofstream ofs((m_name + ".xml").c_str());
+    std::ofstream ofs(fileName);
     assert(ofs.good());
     boost::archive::xml_oarchive oa(ofs);
     oa << BOOST_SERIALIZATION_NVP(this);
 }
 
-Serializable* Serializable::load(const std::string &fileName)
+Serializable* Serializable::load(const char * fileName)
 {
     Serializable* ob;
     std::ifstream ifs(fileName);
