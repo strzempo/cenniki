@@ -7,6 +7,7 @@
 class TreeComposite : public TreeComponent
 {
 public:
+    explicit TreeComposite();
     explicit TreeComposite(QString title, TreeComponent *parent = nullptr);
     virtual ~TreeComposite();
 
@@ -20,6 +21,7 @@ protected:
    QList<TreeComponent*> m_children;
 
     friend class boost::serialization::access;
+/*
     template<class Archive>
     void serialize(Archive & ar, const unsigned int version)
     {
@@ -27,6 +29,27 @@ protected:
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(m_children);
     }
+    */
+    template<class Archive>
+    void save(Archive & ar, const unsigned int version) const
+    {
+        Q_UNUSED(version)
+        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
+        std::list<TreeComponent*> list = m_children.toStdList();
+        ar << boost::serialization::make_nvp("m_children", list);
+    }
+    template<class Archive>
+    void load(Archive & ar, const unsigned int version)
+    {
+        Q_UNUSED(version)
+        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
+        std::list<TreeComponent*> list;
+        ar >> boost::serialization::make_nvp("m_children", list);
+        m_children = QList<TreeComponent*>::fromStdList(list);
+    }
+
+    BOOST_SERIALIZATION_SPLIT_MEMBER()
+
 };
 
 #endif // TREECOMPOSITE_H

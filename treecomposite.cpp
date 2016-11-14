@@ -2,6 +2,10 @@
 
 BOOST_CLASS_EXPORT_IMPLEMENT(TreeComposite)
 
+TreeComposite::TreeComposite(): TreeComponent()
+{
+}
+
 TreeComposite::TreeComposite(QString title, TreeComponent *parent) : TreeComponent(title, parent)
 {
 }

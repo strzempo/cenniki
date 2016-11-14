@@ -13,6 +13,7 @@
 //#include <boost/serialization/shared_ptr.hpp>
 
 #include "qstring_serialization.h"
+#include "qlist_serialization.h"
 
 /*
 in h:

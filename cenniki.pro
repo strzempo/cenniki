@@ -19,7 +19,8 @@ HEADERS += \
     treecomposite.h \
     itempdf.h \
     qstring_serialization.h \
-    serialization.h
+    serialization.h \
+    qlist_serialization.h
 
 SOURCES += \
     main.cpp \
