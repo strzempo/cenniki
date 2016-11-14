@@ -3,6 +3,7 @@
 
 #include "serialization.h"
 #include <QString>
+#include <QDebug>
 
 class TreeComposite;
 class QVariant;
@@ -26,6 +27,7 @@ public:
 
     virtual QString title() const;
     virtual void action();
+    virtual void setParent(TreeComponent *parent);
 
 protected:
     TreeComponent* m_parent;
@@ -36,6 +38,7 @@ protected:
     {
      //   ar & BOOST_SERIALIZATION_NVP(m_parent);
         ar & BOOST_SERIALIZATION_NVP(m_title);
+        qDebug() << "serializing treecomponent" << m_title;
     }
 
     friend class boost::serialization::access;

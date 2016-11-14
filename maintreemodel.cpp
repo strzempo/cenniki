@@ -7,12 +7,6 @@
 MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
 {
-    m_rootComponent = new TreeComposite(tr("Main Menu"));
-    m_rootComponent->add(new ItemPDF(tr("movie"), "movie.flv", m_rootComponent));
-    TreeComposite* submenu = new TreeComposite(tr("Submenu"), m_rootComponent);
-    submenu->add(new ItemPDF(tr("First Leaf"), "first.pdf", submenu));
-    submenu->add(new ItemPDF(tr("Second Leaf"), "second.pdf", submenu));
-    m_rootComponent->add(submenu);
 }
 
 MainTreeModel::~MainTreeModel()
@@ -116,4 +110,14 @@ void MainTreeModel::load()
     boost::archive::xml_iarchive ia(ifs);
     ia >> BOOST_SERIALIZATION_NVP(m_rootComponent);
     assert(m_rootComponent	);
+}
+
+void MainTreeModel::generateSampleTree()
+{
+    m_rootComponent = new TreeComposite(tr("Main Menu"));
+    m_rootComponent->add(new ItemPDF(tr("movie"), "movie.flv", m_rootComponent));
+    TreeComposite* submenu = new TreeComposite(tr("Submenu"), m_rootComponent);
+    submenu->add(new ItemPDF(tr("First Leaf"), "first.pdf", submenu));
+    submenu->add(new ItemPDF(tr("Second Leaf"), "second.pdf", submenu));
+    m_rootComponent->add(submenu);
 }

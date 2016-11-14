@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
     engine.addImageProvider(QLatin1String("iconProvider"), new IconProvider());
 */
     MainTreeModel model;
-    qDebug() << "przed";
+   // model.save();
+    model.load();
     QTreeView view;
-    qDebug() << "po";
     view.setModel(&model);
     view.show();
     QObject::connect(&view, &QTreeView::doubleClicked, [](const QModelIndex& index){ static_cast<TreeComponent*>(index.internalPointer())->action(); });

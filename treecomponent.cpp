@@ -74,3 +74,8 @@ void TreeComponent::action()
 {
     qDebug() << "Empty action";
 }
+
+void TreeComponent::setParent(TreeComponent *parent)
+{
+    m_parent = parent;
+}

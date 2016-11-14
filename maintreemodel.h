@@ -30,6 +30,8 @@ public:
     void save();
     void load();
 
+    void generateSampleTree();
+
 private:
     TreeComponent* m_rootComponent;
 };

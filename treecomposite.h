@@ -3,6 +3,7 @@
 
 #include "treecomponent.h"
 #include <QList>
+#include <QDebug>
 
 class TreeComposite : public TreeComponent
 {
@@ -27,6 +28,7 @@ protected:
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         std::list<TreeComponent*> list = m_children.toStdList();
         ar << boost::serialization::make_nvp("m_children", list);
+        qDebug() << "saved treecomposite:" << m_title;
     }
     template<class Archive>
     void load(Archive & ar, const unsigned int version)
@@ -36,9 +38,14 @@ protected:
         std::list<TreeComponent*> list;
         ar >> boost::serialization::make_nvp("m_children", list);
         m_children = QList<TreeComponent*>::fromStdList(list);
+        foreach(TreeComponent* child, m_children)
+            child->setParent(this);
+        qDebug() << "loaded treecomposite:" << m_title;
     }
     BOOST_SERIALIZATION_SPLIT_MEMBER()
     friend class boost::serialization::access;
 };
+
+BOOST_CLASS_EXPORT_KEY(TreeComposite)
 
 #endif // TREECOMPOSITE_H

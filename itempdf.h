@@ -3,6 +3,7 @@
 
 #include "treecomponent.h"
 #include <QString>
+#include <QDebug>
 
 class ItemPDF : public TreeComponent
 {
@@ -21,7 +22,10 @@ protected:
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(m_fileName);
+        qDebug() << "serializing itempdf:" << m_title;
     }
 };
+
+BOOST_CLASS_EXPORT_KEY(ItemPDF)
 
 #endif // ITEMPDF_H
