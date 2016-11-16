@@ -3,16 +3,18 @@ Rectangle {
     id:delegate
     width: view.width
     height:34
-    color: view.colors[index & 3]
-    Row { anchors.fill: parent
+ //   color: view.colors[index & 3]
+    Row {
+        anchors.fill: parent
+        /*
         Image {
             id: icon
             width: delegate.height - 2
             height:width
             source: "image://iconProvider/"+filePath
-        }
+        }*/
         Text {
-            text: fileName
+            text: nodeName //fileName
             anchors.verticalCenter: parent.verticalCenter
         }
     }

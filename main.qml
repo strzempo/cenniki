@@ -2,11 +2,11 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Dialogs 1.2
 import Qt.labs.folderlistmodel 2.1
-//import QtQuick.Layouts 1.0
+import QtQuick.Layouts 1.0
 
 
 ApplicationWindow {
-//    id: mainWindow
+    id: mainWindow
     visible: true
     width: 800
     height: 600
@@ -14,7 +14,7 @@ ApplicationWindow {
 
     FileBrowser {
         anchors.fill: parent
-        path: "file:///home/" // let's start with the Home folder
+ //       path: "file:///home/" // let's start with the Home folder
     }
   /*
     color: "lightgray"

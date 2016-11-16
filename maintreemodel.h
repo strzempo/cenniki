@@ -7,6 +7,7 @@ class TreeComponent;
 class MainTreeModel : public QAbstractItemModel
 {
     Q_OBJECT
+  //  Q_PROPERTY(QModelIndex index READ index)
 
 public:
     explicit MainTreeModel(QObject *parent = 0);
@@ -16,8 +17,7 @@ public:
     QVariant headerData(int /*section*/, Qt::Orientation /*orientation*/, int /*role = Qt::DisplayRole*/) const override;
 
     // Basic functionality:
-    QModelIndex index(int row, int column,
-                      const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &index) const override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -31,6 +31,13 @@ public:
     void load();
 
     void generateSampleTree();
+
+    //for qml
+    enum ItemRoles
+    {
+        nodeNameRole = Qt::UserRole + 1
+    };
+    QHash<int, QByteArray> roleNames() const override;
 
 private:
     TreeComponent* m_rootComponent;

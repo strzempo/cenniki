@@ -6,7 +6,7 @@ QPixmap IconProvider::requestPixmap(const QString &id, QSize *size, const QSize 
     int width = requestedSize.width() > 0 ? requestedSize.width() : 64;
     int height = width;
     if (size) *size = QSize(width, height);
-    //return QPixmap(width,height);
+    return QPixmap(width,height);
     if (QFileInfo(id).isDir()) return m_provider.icon(QFileIconProvider::Folder).pixmap(width,height);
     else  {
         QMimeType mime = m_mimeDB.mimeTypeForFile(id);

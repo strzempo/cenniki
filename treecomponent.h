@@ -21,7 +21,7 @@ public:
     virtual TreeComponent* parent();
 
     virtual int columnCount() const;
-    virtual QVariant data(int /*column*/);
+    virtual QVariant data(int /*displayRole*/);
     virtual int row() const;
     virtual int findRowOf(TreeComponent* /*child*/) const;
 

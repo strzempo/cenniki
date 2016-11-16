@@ -76,15 +76,16 @@ int MainTreeModel::columnCount(const QModelIndex &parent) const
 
 QVariant MainTreeModel::data(const QModelIndex &index, int role) const
 {
+    qDebug() << "index passed:" << index;
     if (!index.isValid())
         return QVariant();
-
+/*
     if (role != Qt::DisplayRole)
         return QVariant();
-
+*/
     TreeComponent *item = static_cast<TreeComponent*>(index.internalPointer());
 
-    return item->data(index.column());
+    return item->data(role);
 }
 
 Qt::ItemFlags MainTreeModel::flags(const QModelIndex &index) const
@@ -120,4 +121,11 @@ void MainTreeModel::generateSampleTree()
     submenu->add(new ItemPDF(tr("First Leaf"), "first.pdf", submenu));
     submenu->add(new ItemPDF(tr("Second Leaf"), "second.pdf", submenu));
     m_rootComponent->add(submenu);
+}
+
+QHash<int, QByteArray> MainTreeModel::roleNames() const
+{
+    QHash<int, QByteArray> roles;
+    roles[nodeNameRole] = "nodeName";
+    return roles;
 }
