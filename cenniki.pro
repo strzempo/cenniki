@@ -13,7 +13,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    iconprovider.h \
     maintreemodel.h \
     treecomponent.h \
     treecomposite.h \
@@ -23,7 +22,6 @@ HEADERS += \
 
 SOURCES += \
     main.cpp \
-    iconprovider.cpp \
     maintreemodel.cpp \
     treecomposite.cpp \
     treecomponent.cpp \

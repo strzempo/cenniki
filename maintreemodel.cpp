@@ -76,7 +76,7 @@ int MainTreeModel::columnCount(const QModelIndex &parent) const
 
 QVariant MainTreeModel::data(const QModelIndex &index, int role) const
 {
-    qDebug() << "index passed:" << index;
+ //   qDebug() << "index passed:" << index;
     if (!index.isValid())
         return QVariant();
 /*
@@ -128,4 +128,17 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[nodeNameRole] = "nodeName";
     return roles;
+}
+
+void MainTreeModel::invokeAction(const QModelIndex &index) const
+{
+    static_cast<TreeComponent*>(index.internalPointer())->action();
+}
+
+QString MainTreeModel::sectionName(const QModelIndex &index) const
+{
+    //qDebug() << static_cast<TreeComponent*>(index.internalPointer())->title();
+    if(!index.isValid())
+        return QString();
+    return static_cast<TreeComponent*>(index.internalPointer())->title();
 }

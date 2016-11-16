@@ -1,24 +1,49 @@
 import QtQuick 2.7
 import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.2
-import Qt.labs.folderlistmodel 2.1
+import QtQml.Models 2.2
+
 Item {
     id: browser
-//    property alias path: view.path
+   // property alias mainModel: mainModel.model
     width: 300
     height: 200
+    property string sectionName
+    property var mainModel: DelegateModel {
+        model: mainTreeModel
+        delegate: Rectangle {
+            width: view.width
+            height:34
+            Row {
+                anchors.fill: parent
+                /*
+                Image {
+                    id: icon
+                    width: delegate.height - 2
+                    height:width
+                    source: "image://iconProvider/"+filePath
+                }*/
+                Text {
+                    text: nodeName //fileName
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    if (model.hasModelChildren) {
+                        sectionName = nodeName
+                        mainModel.rootIndex = mainModel.modelIndex(index)
+                    } else
+                        mainModel.model.invokeAction(mainModel.modelIndex(index))
+                }
+            }
+        }
+    }
     ListView {
         id: view
-    //    property var colors: ["white","#E0FFE0","white","#EEEEFF" ]
-    //    property string path
-//        property var currentNode: model.root
         anchors.fill: parent
-        model: mainModel /* FolderListModel {
-            id: folder
-            folder: view.path
-        }*/
-        delegate: FileDelegate { }
-      //  delegate: Text { text: nodeName }
+        model: mainModel
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
             width: browser.width
@@ -31,11 +56,15 @@ Item {
                     width:32
                     height :32
                     text: "<<<"
-  //                  onClicked: view.currentNode = currentNode.parentNode//view.path = folder.parentFolder
+                    onClicked: {
+                        mainModel.rootIndex = mainModel.parentModelIndex()
+                        sectionName = mainModel.model.sectionName(mainModel.rootIndex)
+                    }
                 }
                 Text {
-   //                 text: currentNode.title //view.path
+                    text: sectionName
                     anchors.verticalCenter: parent.verticalCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
         }

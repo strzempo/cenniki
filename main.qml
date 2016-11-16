@@ -12,11 +12,6 @@ ApplicationWindow {
     height: 600
     title: qsTr("Aliaxis-UI")
 
-    FileBrowser {
-        anchors.fill: parent
- //       path: "file:///home/" // let's start with the Home folder
-    }
-  /*
     color: "lightgray"
 
     header: Text {
@@ -25,6 +20,10 @@ ApplicationWindow {
         font.pointSize: 24
     }
 
+    FileBrowser {
+        anchors.fill: parent
+    }
+/*
     ListModel {
         id: mainListModel
         ListElement { name: qsTr("First Item") }
