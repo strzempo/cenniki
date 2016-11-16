@@ -24,7 +24,8 @@ Item {
                     source: "image://iconProvider/"+filePath
                 }*/
                 Text {
-                    text: nodeName //fileName
+                    text: nodeName
+                    font.pointSize: 12
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }
@@ -48,40 +49,21 @@ Item {
         header: Rectangle {
             width: browser.width
             height: 34
-            color: "yellow"
-            z:2
-            Row {
+            color: "lightgreen"
+            //z:2
+            Text {
+                text: sectionName
+                font.pointSize: 14
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            MouseArea {
                 anchors.fill: parent
-                Button {
-                    width:32
-                    height :32
-                    text: "<<<"
-                    onClicked: {
-                        mainModel.rootIndex = mainModel.parentModelIndex()
-                        sectionName = mainModel.model.sectionName(mainModel.rootIndex)
-                    }
-                }
-                Text {
-                    text: sectionName
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    mainModel.rootIndex = mainModel.parentModelIndex()
+                    sectionName = mainModel.model.sectionName(mainModel.rootIndex)
                 }
             }
         }
-        /*
-        footerPositioning: ListView.OverlayHeader
-        footer: Rectangle {
-            width: browser.width
-            height: 34
-            color: "yellow"
-            z:2
-            Row {
-                anchors.fill: parent
-                Text {
-                    text: "["+folder.count+" Files]"
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-            }
-        }*/
     }
 }

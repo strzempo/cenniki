@@ -17,46 +17,10 @@ ApplicationWindow {
     header: Text {
         id: headerText
         text: qsTr("Aliaxis Utility and Industry\nMarek Strzempowicz")
-        font.pointSize: 24
+        font.pointSize: 20
     }
 
     FileBrowser {
         anchors.fill: parent
     }
-/*
-    ListModel {
-        id: mainListModel
-        ListElement { name: qsTr("First Item") }
-        ListElement { name: qsTr("second item") }
-    }
-
-    Component {
-        id: listDelegate
-        Text {
-            text: name;
-            font.pixelSize: 18;
-        }
-    }
-
-    ListView {
-        id: mainListView
-        anchors.fill: parent
-        model: mainListModel
-        delegate: listDelegate
-
-        highlight: Rectangle {
-            width: parent.width
-            color: "red"
-        }
-    }
-
-    footer: ToolBar {
-        id: bottomToolBar
-
-        ToolButton {
-            id: returnToolButton1
-            text: qsTr("Powrót")
-        }
-    }
-    */
 }
