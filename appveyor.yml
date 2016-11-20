@@ -2,7 +2,7 @@ version: "{branch}-ci-{build}"
 os: Visual Studio 2015
 
 environment:
-#  BOOST_ROOT: C:\Libraries\boost_1_59_0
+  BOOST_ROOT: C:\Libraries\boost_1_59_0
   BOOST_INCLUDEDIR: C:\Libraries\boost_1_59_0\boost
   matrix:
   - platform: x86
@@ -18,9 +18,11 @@ install:
 - cmd: call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
 - cmd: set PATH=%PATH%;%QTDIR%\bin
 - cmd: qmake -v
+- cmd: dir %BOOST_ROOT%
+- cmd: dir %BOOST_INCLUDEDIR%
 
 build_script:
-- cmd: qmake "INCLUDEPATH += %BOOST_INCLUDEDIR%"
+- cmd: qmake "INCLUDEPATH += %BOOST_ROOT%"
 #"LIBS+=%BOOST_LIBRARYDIR%/boost_serialization.lib"
 - cmd: nmake /NOLOGO 
 
