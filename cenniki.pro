@@ -1,6 +1,6 @@
 QT += qml quick widgets
 CONFIG += c++11
-LIBS += -L/usr/lib/ -lboost_serialization
+unix: LIBS += -L/usr/lib/ -lboost_serialization
 
 RESOURCES += qml.qrc
 
