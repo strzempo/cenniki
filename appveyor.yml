@@ -7,10 +7,10 @@ environment:
   matrix:
   - platform: x86
     QTDIR: C:\Qt\5.3\msvc2013_opengl 
-#    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
+    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
   - platform: x86
     QTDIR: C:\Qt\5.7\msvc2013 
-#    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
+    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
 
 install:
 - git submodule init
@@ -22,8 +22,8 @@ install:
 #- cmd: dir %BOOST_INCLUDEDIR%
 
 build_script:
-- cmd: qmake "INCLUDEPATH += %BOOST_ROOT%"
-#"LIBS+=%BOOST_LIBRARYDIR%/boost_serialization.lib"
+- cmd: dir %BOOST_LIBRARYDIR%
+- cmd: qmake "INCLUDEPATH += %BOOST_ROOT% \n LIBS+=%BOOST_LIBRARYDIR%/libboost_serialization-vc140-mt-1_59.lib"
 - cmd: nmake /NOLOGO 
 
 #test_script:
