@@ -1,0 +1,27 @@
+version: "{branch}-ci-{build}"
+os: Visual Studio 2013
+
+environment:
+  matrix:
+  - platform: x86
+    QTDIR: C:\Qt\5.3\msvc2013_opengl 
+  - platform: x86
+    QTDIR: C:\Qt\5.7\msvc2013 
+
+install:
+- git submodule init
+- git submodule update
+- cmd: call "%VS120COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
+- cmd: set PATH=%PATH%;%QTDIR%\bin
+- cmd: qmake -v
+
+build_script:
+- cmd: qmake 
+- cmd: nmake
+
+#test_script:
+
+#branches:
+#  only:
+#  - master
+
