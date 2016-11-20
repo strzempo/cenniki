@@ -1,11 +1,14 @@
 QT += qml quick widgets
 CONFIG += c++11
 unix: LIBS += -L/usr/lib/ -lboost_serialization
-
+win32: {
+    INCLUDEPATH += "$(BOOST_ROOT)"
+    LIBS += "$(BOOST_LIBRARYDIR)/libboost_serialization-vc140-mt-1_59.lib"
+}
 RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+#QML_IMPORT_PATH =
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

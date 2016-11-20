@@ -23,7 +23,8 @@ install:
 
 build_script:
 - cmd: dir %BOOST_LIBRARYDIR%
-- cmd: qmake "INCLUDEPATH += %BOOST_ROOT% \n LIBS+=%BOOST_LIBRARYDIR%/libboost_serialization-vc140-mt-1_59.lib"
+- cmd: qmake 
+#"INCLUDEPATH += %BOOST_ROOT%  LIBS += %BOOST_LIBRARYDIR%/libboost_serialization-vc140-mt-1_59.lib"
 - cmd: nmake /NOLOGO 
 
 #test_script:
