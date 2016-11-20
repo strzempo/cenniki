@@ -2,15 +2,15 @@ version: "{branch}-ci-{build}"
 os: Visual Studio 2015
 
 environment:
-  BOOST_ROOT: C:\Libraries\boost_1_59_0
+#  BOOST_ROOT: C:\Libraries\boost_1_59_0
   BOOST_INCLUDEDIR: C:\Libraries\boost_1_59_0\boost
   matrix:
   - platform: x86
     QTDIR: C:\Qt\5.3\msvc2013_opengl 
-    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
+#    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
   - platform: x86
     QTDIR: C:\Qt\5.7\msvc2013 
-    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
+#    BOOST_LIBRARYDIR: C:\Libraries\boost_1_59_0\lib32-msvc-14.0
 
 install:
 - git submodule init
@@ -20,7 +20,8 @@ install:
 - cmd: qmake -v
 
 build_script:
-- cmd: qmake -L"%BOOST_LIBRARYDIR%" -l"boost_serialization.lib" -I"%BOOST_INCLUDEDIR%"
+- cmd: qmake "INCLUDEPATH += %BOOST_INCLUDEDIR%"
+#"LIBS+=%BOOST_LIBRARYDIR%/boost_serialization.lib"
 - cmd: nmake /NOLOGO 
 
 #test_script:
