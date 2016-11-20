@@ -6,12 +6,13 @@ import QtQml.Models 2.2
 Item {
     id: browser
    // property alias mainModel: mainModel.model
-    width: 300
-    height: 200
+ //   width: 300
+  //  height: 200
     property string sectionName
     property var mainModel: DelegateModel {
         model: mainTreeModel
         delegate: Rectangle {
+            color: "transparent"
             width: view.width
             height:34
             Row {
