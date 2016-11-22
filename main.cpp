@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
     QObject::connect(&view, &QTreeView::doubleClicked, [](const QModelIndex& index){ static_cast<TreeComponent*>(index.internalPointer())->action(); });
 */
     MainTreeModel model;
-    model.load();
+//    model.load();
+    model.generateSampleTree();
     engine.rootContext()->setContextProperty("mainTreeModel", &model);
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
     return app.exec();
