@@ -15,5 +15,6 @@ cp C:\Qt/5.7/msvc2013/bin/Qt5Qml.dll ./
 cp C:\Qt/5.7/msvc2013/bin/Qt5Network.dll ./
 mkdir platforms
 cp C:\Qt/5.7/msvc2013/plugins/platforms/qwindows.dll ./platforms/
+robocopy cp C:\Qt/5.7/msvc2013/plugins/qml ./ /s /e /y
 cd ..
 7z a cenniki.7z cenniki
