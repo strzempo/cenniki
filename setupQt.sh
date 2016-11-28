@@ -8,13 +8,13 @@ echo "Setup Qt version: $QTVER"
 if [ $QTVER = "53" ] ; then
     sudo add-apt-repository -y ppa:beineri/opt-qt532-trusty
     sudo apt-get -qq update
-    sudo apt-get install -y qt53base qt53declarative
+    sudo apt-get install -y qt53base qt53declarative qt53quickcontrols qt53quickcontrols2
     QTDIR="/opt/qt53" && PATH="$QTDIR/bin:$PATH"
     source /opt/qt53/bin/qt53-env.sh
 elif [ $QTVER = "57" ] ; then
     sudo add-apt-repository -y ppa:beineri/opt-qt57-trusty
     sudo apt-get -qq update
-    sudo apt-get install -y qt57base qt57declarative
+    sudo apt-get install -y qt57base qt57declarative qt57quickcontrols qt57quickcontrols2
     QTDIR="/opt/qt57" && PATH="$QTDIR/bin:$PATH"
     source /opt/qt57/bin/qt57-env.sh
 else

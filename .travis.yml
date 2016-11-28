@@ -13,7 +13,7 @@ env:
 #- if [ "$CXX" = "g++" ]; then g++ -v; else clang -v; fi
 before_script:
 - source setupQt.sh  
-- sudo apt-get install -y clang
+- sudo apt-get install -y clang libboost-serialization-dev 
 
 script:
 - qmake
