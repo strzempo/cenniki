@@ -4,6 +4,14 @@ CONFIG += c++11
 TARGET = cenniki
 TEMPLATE = app
 
+#logger lib - my basic Qt logging class
+#PRE_TARGETDEPS = $$PWD/logger.a
+include($$PWD/logger/logger.pri)
+#INCLUDEPATH += $$PWD/logger
+#DEPENDSPATH += $$PWD/logger
+#LIBS += -L$$PWD/logger/ -llogger
+
+#boost serialization dependancy
 unix: LIBS += -L/usr/lib/ -lboost_serialization
 win32 {
     CONFIG += windows release

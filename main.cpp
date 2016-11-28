@@ -6,9 +6,13 @@
 #include "maintreemodel.h"
 #include "treecomponent.h"
 #include <QtDebug>
+#include "logger/Logger.h"
 
 int main(int argc, char *argv[])
 {
+    qInstallMessageHandler(Logger::handler);
+    qInfo() << "Starting application \"Cenniki\" (c) Kamil Strzempowicz";
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
