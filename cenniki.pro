@@ -1,4 +1,4 @@
-QT += qml quick widgets
+QT += quick widgets #qml quick widgets
 CONFIG += c++11
 
 TARGET = cenniki
