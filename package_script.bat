@@ -19,5 +19,7 @@ mkdir platforms
 cp C:\Qt/5.7/msvc2013/plugins/platforms/qwindows.dll ./platforms/
 mkdir QtQuick
 robocopy C:\Qt/5.7/msvc2013/qml/QtQuick ./QtQuick /s /e 
+mkdir QtQuick.2
+robocopy C:\Qt/5.7/msvc2013/qml/QtQuick.2 ./QtQuick.2 /s /e 
 cd ..
 7z a cenniki.7z cenniki
