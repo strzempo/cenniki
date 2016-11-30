@@ -17,9 +17,11 @@ cp C:\Qt/5.7/msvc2013/bin/Qt5QuickTemplates2.dll ./
 cp C:\Qt/5.7/msvc2013/bin/Qt5QuickControls2.dll ./
 mkdir platforms
 cp C:\Qt/5.7/msvc2013/plugins/platforms/qwindows.dll ./platforms/
+mkdir QtQml
+robocopy C:\Qt/5.7/msvc2013/qml/QtQml ./QtQml /s /e /XF *.pdb /Z
 mkdir QtQuick
-robocopy C:\Qt/5.7/msvc2013/qml/QtQuick ./QtQuick /s /e 
+robocopy C:\Qt/5.7/msvc2013/qml/QtQuick ./QtQuick /s /e /XF *.pdb /Z
 mkdir QtQuick.2
-robocopy C:\Qt/5.7/msvc2013/qml/QtQuick.2 ./QtQuick.2 /s /e 
+robocopy C:\Qt/5.7/msvc2013/qml/QtQuick.2 ./QtQuick.2 /s /e /XF *.pdb /Z
 cd ..
 7z a cenniki.7z cenniki
