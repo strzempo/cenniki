@@ -15,16 +15,16 @@ Item {
             height:34
             Row {
                 anchors.fill: parent
-                /*
+
                 Image {
                     id: icon
-                    width: delegate.height - 2
+                    width: 24//delegate.height - 2
                     height:width
-                    source: "image://iconProvider/"+filePath
-                }*/
+                    source: "images/ding.png"
+                }
                 Text {
                     text: nodeName
-                    font.pointSize: 12
+                    font.pixelSize: 24
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }
@@ -48,7 +48,7 @@ Item {
         header: Rectangle {
             width: browser.width
             height: 34
-            color: "lightgreen"
+            color: "transparent" //"lightgreen"
             //z:2
             Text {
                 text: sectionName

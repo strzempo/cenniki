@@ -6,15 +6,15 @@ ApplicationWindow {
     visible: true
     title: qsTr("Aliaxis-UI")
 
-    width: 542 //826//413
-    height: 768 //1169//584
+    width: 750 //542 //826//413
+    height: 587 //768 //1169//584
 
     flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
 
     FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
 
     background: Image {
-        source: "images/fip.png"
+        source: "images/background.png" //"fip.png"
         fillMode: Image.PreserveAspectFit
         anchors.fill: parent
     }
@@ -31,7 +31,7 @@ ApplicationWindow {
     header: Rectangle {
         height: 8
         width: parent.width
-        color: "lightgray"
+        color: "slategray"
 
         /*Text {
             text: qsTr("Aliaxis Utility and Industry\nMarek Strzempowicz")
@@ -61,11 +61,11 @@ ApplicationWindow {
     }
 
     footer: Rectangle {
-        height: 25
+        height: 30
         color: "transparent"
         Text {
-            text: qsTr("Zamknij")
-            color: "lightsteelblue"
+            text: qsTr("    Zamknij")
+            color: "black"//"lightsteelblue"
             font { family: localFont.name; pixelSize: 20 }
         }
         MouseArea {
