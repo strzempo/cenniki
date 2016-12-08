@@ -19,12 +19,13 @@ Item {
                 Image {
                     id: icon
                     width: 24//delegate.height - 2
-                    height:width
+                    height: width
                     source: "images/ding.png"
                 }
                 Text {
                     text: nodeName
-                    font.pixelSize: 24
+                    font.pixelSize: 20
+                    height: parent.height
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }

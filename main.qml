@@ -6,58 +6,59 @@ ApplicationWindow {
     visible: true
     title: qsTr("Aliaxis-UI")
 
-    width: 750 //542 //826//413
-    height: 587 //768 //1169//584
+    height: 730
+    width: (height - header.height +1) * 1500/1173
 
     flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
 
     FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
 
     background: Image {
-        source: "images/background.png" //"fip.png"
+        source: "images/background.png"
+     //   height: parent.height - parent.header.height
+     //   width:  parent.width
+      //  anchors.top: header.bottom
+        verticalAlignment: Image.AlignBottom
         fillMode: Image.PreserveAspectFit
         anchors.fill: parent
     }
 
-/*
-    style: ApplicationWindowStyle {
-        background: Image {
-            source: "qrc:/fip.png"
-        }
-    }
-*/
-  //      anchors.fill: parent
-
     header: Rectangle {
-        height: 8
+        height: 20
         width: parent.width
-        color: "slategray"
+        color: "steelblue"//"slategray"
 
-        /*Text {
-            text: qsTr("Aliaxis Utility and Industry\nMarek Strzempowicz")
-            font.pointSize: 20
-*/
-
-    MouseArea {
-        anchors.fill: parent
-        property variant clickPos: "1,1"
-
-        onPressed: {
-            clickPos  = Qt.point(mouse.x,mouse.y)
-   //         console.log("presed", clickPos)
+        Text {
+            text: qsTr("Aliaxis Utility and Industry")
+            font.pixelSize: 14
+  //          width: parent.width
+            anchors.fill: parent
+//            height: parent.
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
         }
 
-        onPositionChanged: {
-            var delta = Qt.point(mouse.x-clickPos.x, mouse.y-clickPos.y)
-     //       console.log("delta", delta)
-            mainWindow.x += delta.x;
-            mainWindow.y += delta.y;
+        MouseArea {
+            anchors.fill: parent
+            property variant clickPos: "1,1"
+
+            onPressed: {
+                clickPos  = Qt.point(mouse.x,mouse.y)
+            }
+
+            onPositionChanged: {
+                var delta = Qt.point(mouse.x-clickPos.x, mouse.y-clickPos.y)
+                mainWindow.x += delta.x;
+                mainWindow.y += delta.y;
+            }
         }
-    }
     }
 
     FileBrowser {
-        anchors.fill: parent
+        height: 500
+        width: 250
+        x: parent.width - width
+        y: 35
     }
 
     footer: Rectangle {
