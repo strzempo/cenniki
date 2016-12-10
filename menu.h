@@ -5,12 +5,12 @@
 #include <QList>
 #include <QDebug>
 
-class TreeComposite : public TreeComponent
+class Menu : public TreeComponent
 {
 public:
-    explicit TreeComposite();
-    explicit TreeComposite(QString title, TreeComponent *parent = nullptr);
-    virtual ~TreeComposite();
+    explicit Menu();
+    explicit Menu(QString title, TreeComponent *parent = nullptr);
+    virtual ~Menu();
 
     virtual void add(TreeComponent* component);
     virtual TreeComponent* child(int row) const;
@@ -19,16 +19,16 @@ public:
     virtual int findRowOf(TreeComponent* child) const;
 
 protected:
-   QList<TreeComponent*> m_children;
+   QList<TreeComponent*> Children;
 
     template<class Archive>
     void save(Archive & ar, const unsigned int version) const
     {
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        std::list<TreeComponent*> list = m_children.toStdList();
-        ar << boost::serialization::make_nvp("m_children", list);
-        qDebug() << "saved treecomposite:" << m_title;
+        std::list<TreeComponent*> list = Children.toStdList();
+        ar << boost::serialization::make_nvp("MenuItems", list);
+        qDebug() << "saved treecomposite:" << Title;
     }
     template<class Archive>
     void load(Archive & ar, const unsigned int version)
@@ -36,16 +36,16 @@ protected:
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         std::list<TreeComponent*> list;
-        ar >> boost::serialization::make_nvp("m_children", list);
-        m_children = QList<TreeComponent*>::fromStdList(list);
-        foreach(TreeComponent* child, m_children)
+        ar >> boost::serialization::make_nvp("MenuItems", list);
+        Children = QList<TreeComponent*>::fromStdList(list);
+        foreach(TreeComponent* child, Children)
             child->setParent(this);
-        qDebug() << "loaded treecomposite:" << m_title;
+       // qDebug() << "loaded treecomposite:" << m_title;
     }
     BOOST_SERIALIZATION_SPLIT_MEMBER()
     friend class boost::serialization::access;
 };
 
-BOOST_CLASS_EXPORT_KEY(TreeComposite)
+BOOST_CLASS_EXPORT_KEY(Menu)
 
 #endif // TREECOMPOSITE_H

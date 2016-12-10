@@ -1,5 +1,5 @@
 #include "treecomponent.h"
-#include "treecomposite.h"
+#include "menu.h"
 #include <QVariant>
 #include <QtDebug>
 
@@ -7,13 +7,13 @@ BOOST_CLASS_EXPORT_IMPLEMENT(TreeComponent)
 
 TreeComponent::TreeComponent()
 {
-    m_parent = nullptr;
+    Parent = nullptr;
 }
 
 TreeComponent::TreeComponent(QString title, TreeComponent *parent)
 {
-    m_parent = parent;
-    m_title = title;
+    Parent = parent;
+    Title = title;
 }
 
 TreeComponent::~TreeComponent()
@@ -44,13 +44,13 @@ int TreeComponent::columnCount() const
 
 QVariant TreeComponent::data(int)
 {
-    return m_title;
+    return Title;
 }
 
 int TreeComponent::row() const
 {
-    if(m_parent)
-        m_parent->findRowOf(const_cast<TreeComponent*>(this));
+    if(Parent)
+        Parent->findRowOf(const_cast<TreeComponent*>(this));
     return 0;
 }
 
@@ -62,12 +62,12 @@ int TreeComponent::findRowOf(TreeComponent *) const
 
 TreeComponent *TreeComponent::parent()
 {
-    return m_parent;
+    return Parent;
 }
 
 QString TreeComponent::title() const
 {
-    return m_title;
+    return Title;
 }
 
 void TreeComponent::action()
@@ -77,5 +77,5 @@ void TreeComponent::action()
 
 void TreeComponent::setParent(TreeComponent *parent)
 {
-    m_parent = parent;
+    Parent = parent;
 }

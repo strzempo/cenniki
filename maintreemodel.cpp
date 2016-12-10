@@ -1,6 +1,6 @@
 #include "maintreemodel.h"
-#include "treecomposite.h"
-#include "itempdf.h"
+#include "menu.h"
+#include "itemfileopen.h"
 #include "serialization.h"
 #include <fstream>
 
@@ -11,7 +11,7 @@ MainTreeModel::MainTreeModel(QObject *parent)
 
 MainTreeModel::~MainTreeModel()
 {
-    delete m_rootComponent;
+    delete RootComponent;
 }
 
 QVariant MainTreeModel::headerData(int, Qt::Orientation, int) const
@@ -27,7 +27,7 @@ QModelIndex MainTreeModel::index(int row, int column, const QModelIndex &parent)
     TreeComponent *parentItem;
 
     if (!parent.isValid())
-        parentItem = m_rootComponent;
+        parentItem = RootComponent;
     else
         parentItem = static_cast<TreeComponent*>(parent.internalPointer());
 
@@ -46,7 +46,7 @@ QModelIndex MainTreeModel::parent(const QModelIndex &index) const
     TreeComponent *childItem = static_cast<TreeComponent*>(index.internalPointer());
     TreeComponent *parentItem = childItem->parent();
 
-    if (parentItem == m_rootComponent)
+    if (parentItem == RootComponent)
         return QModelIndex();
 
     return createIndex(parentItem->row(), 0, parentItem);
@@ -59,7 +59,7 @@ int MainTreeModel::rowCount(const QModelIndex &parent) const
         return 0;
 
     if (!parent.isValid())
-        parentItem = m_rootComponent;
+        parentItem = RootComponent;
     else
         parentItem = static_cast<TreeComponent*>(parent.internalPointer());
 
@@ -69,7 +69,7 @@ int MainTreeModel::rowCount(const QModelIndex &parent) const
 int MainTreeModel::columnCount(const QModelIndex &parent) const
 {
     if (!parent.isValid())
-        return m_rootComponent->columnCount();
+        return RootComponent->columnCount();
     else
         return static_cast<TreeComponent*>(parent.internalPointer())->columnCount();
 }
@@ -101,7 +101,7 @@ void MainTreeModel::save()
     std::ofstream ofs("layout.xml");
     assert(ofs.good());
     boost::archive::xml_oarchive oa(ofs);
-    oa << BOOST_SERIALIZATION_NVP(m_rootComponent);
+    oa << BOOST_SERIALIZATION_NVP(RootComponent);
 }
 
 void MainTreeModel::load()
@@ -109,18 +109,18 @@ void MainTreeModel::load()
     std::ifstream ifs("layout.xml");
     assert(ifs.good());
     boost::archive::xml_iarchive ia(ifs);
-    ia >> BOOST_SERIALIZATION_NVP(m_rootComponent);
-    assert(m_rootComponent	);
+    ia >> BOOST_SERIALIZATION_NVP(RootComponent);
+    assert(RootComponent	);
 }
 
 void MainTreeModel::generateSampleTree()
 {
-    m_rootComponent = new TreeComposite(tr("Main Menu"));
-    m_rootComponent->add(new ItemPDF(tr("movie"), "movie.flv", m_rootComponent));
-    TreeComposite* submenu = new TreeComposite(tr("Submenu"), m_rootComponent);
-    submenu->add(new ItemPDF(tr("First Leaf"), "first.pdf", submenu));
-    submenu->add(new ItemPDF(tr("Second Leaf"), "second.pdf", submenu));
-    m_rootComponent->add(submenu);
+    RootComponent = new Menu(tr("Main Menu"));
+    RootComponent->add(new ItemFileOpen(tr("movie"), "movie.flv", RootComponent));
+    Menu* submenu = new Menu(tr("Submenu"), RootComponent);
+    submenu->add(new ItemFileOpen(tr("First Leaf"), "first.pdf", submenu));
+    submenu->add(new ItemFileOpen(tr("Second Leaf"), "second.pdf", submenu));
+    RootComponent->add(submenu);
 }
 
 QHash<int, QByteArray> MainTreeModel::roleNames() const

@@ -30,16 +30,16 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     maintreemodel.h \
     treecomponent.h \
-    treecomposite.h \
-    itempdf.h \
     qstring_serialization.h \
-    serialization.h
+    serialization.h \
+    itemfileopen.h \
+    menu.h
 
 SOURCES += \
     main.cpp \
     maintreemodel.cpp \
-    treecomposite.cpp \
     treecomponent.cpp \
-    itempdf.cpp
+    itemfileopen.cpp \
+    menu.cpp
 
 RESOURCES += qml.qrc

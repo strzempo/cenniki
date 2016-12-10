@@ -5,7 +5,7 @@
 #include <QString>
 #include <QDebug>
 
-class TreeComposite;
+class Menu;
 class QVariant;
 
 class TreeComponent
@@ -30,15 +30,14 @@ public:
     virtual void setParent(TreeComponent *parent);
 
 protected:
-    TreeComponent* m_parent;
-    QString m_title;
+    TreeComponent* Parent;
+    QString Title;
 
     template<class Archive>
     void serialize(Archive & ar, const unsigned int /*version*/)
     {
-     //   ar & BOOST_SERIALIZATION_NVP(m_parent);
-        ar & BOOST_SERIALIZATION_NVP(m_title);
-        qDebug() << "serializing treecomponent" << m_title;
+        ar & BOOST_SERIALIZATION_NVP(Title);
+        //qDebug() << "serializing treecomponent" << m_title;
     }
 
     friend class boost::serialization::access;

@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
     MainTreeModel model;
 //    model.load();
     model.generateSampleTree();
+    model.save();
     engine.rootContext()->setContextProperty("mainTreeModel", &model);
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
     return app.exec();

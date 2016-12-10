@@ -43,7 +43,7 @@ public:
     Q_INVOKABLE QString sectionName(const QModelIndex& index) const;
 
 private:
-    TreeComponent* m_rootComponent;
+    TreeComponent* RootComponent;
 };
 
 #endif // MAINTREEMODEL_H

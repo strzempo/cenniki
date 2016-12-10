@@ -5,15 +5,15 @@
 #include <QString>
 #include <QDebug>
 
-class ItemPDF : public TreeComponent
+class ItemFileOpen : public TreeComponent
 {
 public:
-    explicit ItemPDF();
-    ItemPDF(QString title, QString fileName, TreeComponent* parent);
+    explicit ItemFileOpen();
+    ItemFileOpen(QString title, QString fileName, TreeComponent* parent);
     virtual void action();
 
 protected:
-    QString m_fileName;
+    QString FileName;
 
     friend class boost::serialization::access;
     template<class Archive>
@@ -21,11 +21,11 @@ protected:
     {
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        ar & BOOST_SERIALIZATION_NVP(m_fileName);
-        qDebug() << "serializing itempdf:" << m_title;
+        ar & BOOST_SERIALIZATION_NVP(FileName);
+        //qDebug() << "serializing itempdf:" << m_title;
     }
 };
 
-BOOST_CLASS_EXPORT_KEY(ItemPDF)
+BOOST_CLASS_EXPORT_KEY(ItemFileOpen)
 
 #endif // ITEMPDF_H
