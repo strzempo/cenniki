@@ -3,9 +3,6 @@ import QtQml.Models 2.2
 
 Item {
     id: browser
-   // property alias mainModel: mainModel.model
- //   width: 300
-  //  height: 200
     property string sectionName
     property var mainModel: DelegateModel {
         model: mainTreeModel
@@ -16,7 +13,7 @@ Item {
 
             Image {
                 id: icon
-                width: 24//delegate.height - 2
+                width: 24
                 height: width
                 source: "images/ding.png"
             }
@@ -63,12 +60,10 @@ Item {
 
         remove: Transition {
             NumberAnimation { property: "opacity"; from: 1.0; to: 0; duration: 500 }
-         //   NumberAnimation { property: "scale"; from: 0; to: 1.0; duration: 400 }
         }
 
         add: Transition {
             NumberAnimation { property: "opacity"; from: 0; to: 1.0; duration: 1000 }
-//            NumberAnimation { properties: "x,y"; duration: 400; easing.type: Easing.OutBounce }
         }
 
 
@@ -77,8 +72,7 @@ Item {
         header: Rectangle {
             width: browser.width
             height: 34
-            color: "transparent" //"lightgreen"
-            //z:2
+            color: "transparent"
             Text {
                 text: sectionName
                 font.pointSize: 14

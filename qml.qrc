@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>FileBrowser.qml</file>
-        <file>images/fip.png</file>
         <file>fonts/SourceSansPro-Semibold.otf</file>
         <file>images/ding.png</file>
         <file>images/background.png</file>

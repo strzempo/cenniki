@@ -15,9 +15,6 @@ ApplicationWindow {
 
     background: Image {
         source: "images/background.png"
-     //   height: parent.height - parent.header.height
-     //   width:  parent.width
-      //  anchors.top: header.bottom
         verticalAlignment: Image.AlignBottom
         fillMode: Image.PreserveAspectFit
         anchors.fill: parent
@@ -26,14 +23,12 @@ ApplicationWindow {
     header: Rectangle {
         height: 20
         width: parent.width
-        color: "steelblue"//"slategray"
+        color: "steelblue"
 
         Text {
             text: qsTr("Aliaxis Utility and Industry")
             font.pixelSize: 14
-  //          width: parent.width
             anchors.fill: parent
-//            height: parent.
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
         }
@@ -66,7 +61,7 @@ ApplicationWindow {
         color: "transparent"
         Text {
             text: qsTr("    Zamknij")
-            color: "black"//"lightsteelblue"
+            color: "black"
             font { family: localFont.name; pixelSize: 20 }
         }
         MouseArea {
