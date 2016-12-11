@@ -37,7 +37,6 @@ protected:
     void serialize(Archive & ar, const unsigned int /*version*/)
     {
         ar & BOOST_SERIALIZATION_NVP(Title);
-        //qDebug() << "serializing treecomponent" << m_title;
     }
 
     friend class boost::serialization::access;

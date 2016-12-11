@@ -22,7 +22,6 @@ protected:
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(FileName);
-        //qDebug() << "serializing itempdf:" << m_title;
     }
 };
 

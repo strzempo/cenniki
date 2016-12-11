@@ -1,17 +1,17 @@
 #ifndef SERIALIZATION_H
 #define SERIALIZATION_H
 
-#include "qarchive/qarchive.h"
+#include "qarchive/qarchive.hpp"
 //#include <boost/archive/xml_iarchive.hpp>
 //#include <boost/archive/xml_oarchive.hpp>
 
-#include <boost/serialization/serialization.hpp>
+//#include <boost/serialization/serialization.hpp>
 #include <boost/serialization/nvp.hpp>
 #include <boost/serialization/base_object.hpp>
 #include <boost/serialization/list.hpp>
 #include <boost/serialization/export.hpp>
 
-#include "qstring_serialization.h"
+//#include "qstring_serialization.h"
 
 /*
 in h:

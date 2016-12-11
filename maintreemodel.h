@@ -7,7 +7,6 @@ class TreeComponent;
 class MainTreeModel : public QAbstractItemModel
 {
     Q_OBJECT
-  //  Q_PROPERTY(QModelIndex index READ index)
 
 public:
     explicit MainTreeModel(QObject *parent = 0);

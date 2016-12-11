@@ -24,7 +24,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     maintreemodel.h \
     treecomponent.h \
-    qstring_serialization.h \
     serialization.h \
     itemfileopen.h \
     menu.h

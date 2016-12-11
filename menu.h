@@ -28,7 +28,6 @@ protected:
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         std::list<TreeComponent*> list = Children.toStdList();
         ar << boost::serialization::make_nvp("MenuItems", list);
-        qDebug() << "saved treecomposite:" << Title;
     }
     template<class Archive>
     void load(Archive & ar, const unsigned int version)
@@ -40,7 +39,6 @@ protected:
         Children = QList<TreeComponent*>::fromStdList(list);
         foreach(TreeComponent* child, Children)
             child->setParent(this);
-       // qDebug() << "loaded treecomposite:" << m_title;
     }
     BOOST_SERIALIZATION_SPLIT_MEMBER()
     friend class boost::serialization::access;

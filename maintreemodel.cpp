@@ -7,6 +7,7 @@
 MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
 {
+    RootComponent = nullptr;
 }
 
 MainTreeModel::~MainTreeModel()
@@ -106,6 +107,9 @@ void MainTreeModel::save()
 
 void MainTreeModel::load()
 {
+    if(RootComponent != nullptr)
+        delete RootComponent;
+
     std::ifstream ifs("layout.xml");
     assert(ifs.good());
     q_xml_iarchive ia(ifs);
