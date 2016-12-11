@@ -12,28 +12,28 @@ Menu::Menu(QString title, TreeComponent *parent) : TreeComponent(title, parent)
 
 Menu::~Menu()
 {
-    qDeleteAll(Children);
+    qDeleteAll(MenuItems);
 }
 
 void Menu::add(TreeComponent *component)
 {
-    Children.append(component);
+    MenuItems.append(component);
 }
 
 TreeComponent *Menu::child(int row) const
 {
-    if(row < Children.count())
-        return Children.at(row);
+    if(row < MenuItems.count())
+        return MenuItems.at(row);
     return nullptr;
 }
 
 int Menu::childCount() const
 {
-    return Children.count();
+    return MenuItems.count();
 }
 
 int Menu::findRowOf(TreeComponent *child) const
 {
-    return Children.indexOf(child);
+    return MenuItems.indexOf(child);
 }
 

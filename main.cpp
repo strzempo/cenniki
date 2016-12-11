@@ -8,8 +8,27 @@
 #include <QtDebug>
 #include "logger/Logger.h"
 
+
 int main(int argc, char *argv[])
 {
+    /*
+    std::ofstream ofs("layout.xml");
+    assert(ofs.good());
+    q_xml_oarchive oa(ofs);
+    QStringList qs;
+    qs << "aaa" << "bbb " << "ccc";
+
+    oa << BOOST_SERIALIZATION_NVP(qs);
+    ofs.close();
+    qs.clear();
+
+    std::ifstream ifs("layout.xml");
+    assert(ifs.good());
+    q_xml_iarchive ia(ifs);
+    ia >> BOOST_SERIALIZATION_NVP(qs);
+    qDebug() << qs;
+    return 0;
+*/
     qInstallMessageHandler(Logger::handler);
     qInfo() << "Starting application \"Cenniki\" (c) Kamil Strzempowicz";
 

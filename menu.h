@@ -3,7 +3,7 @@
 
 #include "treecomponent.h"
 #include <QList>
-#include <QDebug>
+//#include <QDebug>
 
 class Menu : public TreeComponent
 {
@@ -19,8 +19,8 @@ public:
     virtual int findRowOf(TreeComponent* child) const;
 
 protected:
-   QList<TreeComponent*> Children;
-
+   QList<TreeComponent*> MenuItems;
+/*
     template<class Archive>
     void save(Archive & ar, const unsigned int version) const
     {
@@ -41,6 +41,14 @@ protected:
             child->setParent(this);
     }
     BOOST_SERIALIZATION_SPLIT_MEMBER()
+    */
+    template<class Archive>
+    void serialize(Archive & ar, const unsigned int /*version*/)
+    {
+        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
+        ar & BOOST_SERIALIZATION_NVP(MenuItems);
+    }
+
     friend class boost::serialization::access;
 };
 
