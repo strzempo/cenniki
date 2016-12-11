@@ -100,7 +100,7 @@ void MainTreeModel::save()
 {
     std::ofstream ofs("layout.xml");
     assert(ofs.good());
-    boost::archive::xml_oarchive oa(ofs);
+    q_xml_oarchive oa(ofs);
     oa << BOOST_SERIALIZATION_NVP(RootComponent);
 }
 
@@ -108,9 +108,9 @@ void MainTreeModel::load()
 {
     std::ifstream ifs("layout.xml");
     assert(ifs.good());
-    boost::archive::xml_iarchive ia(ifs);
+    q_xml_iarchive ia(ifs);
     ia >> BOOST_SERIALIZATION_NVP(RootComponent);
-    assert(RootComponent	);
+    assert(RootComponent);
 }
 
 void MainTreeModel::generateSampleTree()

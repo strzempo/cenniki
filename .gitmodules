@@ -1,3 +1,6 @@
 [submodule "logger"]
 	path = logger
 	url = https://github.com/konserw/logger.git
+[submodule "qarchive"]
+	path = qarchive
+	url = https://github.com/konserw/qarchive.git

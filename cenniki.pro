@@ -7,17 +7,11 @@ TEMPLATE = app
 #logger lib - my basic Qt logging class
 #PRE_TARGETDEPS = $$PWD/logger.a
 include($$PWD/logger/logger.pri)
+include($$PWD/qarchive/qarchive.pri)
 #INCLUDEPATH += $$PWD/logger
 #DEPENDSPATH += $$PWD/logger
 #LIBS += -L$$PWD/logger/ -llogger
 
-#boost serialization dependancy
-unix: LIBS += -L/usr/lib/ -lboost_serialization
-win32 {
-    CONFIG += windows release
-    INCLUDEPATH += "$(BOOST_ROOT)"
-    LIBS += "-L$(BOOST_LIBRARYDIR)" #/libboost_serialization-vc120-mt-1_59.lib"
-}
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 #QML_IMPORT_PATH =

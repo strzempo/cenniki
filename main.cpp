@@ -28,10 +28,11 @@ int main(int argc, char *argv[])
     QObject::connect(&view, &QTreeView::doubleClicked, [](const QModelIndex& index){ static_cast<TreeComponent*>(index.internalPointer())->action(); });
 */
     MainTreeModel model;
-//    model.load();
-    model.generateSampleTree();
+    model.load();
+/*    model.generateSampleTree();
     model.save();
-    engine.rootContext()->setContextProperty("mainTreeModel", &model);
+    return 0;
+  */  engine.rootContext()->setContextProperty("mainTreeModel", &model);
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
     return app.exec();
 }
