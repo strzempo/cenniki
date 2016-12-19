@@ -8,9 +8,29 @@
 #include <QtDebug>
 #include "logger/Logger.h"
 
+#include "vectory.cpp"
 
 int main(int argc, char *argv[])
 {
+    std::vector<std::vector<std::string> > menu_items;
+    std::vector<std::vector<std::vector<std::string> > > div;
+    std::vector<std::vector<std::vector<std::string> > > pliki;
+    vectory(menu_items, div, pliki);
+    qDebug() << "menu_items:";
+    for(int i=0; i < menu_items.size(); ++i)
+        for(int j=0; j<menu_items[i].size(); ++j)
+            qDebug() << QString("[%1][%2] %3").arg(i).arg(j).arg(QString::fromStdString(menu_items[i][j]));
+    qDebug() << "div:";
+    for(int i=0; i < div.size(); ++i)
+        for(int j=0; j<div[i].size(); ++j)
+            for(int k=0; k<div[i][j].size(); ++k)
+                qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(div[i][j][k]));
+    qDebug() << "pliki:";
+    for(int i=0; i < pliki.size(); ++i)
+        for(int j=0; j<pliki[i].size(); ++j)
+            for(int k=0; k<pliki[i][j].size(); ++k)
+                qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(pliki[i][j][k]));
+    return 0;
     /*
     std::ofstream ofs("layout.xml");
     assert(ofs.good());

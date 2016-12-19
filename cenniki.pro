@@ -33,6 +33,7 @@ SOURCES += \
     maintreemodel.cpp \
     treecomponent.cpp \
     itemfileopen.cpp \
-    menu.cpp
+    menu.cpp \
+vectory.cpp
 
 RESOURCES += qml.qrc
