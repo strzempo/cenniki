@@ -26,7 +26,8 @@ HEADERS += \
     treecomponent.h \
     serialization.h \
     itemfileopen.h \
-    menu.h
+    menu.h \
+    mainwindow.h
 
 SOURCES += \
     main.cpp \
@@ -34,6 +35,8 @@ SOURCES += \
     treecomponent.cpp \
     itemfileopen.cpp \
     menu.cpp \
-vectory.cpp
+    mainwindow.cpp
+
+FORMS = mainwindow.ui
 
 RESOURCES += qml.qrc

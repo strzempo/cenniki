@@ -25,6 +25,10 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+    //editing
+    bool insertMenu(const QString &title, const QModelIndex &parent);
+    bool insertItem(const QString &title, const QModelIndex &parent);
+
     //serialization
     void save();
     void load();
@@ -43,6 +47,7 @@ public:
 
 private:
     TreeComponent* RootComponent;
+    TreeComponent* getItem(const QModelIndex& index) const;
 };
 
 #endif // MAINTREEMODEL_H

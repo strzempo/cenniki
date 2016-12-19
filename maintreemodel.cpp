@@ -8,10 +8,13 @@ MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
 {
     RootComponent = nullptr;
+//    RootComponent = new Menu("Menu główne");
+    load();
 }
 
 MainTreeModel::~MainTreeModel()
 {
+    save();
     delete RootComponent;
 }
 
@@ -47,7 +50,7 @@ QModelIndex MainTreeModel::parent(const QModelIndex &index) const
     TreeComponent *childItem = static_cast<TreeComponent*>(index.internalPointer());
     TreeComponent *parentItem = childItem->parent();
 
-    if (parentItem == RootComponent)
+    if (parentItem == RootComponent || parentItem == nullptr)
         return QModelIndex();
 
     return createIndex(parentItem->row(), 0, parentItem);
@@ -56,9 +59,10 @@ QModelIndex MainTreeModel::parent(const QModelIndex &index) const
 int MainTreeModel::rowCount(const QModelIndex &parent) const
 {
     TreeComponent *parentItem;
+/*
     if (parent.column() > 0)
         return 0;
-
+*/
     if (!parent.isValid())
         parentItem = RootComponent;
     else
@@ -69,6 +73,7 @@ int MainTreeModel::rowCount(const QModelIndex &parent) const
 
 int MainTreeModel::columnCount(const QModelIndex &parent) const
 {
+    return 1;
     if (!parent.isValid())
         return RootComponent->columnCount();
     else
@@ -77,13 +82,13 @@ int MainTreeModel::columnCount(const QModelIndex &parent) const
 
 QVariant MainTreeModel::data(const QModelIndex &index, int role) const
 {
- //   qDebug() << "index passed:" << index;
+   // qDebug() << "index passed:" << index;
     if (!index.isValid())
         return QVariant();
-/*
+
     if (role != Qt::DisplayRole)
         return QVariant();
-*/
+
     TreeComponent *item = static_cast<TreeComponent*>(index.internalPointer());
 
     return item->data(role);
@@ -94,7 +99,27 @@ Qt::ItemFlags MainTreeModel::flags(const QModelIndex &index) const
     if (!index.isValid())
         return 0;
 
-    return QAbstractItemModel::flags(index);
+    return Qt::ItemIsEditable | QAbstractItemModel::flags(index);
+}
+
+bool MainTreeModel::insertMenu(const QString& title, const QModelIndex &parent)
+{
+    TreeComponent *parentItem = getItem(parent);
+    int pos = parentItem->childCount();
+    beginInsertRows(parent, pos, pos);
+    parentItem->add(new Menu(title, parentItem));
+    endInsertRows();
+    return true;
+}
+
+bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
+{
+    TreeComponent *parentItem = getItem(parent);
+    int pos = parentItem->childCount();
+    beginInsertRows(parent, pos, pos);
+    parentItem->add(new ItemFileOpen(title, "", parentItem));
+    endInsertRows();
+    return true;
 }
 
 void MainTreeModel::save()
@@ -145,4 +170,14 @@ QString MainTreeModel::sectionName(const QModelIndex &index) const
     if(!index.isValid())
         return QString();
     return static_cast<TreeComponent*>(index.internalPointer())->title();
+}
+
+TreeComponent *MainTreeModel::getItem(const QModelIndex &index) const
+{
+    if (index.isValid()) {
+        TreeComponent *item = static_cast<TreeComponent*>(index.internalPointer());
+        if (item)
+            return item;
+    }
+    return RootComponent;
 }
