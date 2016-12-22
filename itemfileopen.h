@@ -9,6 +9,7 @@ class ItemFileOpen : public TreeComponent
 {
 public:
     explicit ItemFileOpen();
+    explicit ItemFileOpen(QString title);
     ItemFileOpen(QString title, QString fileName, TreeComponent* parent);
     virtual void action();
 

@@ -73,6 +73,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(actionAdd_Menu, &QAction::triggered, this, &MainWindow::addMenu);
     connect(actionAdd_Item, &QAction::triggered, this, &MainWindow::addItem);
 
+    view->expandAll();
     updateActions();
 }
 
@@ -80,14 +81,14 @@ void MainWindow::addMenu()
 {
     QModelIndex index = view->selectionModel()->currentIndex();
     MainTreeModel *model = static_cast<MainTreeModel*>(view->model());
-    model->insertMenu("nodata", index);
+    model->insertMenu("submenu", index);
 }
 
 void MainWindow::addItem()
 {
     QModelIndex index = view->selectionModel()->currentIndex();
     MainTreeModel *model = static_cast<MainTreeModel*>(view->model());
-    model->insertItem("nodata", index);
+    model->insertItem("sample node", index);
 
 }
 

@@ -10,6 +10,11 @@ ItemFileOpen::ItemFileOpen() : TreeComponent()
 
 }
 
+ItemFileOpen::ItemFileOpen(QString title) : TreeComponent(title)
+{
+    FileName = "file.pdf";
+}
+
 ItemFileOpen::ItemFileOpen(QString title, QString fileName, TreeComponent *parent) : TreeComponent(title, parent)
 {
     FileName = fileName;

@@ -17,6 +17,7 @@ Menu::~Menu()
 
 void Menu::add(TreeComponent *component)
 {
+    component->setParent(this);
     MenuItems.append(component);
 }
 
