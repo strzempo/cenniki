@@ -151,7 +151,7 @@ void MainTreeModel::generateSampleTree()
     std::vector<std::vector<std::vector<std::string> > > div;
     std::vector<std::vector<std::vector<std::string> > > pliki;
     vectory(menu_items, div, pliki);
-#ifndef PRINT
+#ifdef PRINT
     qDebug() << "menu_items:";
     for(uint i=0; i < menu_items.size(); ++i)
         for(uint j=0; j<menu_items[i].size(); ++j)
@@ -168,11 +168,14 @@ void MainTreeModel::generateSampleTree()
                 qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(pliki[i][j][k]));
 #endif
     RootComponent = new Menu(tr("Main Menu"));
-    for(uint i=1; i<6; ++i)
+    for(uint i=0; i<6; ++i)
     {
-        if(i < 4) RootComponent->add(new ItemFileOpen(QString::fromLocal8Bit(menu_items[0][i].c_str())));
-        else RootComponent->add(new Menu(QString::fromLocal8Bit(menu_items[0][i].c_str())));
+        QString title = QString::fromStdString(div[0][0][i]);
+        if(i < 4) RootComponent->add(new ItemFileOpen(title, QString::fromStdString(menu_items[0][i])));
+        else RootComponent->add(new Menu(title));
     }
+    RootComponent->add(new ItemFileOpen("Kontakt", ""));
+    RootComponent->add(new ItemFileOpen("Kemy", "kemy.exe"));
 }
 
 QHash<int, QByteArray> MainTreeModel::roleNames() const

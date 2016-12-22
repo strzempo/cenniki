@@ -32,8 +32,8 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //menu zbiorowy[0][0]
     temp.push_back("FIP spot");
     temp.push_back("O FIP-ie");
-    temp.push_back("PodrÍcznik kszta≥tek");
-    temp.push_back("PodrÍcznik zaworÛw");
+    temp.push_back("Podrƒôcznik kszta≈Çtek");
+    temp.push_back("Podrƒôcznik zawor√≥w");
     temp.push_back("Broszury");
     temp.push_back("Katalogi techniczne");
     temp.push_back("Kontakt");
@@ -41,9 +41,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //produkty menu zbiorowy [0][1]
 	temp.clear();
-    temp.push_back("Zawory z napÍdami");
-    temp.push_back("Zawory rÍczne z PVC-U");
-    temp.push_back("Kszta≥tki PVC-U");
+    temp.push_back("Zawory z napƒôdami");
+    temp.push_back("Zawory rƒôczne z PVC-U");
+    temp.push_back("Kszta≈Çtki PVC-U");
     temp.push_back("System PP-H");
     temp.push_back("System PVC-C TemperFIP100\xAE");
     temp.push_back("System PVDF");
@@ -53,26 +53,26 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //menu broszury [0][2]
 	temp.clear();
     temp.push_back("VKD - Zawory kulowe DualBlock\xAE");
-    temp.push_back("TKD - Zawory kulowe trÛjdrozne DualBlock\xAE");
-    temp.push_back("MK/CP - Zawory membranowe pneumatyczne z napÍdem t≥okowym");
+    temp.push_back("TKD - Zawory kulowe tr√≥jdrozne DualBlock\xAE");
+    temp.push_back("MK/CP - Zawory membranowe pneumatyczne z napƒôdem t≈Çokowym");
     temp.push_back("VEE - Zawory kulowe Easyfit\xAE");
     temp.push_back("VXE - Zawory kulowe Easyfit\xAE");
-    temp.push_back("System etykiet do zaworÛw Easyfit\xAE");
+    temp.push_back("System etykiet do zawor√≥w Easyfit\xAE");
     temp.push_back("FS-FC - Rotametry");
 	zbiorowy.push_back(temp);
 //#################################
 //# system PE - zbiorowy [0][3] #
 //#################################
 	temp.clear();
-    temp.push_back("Kszta≥tki doczo≥owe");
-    temp.push_back("Z≥πczki elektrooporowe FRIALENÆ");
-    temp.push_back("Wytyczne dla projektantÛw");
+    temp.push_back("Kszta≈Çtki doczo≈Çowe");
+    temp.push_back("Z≈ÇƒÖczki elektrooporowe FRIALEN¬Æ");
+    temp.push_back("Wytyczne dla projektant√≥w");
 	zbiorowy.push_back(temp);
 //#################################
 //# system ABS - zbiorowy [0][4] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("System metryczny");
     temp.push_back("System calowy");
     temp.push_back("System preizolowany");
@@ -84,83 +84,83 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //# actuaded zawory zbiorowy [1] #
 //################################
 	temp.clear();
-    temp.push_back("Si≥owniki Elektryczne");
-    temp.push_back("Si≥owniki Pneumatyczne");
-    temp.push_back("Zawory bezpieczeÒstwa");
+    temp.push_back("Si≈Çowniki Elektryczne");
+    temp.push_back("Si≈Çowniki Pneumatyczne");
+    temp.push_back("Zawory bezpiecze≈Ñstwa");
     temp.push_back("Rotametry");
 	zbiorowy.push_back(temp);
-//elektryczna coútam zbiorowy
+//elektryczna co≈õtam zbiorowy
 	temp.clear();
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Elektrozawory");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //zawory kulowe
 	temp.clear();
-    temp.push_back("VKD/CE - ZawÛr kulowy Dual Block \xAE DN 10-50 z si≥ownikiem elektrycznym");
-    temp.push_back("VKD/CE - ZawÛr kulowy Dual Block \xAE DN 65-100 z si≥ownikiem elektrycznym");
-    temp.push_back("TKD/CE - TrÛjdroøny zawÛr kulowy Dual Block \xAE z si≥ownikiem elektrycznym");
-    temp.push_back("PowrÛt");
+    temp.push_back("VKD/CE - Zaw√≥r kulowy Dual Block \xAE DN 10-50 z si≈Çownikiem elektrycznym");
+    temp.push_back("VKD/CE - Zaw√≥r kulowy Dual Block \xAE DN 65-100 z si≈Çownikiem elektrycznym");
+    temp.push_back("TKD/CE - Tr√≥jdro≈ºny zaw√≥r kulowy Dual Block \xAE z si≈Çownikiem elektrycznym");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //zawory motylkowe
 	temp.clear();
     temp.push_back("FE/CE");
     temp.push_back("FK/CE");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //zawory cewkowe
 	temp.clear();
     temp.push_back("S1-S2");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //pneumatyczne costam zbiorowy
 	temp.clear();
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Zawory membranowe");
-    temp.push_back("Zawory skoúne");
-    temp.push_back("PowrÛt");
+    temp.push_back("Zawory sko≈õne");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD/CE - ZawÛr kulowy Dual Block \xAE DN 10-50 z si≥ownikiem pneumstycznym");
-    temp.push_back("VKD/CE - ZawÛr kulowy Dual Block \xAE DN 65-100 z si≥ownikiem pneumstycznym");
-    temp.push_back("TKD/CE - TrÛjdroøny zawÛr kulowy Dual Block \xAE z si≥ownikiem pneumstycznym");
-    temp.push_back("PowrÛt");
+    temp.push_back("VKD/CE - Zaw√≥r kulowy Dual Block \xAE DN 10-50 z si≈Çownikiem pneumstycznym");
+    temp.push_back("VKD/CE - Zaw√≥r kulowy Dual Block \xAE DN 65-100 z si≈Çownikiem pneumstycznym");
+    temp.push_back("TKD/CE - Tr√≥jdro≈ºny zaw√≥r kulowy Dual Block \xAE z si≈Çownikiem pneumstycznym");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //motylkowe
 	temp.clear();
     temp.push_back("FE/CP");
     temp.push_back("FK/CP");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
-//diacoútam
+//diaco≈õtam
 	temp.clear();
-    temp.push_back("VM/CP-NC - ZawÛr membranowy pneumatyczny normalnie zamkniÍty");
-    temp.push_back("VM/CP-NO - ZawÛr membranowy pneumatyczny normalnie otwarty");
-    temp.push_back("MK/CP-NC - ZawÛr membranowy pneumatyczny normalnie zamkniety z si≥ownikiem t≥okowym");
-    temp.push_back("MK/CP-NO - ZawÛr membranowy pneumatyczny normalnie otwarty z si≥ownikiem t≥okowym");
-    temp.push_back("MK/CP-DA - ZawÛr membranowy pneumatyczny obustronego dzia≥ania z si≥ownikiem t≥okowym");
-    temp.push_back("DM/CP-NO - ZawÛr membranowy pneumatyczny normalnie otwarty bezsprÍøynowy");
-    temp.push_back("CM/CP - ZawÛr membranowy pneumatyczny - kompaktowy");
-    temp.push_back("PowrÛt");
+    temp.push_back("VM/CP-NC - Zaw√≥r membranowy pneumatyczny normalnie zamkniƒôty");
+    temp.push_back("VM/CP-NO - Zaw√≥r membranowy pneumatyczny normalnie otwarty");
+    temp.push_back("MK/CP-NC - Zaw√≥r membranowy pneumatyczny normalnie zamkniety z si≈Çownikiem t≈Çokowym");
+    temp.push_back("MK/CP-NO - Zaw√≥r membranowy pneumatyczny normalnie otwarty z si≈Çownikiem t≈Çokowym");
+    temp.push_back("MK/CP-DA - Zaw√≥r membranowy pneumatyczny obustronego dzia≈Çania z si≈Çownikiem t≈Çokowym");
+    temp.push_back("DM/CP-NO - Zaw√≥r membranowy pneumatyczny normalnie otwarty bezsprƒô≈ºynowy");
+    temp.push_back("CM/CP - Zaw√≥r membranowy pneumatyczny - kompaktowy");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
-//kπtowy 
+//kƒÖtowy 
 	temp.clear();
-    temp.push_back("VV/CP - zawory skoúne pneumatyczne");
-    temp.push_back("PowrÛt");
+    temp.push_back("VV/CP - zawory sko≈õne pneumatyczne");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //relief zbiorowy
 	temp.clear();
-    temp.push_back("SV - ZawÛr skoúny upustowy");
-    temp.push_back("PowrÛt");
+    temp.push_back("SV - Zaw√≥r sko≈õny upustowy");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
-//przep≥ywomierze zbiorowy
+//przep≈Çywomierze zbiorowy
 	temp.clear();
     temp.push_back("FS - rotametry standartowe");
-    temp.push_back("FC - rotametry krÛtkie");
-    temp.push_back("PowrÛt");
+    temp.push_back("FC - rotametry kr√≥tkie");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();
@@ -168,64 +168,64 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //# manualne zawory zbiorowy [2] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Zawory membranowe");
     temp.push_back("Zawory zwrotne");
     temp.push_back("Filtry");
-    temp.push_back("Pozosta≥e zawory");
+    temp.push_back("Pozosta≈Çe zawory");
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
     temp.push_back("VKD PVC-U - Zawory kulowe Dual Block\xAE DN 10-50");
     temp.push_back("VKD PVC-U - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVC-U - TrÛjdroøne zawory kulowe Dual Block\xAE");
+    temp.push_back("TKD PVC-U - Tr√≥jdro≈ºne zawory kulowe Dual Block\xAE");
     temp.push_back("VEE PVC-U - Zawory kulowe serii Easyfit");
     temp.push_back("VE PVC-U - Zawory kulowe DN 65-100");
     temp.push_back("VXE PVC-U - Zawory kulowe serii Easyfit");
     temp.push_back("VX PVC-U - Zawory kulowe serii Ergo DN 65-100");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //przepustnice
 	temp.clear();
     temp.push_back("FE PVC-U");
     temp.push_back("FK PVC-U");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //membranowe
 	temp.clear();
     temp.push_back("VM PVC-U - Zawory membranowe");
     temp.push_back("VM/RM-PVC-U - Mini zawory membranowe");
     temp.push_back("CM PVC-U - Kompaktowe zawory membranowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
-//bezpieczeÒstwa
+//bezpiecze≈Ñstwa
 	temp.clear();
-    temp.push_back("VR PVC-U - ZawÛr zwrotny");
-    temp.push_back("SR PVC-U - Kulowy zawÛr zwrotny");
+    temp.push_back("VR PVC-U - Zaw√≥r zwrotny");
+    temp.push_back("SR PVC-U - Kulowy zaw√≥r zwrotny");
     temp.push_back("CR PVC-U - Klapa zwrotna");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //Filtry
 	temp.clear();
     temp.push_back("RV PVC-U - Filtry siatkowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
-//Pozosta≥e
+//Pozosta≈Çe
 	temp.clear();
-    temp.push_back("VA PVC-U - Zawory odpowietrzajπco napowietrzajπce");
+    temp.push_back("VA PVC-U - Zawory odpowietrzajƒÖco napowietrzajƒÖce");
     temp.push_back("VZ PVC-U - Zawory stopowe");
-    temp.push_back("VV PVC-U - Zawory skoúne");
-    temp.push_back("PowrÛt");
+    temp.push_back("VV PVC-U - Zawory sko≈õne");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();
 //#################################
-//# kszta≥tki zbiorowy [3] #
+//# kszta≈Çtki zbiorowy [3] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("Instrukcja klejenia");
     temp.push_back("System metryczny");
     temp.push_back("System calowy");
@@ -236,16 +236,16 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //iso
 	temp.clear();
-    temp.push_back("Kszta≥tki klejone");
-    temp.push_back("Kszta≥tki przejsciowe");
-    temp.push_back("Kszta≥tki gwintowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Kszta≈Çtki klejone");
+    temp.push_back("Kszta≈Çtki przejsciowe");
+    temp.push_back("Kszta≈Çtki gwintowe");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //BS
 	temp.clear();
-    temp.push_back("Kszta≥tki klejone");
-    temp.push_back("Kszta≥tki przejsciowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Kszta≈Çtki klejone");
+    temp.push_back("Kszta≈Çtki przejsciowe");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();
@@ -253,9 +253,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //# PP-H system - zbiorowy [4] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("Instrukcje zgrzewania");
-    temp.push_back("Rury i kszta≥tki");
+    temp.push_back("Rury i kszta≈Çtki");
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Zawory membranowe");
@@ -265,44 +265,44 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //instrukcje
 	temp.clear();
     temp.push_back("Zgrzewanie mufowe");
-    temp.push_back("Zgrzewanie doczo≥owe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Zgrzewanie doczo≈Çowe");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //rury
 	temp.clear();
     temp.push_back("Rury");
-    temp.push_back("Kszta≥tki do zgrzewania mufowego");
-    temp.push_back("Kszta≥tki do zgrzewania doczo≥owego");
-    temp.push_back("PowrÛt");
+    temp.push_back("Kszta≈Çtki do zgrzewania mufowego");
+    temp.push_back("Kszta≈Çtki do zgrzewania doczo≈Çowego");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
     temp.push_back("VKD PP-H - Zawory kulowe Dual Block\xAE DN 10-50");
     temp.push_back("VKD PP-H - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PP-H - TrÛjdroøne zawory kulowe Dual Block\xAE");
-    temp.push_back("PowrÛt");
+    temp.push_back("TKD PP-H - Tr√≥jdro≈ºne zawory kulowe Dual Block\xAE");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //przepustnice
 	temp.clear();
     temp.push_back("FK PP-H");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //membr
 	temp.clear();
     temp.push_back("VM PP-H - Zawory membranowe");
     temp.push_back("CM PP-H - Kompaktowe zawory membranowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //bezp
 	temp.clear();
-    temp.push_back("VR PP-H - ZawÛr bezpieczeÒstwa");
-    temp.push_back("SR PP-H - Kulowy zawÛr bezpieczeÒstwa");
-    temp.push_back("PowrÛt");
+    temp.push_back("VR PP-H - Zaw√≥r bezpiecze≈Ñstwa");
+    temp.push_back("SR PP-H - Kulowy zaw√≥r bezpiecze≈Ñstwa");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //filtr
 	temp.clear();
     temp.push_back("RV PP-H - Filtr siatkowy");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();
@@ -310,9 +310,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //# temperfip - zbiorowy - [5] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("Instrukcje klejenia");
-    temp.push_back("Rury i kszta≥tki");
+    temp.push_back("Rury i kszta≈Çtki");
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Zawory membranowe");
@@ -326,38 +326,38 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //rury
 	temp.clear();
     temp.push_back("Rury");
-    temp.push_back("Kszta≥tki do klejenia");
-    temp.push_back("Kszta≥tki przejúciowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Kszta≈Çtki do klejenia");
+    temp.push_back("Kszta≈Çtki przej≈õciowe");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
     temp.push_back("VKD PVC-C - Zawory kulowe Dual Block\xAE DN 10-50");
     temp.push_back("VKD PVC-C - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVC-C - TrÛjdroøne zawory kulowe Dual Block\xAE");
+    temp.push_back("TKD PVC-C - Tr√≥jdro≈ºne zawory kulowe Dual Block\xAE");
     temp.push_back("VXE PVC-C - Zawory kulowe serii Easyfit");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //przepustnice
 	temp.clear();
     temp.push_back("FK PVC-C");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //membranowe
 	temp.clear();
     temp.push_back("VM PVC-C - Zawory membranowe");
     temp.push_back("CM PVC-C - Kompaktowe zawory membranowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //bezp
 	temp.clear();
-    temp.push_back("SR PVC-C - Kulowy zawÛr zwrotny");
-    temp.push_back("PowrÛt");
+    temp.push_back("SR PVC-C - Kulowy zaw√≥r zwrotny");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //filtr
 	temp.clear();
     temp.push_back("RV PVC-C - Filtr siatkowy");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();
@@ -365,9 +365,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //# PVDF system - zbiorowy [6] #
 //#################################
 	temp.clear();
-    temp.push_back("Informacje ogÛlne");
+    temp.push_back("Informacje og√≥lne");
     temp.push_back("Instrukcja zgrzewania");
-    temp.push_back("Rury i kszta≥tki");
+    temp.push_back("Rury i kszta≈Çtki");
     temp.push_back("Zawory kulowe");
     temp.push_back("Przepustnice");
     temp.push_back("Zawory membranowe");
@@ -380,31 +380,31 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 //rury 
 	temp.clear();
     temp.push_back("Rury");
-    temp.push_back("Kszta≥tki do zgrzewania mufowego");
-    temp.push_back("PowrÛt");
+    temp.push_back("Kszta≈Çtki do zgrzewania mufowego");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
     temp.push_back("VKD PVDF - Zawory kulowe Dual Block\xAE DN 10-50");
     temp.push_back("VKD PVDF - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVDF - TrÛjdroøne zawory kulowe Dual Block\xAE");
-    temp.push_back("PowrÛt");
+    temp.push_back("TKD PVDF - Tr√≥jdro≈ºne zawory kulowe Dual Block\xAE");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //przepustnice
 	temp.clear();
     temp.push_back("FK PVDF");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //membr
 	temp.clear();
     temp.push_back("VM PVDF - Zawory membranowe");
     temp.push_back("CM PVDF - Kompaktowe zawory membranowe");
-    temp.push_back("PowrÛt");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 //bezp
 	temp.clear();
-    temp.push_back("SR PVDF - Kulowy zawÛr zwrotny");
-    temp.push_back("PowrÛt");
+    temp.push_back("SR PVDF - Kulowy zaw√≥r zwrotny");
+    temp.push_back("Powr√≥t");
 	zbiorowy.push_back(temp);
 	div.push_back(zbiorowy);
 	zbiorowy.clear();

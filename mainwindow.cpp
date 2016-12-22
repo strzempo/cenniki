@@ -89,7 +89,6 @@ void MainWindow::addItem()
     QModelIndex index = view->selectionModel()->currentIndex();
     MainTreeModel *model = static_cast<MainTreeModel*>(view->model());
     model->insertItem("sample node", index);
-
 }
 
 void MainWindow::insertChild()
