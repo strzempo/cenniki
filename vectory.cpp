@@ -45,19 +45,19 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
     temp.push_back("Zawory ręczne z PVC-U");
     temp.push_back("Kształtki PVC-U");
     temp.push_back("System PP-H");
-    temp.push_back("System PVC-C TemperFIP100\xAE");
+    temp.push_back("System PVC-C TemperFIP100");
     temp.push_back("System PVDF");
     temp.push_back("System PE-HD");
     temp.push_back("System ABS");
 	zbiorowy.push_back(temp);
 //menu broszury [0][2]
 	temp.clear();
-    temp.push_back("VKD - Zawory kulowe DualBlock\xAE");
-    temp.push_back("TKD - Zawory kulowe trójdrozne DualBlock\xAE");
+    temp.push_back("VKD - Zawory kulowe DualBlock");
+    temp.push_back("TKD - Zawory kulowe trójdrozne DualBlock");
     temp.push_back("MK/CP - Zawory membranowe pneumatyczne z napędem tłokowym");
-    temp.push_back("VEE - Zawory kulowe Easyfit\xAE");
-    temp.push_back("VXE - Zawory kulowe Easyfit\xAE");
-    temp.push_back("System etykiet do zaworów Easyfit\xAE");
+    temp.push_back("VEE - Zawory kulowe Easyfit");
+    temp.push_back("VXE - Zawory kulowe Easyfit");
+    temp.push_back("System etykiet do zaworów Easyfit");
     temp.push_back("FS-FC - Rotametry");
 	zbiorowy.push_back(temp);
 //#################################
@@ -98,9 +98,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //zawory kulowe
 	temp.clear();
-    temp.push_back("VKD/CE - Zawór kulowy Dual Block \xAE DN 10-50 z siłownikiem elektrycznym");
-    temp.push_back("VKD/CE - Zawór kulowy Dual Block \xAE DN 65-100 z siłownikiem elektrycznym");
-    temp.push_back("TKD/CE - Trójdrożny zawór kulowy Dual Block \xAE z siłownikiem elektrycznym");
+    temp.push_back("VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem elektrycznym");
+    temp.push_back("VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem elektrycznym");
+    temp.push_back("TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem elektrycznym");
     temp.push_back("Powrót");
 	zbiorowy.push_back(temp);
 //zawory motylkowe
@@ -124,9 +124,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD/CE - Zawór kulowy Dual Block \xAE DN 10-50 z siłownikiem pneumstycznym");
-    temp.push_back("VKD/CE - Zawór kulowy Dual Block \xAE DN 65-100 z siłownikiem pneumstycznym");
-    temp.push_back("TKD/CE - Trójdrożny zawór kulowy Dual Block \xAE z siłownikiem pneumstycznym");
+    temp.push_back("VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem pneumstycznym");
+    temp.push_back("VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem pneumstycznym");
+    temp.push_back("TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem pneumstycznym");
     temp.push_back("Powrót");
 	zbiorowy.push_back(temp);
 //motylkowe
@@ -178,9 +178,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD PVC-U - Zawory kulowe Dual Block\xAE DN 10-50");
-    temp.push_back("VKD PVC-U - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVC-U - Trójdrożne zawory kulowe Dual Block\xAE");
+    temp.push_back("VKD PVC-U - Zawory kulowe Dual Block DN 10-50");
+    temp.push_back("VKD PVC-U - Zawory kulowe Dual Block DN 65-100");
+    temp.push_back("TKD PVC-U - Trójdrożne zawory kulowe Dual Block");
     temp.push_back("VEE PVC-U - Zawory kulowe serii Easyfit");
     temp.push_back("VE PVC-U - Zawory kulowe DN 65-100");
     temp.push_back("VXE PVC-U - Zawory kulowe serii Easyfit");
@@ -277,9 +277,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD PP-H - Zawory kulowe Dual Block\xAE DN 10-50");
-    temp.push_back("VKD PP-H - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PP-H - Trójdrożne zawory kulowe Dual Block\xAE");
+    temp.push_back("VKD PP-H - Zawory kulowe Dual Block DN 10-50");
+    temp.push_back("VKD PP-H - Zawory kulowe Dual Block DN 65-100");
+    temp.push_back("TKD PP-H - Trójdrożne zawory kulowe Dual Block");
     temp.push_back("Powrót");
 	zbiorowy.push_back(temp);
 //przepustnice
@@ -332,9 +332,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD PVC-C - Zawory kulowe Dual Block\xAE DN 10-50");
-    temp.push_back("VKD PVC-C - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVC-C - Trójdrożne zawory kulowe Dual Block\xAE");
+    temp.push_back("VKD PVC-C - Zawory kulowe Dual Block DN 10-50");
+    temp.push_back("VKD PVC-C - Zawory kulowe Dual Block DN 65-100");
+    temp.push_back("TKD PVC-C - Trójdrożne zawory kulowe Dual Block");
     temp.push_back("VXE PVC-C - Zawory kulowe serii Easyfit");
     temp.push_back("Powrót");
 	zbiorowy.push_back(temp);
@@ -385,9 +385,9 @@ void vectory(std::vector<std::vector<std::string> >& menu_items,
 	zbiorowy.push_back(temp);
 //kulowe
 	temp.clear();
-    temp.push_back("VKD PVDF - Zawory kulowe Dual Block\xAE DN 10-50");
-    temp.push_back("VKD PVDF - Zawory kulowe Dual Block\xAE DN 65-100");
-    temp.push_back("TKD PVDF - Trójdrożne zawory kulowe Dual Block\xAE");
+    temp.push_back("VKD PVDF - Zawory kulowe Dual Block DN 10-50");
+    temp.push_back("VKD PVDF - Zawory kulowe Dual Block DN 65-100");
+    temp.push_back("TKD PVDF - Trójdrożne zawory kulowe Dual Block");
     temp.push_back("Powrót");
 	zbiorowy.push_back(temp);
 //przepustnice
