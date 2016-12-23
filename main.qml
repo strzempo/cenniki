@@ -44,8 +44,8 @@ ApplicationWindow {
         color: "steelblue"
 
         Text {
-            text: qsTr("Aliaxis Utility and Industry")
-            font.pixelSize: 14
+            text: "Aliaxis Utility and Industry"
+            font { family: localFont.name; pixelSize: 14 }
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -74,20 +74,42 @@ ApplicationWindow {
         y: 35
     }
 
-    footer: Rectangle {
-        height: text.contentHeight + 10
-        width: text.contentWidth
+    Loader {
+        id: ld
+        anchors.fill: parent
+    }
+
+    footer: Column {
         x: 20
-        color: "transparent"
-        Text {
-            id: text
-            text: qsTr("Zamknij")
-            color: "black"
-            font { family: localFont.name; pixelSize: 20 }
+        Rectangle {
+            height: kontakt.contentHeight + 10
+            width: kontakt.contentWidth
+            color: "transparent"
+            Text {
+                id: kontakt
+                text: "☎ Kontakt"
+                color: "black"
+                font { family: localFont.name; pixelSize: 20 }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: ld.source="kontakt.qml"
+            }
         }
-        MouseArea {
-            anchors.fill: parent
-            onPressed: Qt.quit()
+        Rectangle {
+            height: zamknij.contentHeight + 10
+            width: zamknij.contentWidth
+            color: "transparent"
+            Text {
+                id: zamknij
+                text: "✗   Zamknij"
+                color: "black"
+                font { family: localFont.name; pixelSize: 20 }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: Qt.quit()
+            }
         }
     }
 }

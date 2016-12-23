@@ -5,5 +5,6 @@
         <file>fonts/SourceSansPro-Semibold.otf</file>
         <file>images/ding.png</file>
         <file>images/background.png</file>
+        <file>kontakt.qml</file>
     </qresource>
 </RCC>

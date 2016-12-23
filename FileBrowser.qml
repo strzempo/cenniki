@@ -96,9 +96,10 @@ Item {
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
             width: browser.width
-            height: 1.5 * text.contentHeight
+            height: 1.5 * sectionNameText.contentHeight
             color: "transparent"
             Text {
+                id: sectionNameText
                 text: sectionName
                 font.pixelSize: 24
                 anchors.verticalCenter: parent.verticalCenter
@@ -108,10 +109,11 @@ Item {
         footer: Column {
             Rectangle {
                 width: browser.width
-                height: 1.5 * text.contentHeight
+                height: 1.5 * goBack.contentHeight
                 color: "transparent"
                 visible: oldSectionName
                 Text {
+                    id: goBack
                     text: "⤺" + oldSectionName //" Powrót"
                     font.pixelSize: 20
                     color: "midnightblue"
@@ -128,10 +130,11 @@ Item {
             }
             Rectangle {
                 width: browser.width
-                height: 1.5 * text.contentHeight
+                height: 1.5 * goMenu.contentHeight
                 color: "transparent"
                 visible: sectionName
                 Text {
+                    id: goMenu
                     text: "↶ Menu Główne"
                     font.pixelSize: 20
                     color: "darkblue"
