@@ -50,8 +50,8 @@ ApplicationWindow {
     }
 
     FileBrowser {
-        height: 500
-        width: 250
+        height: 600
+        width: 500
         x: parent.width - width
         y: 35
     }

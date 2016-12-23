@@ -9,7 +9,7 @@ Item {
         delegate: Rectangle {
             color: "transparent"
             width: view.width
-            height:34
+            height: text.contentHeight + 8
 
             Image {
                 id: icon
@@ -21,10 +21,13 @@ Item {
                 id: text
                 text: nodeName
                 font.pixelSize: 20
+                width: parent.width - icon.width - (anchors.leftMargin * 2)
                 height: parent.height
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: icon.right
                 anchors.leftMargin: 4
+                wrapMode: Text.WordWrap
+                //clip: true
             }
 
             states: State {
