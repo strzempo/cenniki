@@ -57,10 +57,13 @@ ApplicationWindow {
     }
 
     footer: Rectangle {
-        height: 30
+        height: text.contentHeight + 10
+        width: text.contentWidth
+        x: 20
         color: "transparent"
         Text {
-            text: qsTr("    Zamknij")
+            id: text
+            text: qsTr("Zamknij")
             color: "black"
             font { family: localFont.name; pixelSize: 20 }
         }

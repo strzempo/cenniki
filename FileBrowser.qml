@@ -4,7 +4,9 @@ import QtQml.Models 2.2
 Item {
     id: browser
     property string sectionName
+    property string oldSectionName
     property var mainModel: DelegateModel {
+        property var mainMenuIndex: rootIndex
         model: mainTreeModel
         delegate: Rectangle {
             color: "transparent"
@@ -28,6 +30,7 @@ Item {
                 anchors.leftMargin: 4
                 wrapMode: Text.WordWrap
                 //clip: true
+                color: model.hasModelChildren ? "black" : "steelblue"
             }
 
             states: State {
@@ -48,6 +51,7 @@ Item {
                 hoverEnabled: true
                 onClicked: {
                     if (model.hasModelChildren) {
+                        oldSectionName = sectionName
                         sectionName = nodeName
                         mainModel.rootIndex = mainModel.modelIndex(index)
                     } else
@@ -74,19 +78,54 @@ Item {
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
             width: browser.width
-            height: 34
+            height: 1.5 * text.contentHeight
             color: "transparent"
             Text {
                 text: sectionName
-                font.pointSize: 14
+                font.pixelSize: 24
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
             }
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    mainModel.rootIndex = mainModel.parentModelIndex()
-                    sectionName = mainModel.model.sectionName(mainModel.rootIndex)
+        }
+        footer: Column {
+            Rectangle {
+                width: browser.width
+                height: 1.5 * text.contentHeight
+                color: "transparent"
+                visible: oldSectionName
+                Text {
+                    text: "⤺" + oldSectionName //" Powrót"
+                    font.pixelSize: 20
+                    color: "midnightblue"
+                    anchors.fill: parent
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        mainModel.rootIndex = mainModel.parentModelIndex()
+                        sectionName = mainModel.model.sectionName(mainModel.rootIndex)
+                        oldSectionName = mainModel.model.sectionName(mainModel.rootIndex.parent)
+                    }
+                }
+            }
+            Rectangle {
+                width: browser.width
+                height: 1.5 * text.contentHeight
+                color: "transparent"
+                visible: sectionName
+                Text {
+                    text: "↶ Menu Główne"
+                    font.pixelSize: 20
+                    color: "darkblue"
+                    anchors.fill: parent
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        mainModel.rootIndex = mainModel.model.rootIndex()
+                        sectionName = ""
+                        oldSectionName = ""
+                    }
                 }
             }
         }

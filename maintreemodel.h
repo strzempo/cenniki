@@ -43,6 +43,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void invokeAction(const QModelIndex& index) const;
+    Q_INVOKABLE QModelIndex rootIndex() const;
     Q_INVOKABLE QString sectionName(const QModelIndex& index) const;
 
 private:

@@ -229,6 +229,11 @@ void MainTreeModel::invokeAction(const QModelIndex &index) const
     static_cast<TreeComponent*>(index.internalPointer())->action();
 }
 
+QModelIndex MainTreeModel::rootIndex() const
+{
+    return createIndex(0, 0, RootComponent);
+}
+
 QString MainTreeModel::sectionName(const QModelIndex &index) const
 {
     //qDebug() << static_cast<TreeComponent*>(index.internalPointer())->title();
