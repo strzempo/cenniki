@@ -167,6 +167,7 @@ void MainTreeModel::generateSampleTree()
             for(uint k=0; k<pliki[i][j].size(); ++k)
                 qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(pliki[i][j][k]));
 #endif
+    //Main menu
     RootComponent = new Menu(tr("Main Menu"));
     for(uint i=0; i<6; ++i)
     {
@@ -176,6 +177,44 @@ void MainTreeModel::generateSampleTree()
     }
     RootComponent->add(new ItemFileOpen("Kontakt", ""));
     RootComponent->add(new ItemFileOpen("Kemy", "kemy.exe"));
+    //broszury
+    for(uint i=0; i<7; i++)
+        RootComponent->child(4)->add(new ItemFileOpen(QString::fromStdString(div[0][2][i]), QString::fromStdString(menu_items[1][i])));
+    //katalogi
+    for(uint i=0; i<8; ++i)
+    {
+     //   qDebug() << QString("[%1] %4").arg(i).arg(QString::fromStdString(div[0][1][i]));
+        Menu* cur = new Menu(QString::fromStdString(div[0][1][i]));
+        RootComponent->child(5)->add(cur);
+        if(i < 6) for(uint j=0; j<div[i+1][0].size(); ++j)
+        {
+   //         qDebug() << QString("\t[%1][%2][%3] %4").arg(i+1).arg(0).arg(j).arg(QString::fromStdString(div[i+1][0][j]));
+            TreeComponent* cur2;
+            if((i!=0 && j==0) || ((i==2 || i==4 || i==5) && j==1))
+                cur2 = new ItemFileOpen(QString::fromStdString(div[i+1][0][j]), QString::fromStdString(pliki[i+3][j][0]));
+            else
+                cur2 = new Menu(QString::fromStdString(div[i+1][0][j]));
+            cur->add(cur2);
+            if(j < 2 && i == 0) for(uint k=0; k<3; ++k)
+            {
+                QString title;
+                if(j==0) title = QString::fromStdString(div[i+1][1][k]);
+                else if(j==1) title = QString::fromStdString(div[i+1][5][k]);
+                cur2->add(new Menu(title));
+            }
+        }
+        else if(i==6) for(uint j=0; j < div[0][3].size(); ++j)
+        {
+       //     qDebug() << QString("\t[%1][%2][%3] %4").arg(0).arg(3).arg(j).arg(QString::fromStdString(div[0][3][j]));
+            cur->add(new ItemFileOpen(QString::fromStdString(div[0][3][j]), QString::fromStdString(pliki[9][0][j])));
+        }
+        else if(i==7) for(uint j=0; j < div[0][4].size(); ++j)
+        {
+         //   qDebug() << QString("\t[%1][%2][%3] %4").arg(0).arg(4).arg(j).arg(QString::fromStdString(div[0][4][j]));
+            cur->add(new ItemFileOpen(QString::fromStdString(div[0][4][j]), QString::fromStdString(pliki[10][0][j])));
+        }
+
+    }
 }
 
 QHash<int, QByteArray> MainTreeModel::roleNames() const
