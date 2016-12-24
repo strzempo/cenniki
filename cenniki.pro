@@ -15,10 +15,10 @@ win32 {
     LIBS += "-L$(BOOST_LIBRARYDIR)" \
             -llibboost_serialization-vc120-mt-s-1_58
     CONFIG+= static
+    QMAKE_CXXFLAGS += /MT
 }
 #QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:MSVCRT
 #QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:LIBCMT
-#QMAKE_LFLAGS_WINDOWS += /MT
 
 HEADERS += \
     maintreemodel.h \

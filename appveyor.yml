@@ -17,9 +17,10 @@ install:
 
 build_script:
 - cmd: qmake 
-- cmd: nmake /NOLOGO /MT release
+- cmd: nmake /NOLOGO
 - cmd: cd release
 - cmd: "mt.exe -manifest cenniki.exe.manifest -outputresource: cenniki.exe"
+- cmd: cd ..
 
 after_build:
 - cmd: package_script.bat
