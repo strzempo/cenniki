@@ -15,6 +15,7 @@ win32 {
     LIBS += "-L$(BOOST_LIBRARYDIR)" \
             -llibboost_serialization-vc120-mt-s-1_58
     CONFIG+= static
+    QMAKE_CXXFLAGS -= /MD
     QMAKE_CXXFLAGS += /MT
 }
 #QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:MSVCRT
