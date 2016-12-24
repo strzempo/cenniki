@@ -13,7 +13,7 @@ win32 {
     CONFIG += windows release
     INCLUDEPATH += "$(BOOST_ROOT)"
     LIBS += "-L$(BOOST_LIBRARYDIR)" \
-            -lboost_serialization-vc120-mt-s-1_58
+            -llibboost_serialization-vc120-mt-s-1_58
 }
 
 HEADERS += \
