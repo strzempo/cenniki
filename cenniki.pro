@@ -1,4 +1,4 @@
-QT += quick #qml widgets
+QT += quick
 CONFIG += c++11
 
 TARGET = cenniki
@@ -8,11 +8,13 @@ TEMPLATE = app
 include($$PWD/logger/logger.pri)
 #qarchve lib - my boost::xmlarchive implementation for Qt Calsses
 include($$PWD/qarchive/qarchive.pri)
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+unix: LIBS += /usr/lib/libboost_serialization.a
+win32 {
+    CONFIG += windows release
+    INCLUDEPATH += "$(BOOST_ROOT)"
+    LIBS += "-L$(BOOST_LIBRARYDIR)" \
+            -lboost_serialization-vc120-mt-s-1_58
+}
 
 HEADERS += \
     maintreemodel.h \
