@@ -3,24 +3,27 @@ import QtQuick.Controls 2.0
 
 Rectangle {
     width: 100
-    height: 62
+    height: 100
     color: "lightgray"
     TextArea {
         id: textArea
         anchors.centerIn: parent
         text:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
-            "sed do eiusmod tempor incididunt ut labore et dolore magna " +
-            "aliqua. Ut enim ad minim veniam, quis nostrud exercitation " +
-            "ullamco laboris nisi ut aliquip ex ea commodo cosnsequat. ";
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n" +
+            "sed do eiusmod tempor incididunt ut labore et dolore magna\n" +
+            "aliqua. Ut enim ad minim veniam, quis nostrud exercitation\n" +
+            "ullamco laboris nisi ut aliquip ex ea commodo cosnsequat.\n";
         selectByKeyboard: true
         selectByMouse: true
         wrapMode: "WordWrap"
         width: parent.width
+        height: parent.height
+        /*
         onCursorRectangleChanged: {
             copy()
             deselect()
         }
+        */
         /*MouseArea {
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -30,6 +33,25 @@ Rectangle {
                 }
             }
         }*/
+    }
+    Rectangle {
+        color: "steelBlue"
+        width: 70
+        height: 1.5 * kopiuj.contentHeight
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.margins: 10
+
+        Text {
+            id: kopiuj
+            anchors.centerIn: parent
+            text: "Kopiuj"
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {textArea.copy(); textArea.deselect() }
+        }
     }
 
     Rectangle {

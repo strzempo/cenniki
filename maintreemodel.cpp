@@ -193,7 +193,6 @@ void MainTreeModel::generateSampleTree()
         if(i < 4) RootComponent->add(new ItemFileOpen(title, QString::fromStdString(menu_items[0][i])));
         else RootComponent->add(new Menu(title));
     }
-    RootComponent->add(new ItemFileOpen("Kontakt", ""));
     RootComponent->add(new ItemFileOpen("Kemy", "kemy.exe"));
     //broszury
     for(uint i=0; i<7; i++)
