@@ -13,10 +13,11 @@ win32 {
     CONFIG += windows release
     INCLUDEPATH += "$(BOOST_ROOT)"
     LIBS += "-L$(BOOST_LIBRARYDIR)" \
-            -llibboost_serialization-vc120-s-1_58
+            -llibboost_serialization-vc120-mt-s-1_58
 }
-#QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:MSVCRT
-#QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:LIBCMT
+QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:MSVCRT
+QMAKE_LFLAGS_WINDOWS += /NODEFAULTLIB:LIBCMT
+QMAKE_LFLAGS_WINDOWS += /MT
 
 HEADERS += \
     maintreemodel.h \
