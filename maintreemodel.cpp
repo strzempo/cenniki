@@ -28,13 +28,10 @@ MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
 {
     RootComponent = nullptr;
-//    RootComponent = new Menu("Menu główne");
-    load();
 }
 
 MainTreeModel::~MainTreeModel()
 {
-    save();
     delete RootComponent;
 }
 
@@ -79,10 +76,7 @@ QModelIndex MainTreeModel::parent(const QModelIndex &index) const
 int MainTreeModel::rowCount(const QModelIndex &parent) const
 {
     TreeComponent *parentItem;
-/*
-    if (parent.column() > 0)
-        return 0;
-*/
+
     if (!parent.isValid())
         parentItem = RootComponent;
     else
@@ -102,13 +96,9 @@ int MainTreeModel::columnCount(const QModelIndex &parent) const
 
 QVariant MainTreeModel::data(const QModelIndex &index, int role) const
 {
-   // qDebug() << "index passed:" << index;
     if (!index.isValid())
         return QVariant();
-/*
-    if (role != Qt::DisplayRole)
-        return QVariant();
-*/
+
     TreeComponent *item = static_cast<TreeComponent*>(index.internalPointer());
 
     return item->data(role);
@@ -253,7 +243,6 @@ QModelIndex MainTreeModel::rootIndex() const
 
 QString MainTreeModel::sectionName(const QModelIndex &index) const
 {
-    //qDebug() << static_cast<TreeComponent*>(index.internalPointer())->title();
     if(!index.isValid())
         return QString();
     return static_cast<TreeComponent*>(index.internalPointer())->title();

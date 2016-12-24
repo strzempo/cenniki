@@ -21,7 +21,6 @@
 
 #include "treecomponent.h"
 #include <QList>
-//#include <QDebug>
 
 class Menu : public TreeComponent
 {
@@ -38,28 +37,6 @@ public:
 
 protected:
    QList<TreeComponent*> MenuItems;
-/*
-    template<class Archive>
-    void save(Archive & ar, const unsigned int version) const
-    {
-        Q_UNUSED(version)
-        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        std::list<TreeComponent*> list = Children.toStdList();
-        ar << boost::serialization::make_nvp("MenuItems", list);
-    }
-    template<class Archive>
-    void load(Archive & ar, const unsigned int version)
-    {
-        Q_UNUSED(version)
-        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        std::list<TreeComponent*> list;
-        ar >> boost::serialization::make_nvp("MenuItems", list);
-        Children = QList<TreeComponent*>::fromStdList(list);
-        foreach(TreeComponent* child, Children)
-            child->setParent(this);
-    }
-    BOOST_SERIALIZATION_SPLIT_MEMBER()
-    */
     template<class Archive>
     void serialize(Archive & ar, const unsigned int /*version*/)
     {

@@ -47,7 +47,6 @@ Item {
                 anchors.left: icon.right
                 anchors.leftMargin: 4
                 wrapMode: Text.WordWrap
-                //clip: true
                 color: model.hasModelChildren ? "black" : "steelblue"
             }
 
