@@ -203,12 +203,30 @@ void MainTreeModel::generateSampleTree()
             else
                 cur2 = new Menu(QString::fromStdString(div[i+1][0][j]));
             cur->add(cur2);
-            if(j < 2 && i == 0) for(uint k=0; k<3; ++k)
+            if(i==0) //zawory z napędami
             {
-                QString title;
-                if(j==0) title = QString::fromStdString(div[i+1][1][k]);
-                else if(j==1) title = QString::fromStdString(div[i+1][5][k]);
-                cur2->add(new Menu(title));
+                //siłowniki elektryczne
+                if(j==0) for(uint k=0; k<div[1][1].size()-1; ++k)
+                {
+                    TreeComponent* cur3 = new Menu(QString::fromStdString(div[1][1][k]));
+                    cur2->add(cur3);
+                    for(uint h=0; h<div[1][k+2].size()-1; ++h)
+                        cur3->add(new ItemFileOpen(QString::fromStdString(div[1][k+2][h])));
+                }
+                //siłowniki pneumatyczne
+                else if(j == 1) for(uint k=0; k<div[1][5].size()-1; ++k)
+                {
+                    TreeComponent* cur3 = new Menu(QString::fromStdString(div[1][5][k]));
+                    cur2->add(cur3);
+                    for(uint h=0; h<div[1][k+6].size()-1; ++h)
+                        cur3->add(new ItemFileOpen(QString::fromStdString(div[1][k+6][h])));
+                }
+                //rotametry i zawory bezpieczenstwa
+                else for(uint k=0; k<div[1][j+8].size()-1; ++k)
+                {
+                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[1][j+8][k]));
+                    cur2->add(cur3);
+                }
             }
         }
         else if(i==6) for(uint j=0; j < div[0][3].size(); ++j)
