@@ -16,12 +16,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
+#include <fstream>
+
 #include "maintreemodel.h"
 #include "menu.h"
 #include "itemfileopen.h"
 #include "serialization.h"
-#include <fstream>
-
+#include "itemappopen.h"
 #include "vectory.cpp"
 
 MainTreeModel::MainTreeModel(QObject *parent)
@@ -183,7 +184,7 @@ void MainTreeModel::generateSampleTree()
         if(i < 4) RootComponent->add(new ItemFileOpen(title, QString::fromStdString(menu_items[0][i])));
         else RootComponent->add(new Menu(title));
     }
-    RootComponent->add(new ItemFileOpen("Kemy", "kemy.exe"));
+    RootComponent->add(new ItemAppOpen("Kemy", "kemy.exe", "Program do sprawdzania odporności chemicznej materiałów i uszczelnień"));
     //broszury
     for(uint i=0; i<7; i++)
         RootComponent->child(4)->add(new ItemFileOpen(QString::fromStdString(div[0][2][i]), QString::fromStdString(menu_items[1][i])));
@@ -228,6 +229,7 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[nodeNameRole] = "nodeName";
+    roles[nodeAboutRole] = "nodeAbout";
     return roles;
 }
 

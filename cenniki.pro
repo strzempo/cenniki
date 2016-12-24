@@ -19,7 +19,8 @@ HEADERS += \
     treecomponent.h \
     serialization.h \
     itemfileopen.h \
-    menu.h
+    menu.h \
+    itemappopen.h
 
 SOURCES += \
     main.cpp \
@@ -27,7 +28,8 @@ SOURCES += \
     treecomponent.cpp \
     itemfileopen.cpp \
     menu.cpp \
-vectory.cpp
+vectory.cpp \
+    itemappopen.cpp
 
 FORMS =
 

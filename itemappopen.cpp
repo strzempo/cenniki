@@ -16,33 +16,34 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
-#ifndef ITEMPDF_H
-#define ITEMPDF_H
+#include "itemappopen.h"
+#include "maintreemodel.h"
 
-#include "treecomponent.h"
-#include <QString>
+#include <QUrl>
+#include <QDesktopServices>
 
-class ItemFileOpen : public TreeComponent
+BOOST_CLASS_EXPORT_IMPLEMENT(ItemAppOpen)
+
+ItemAppOpen::ItemAppOpen()
 {
-public:
-    explicit ItemFileOpen();
-    explicit ItemFileOpen(QString title);
-    ItemFileOpen(QString title, QString fileName, TreeComponent* parent = nullptr);
-    virtual void action();
 
-protected:
-    QString FileName;
+}
 
-    friend class boost::serialization::access;
-    template<class Archive>
-    void serialize(Archive & ar, const unsigned int version)
-    {
-        Q_UNUSED(version)
-        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        ar & BOOST_SERIALIZATION_NVP(FileName);
-    }
-};
+void ItemAppOpen::action()
+{
+    QDesktopServices::openUrl(QUrl(AppName));
+}
 
-BOOST_CLASS_EXPORT_KEY(ItemFileOpen)
+QVariant ItemAppOpen::data(int displayRole)
+{
+    if(displayRole == MainTreeModel::nodeAboutRole)
+        return AboutText;
+    else
+        return TreeComponent::data(displayRole);
+}
 
-#endif // ITEMPDF_H
+ItemAppOpen::ItemAppOpen(const QString &title, const QString &appName, const QString &aboutText, TreeComponent *parent) : TreeComponent(title, parent)
+{
+    AppName = appName;
+    AboutText = aboutText;
+}

@@ -29,7 +29,7 @@ Item {
         delegate: Rectangle {
             color: "transparent"
             width: view.width
-            height: text.contentHeight + 8
+            height: nodeNameText.contentHeight + 8
 
             Image {
                 id: icon
@@ -38,10 +38,10 @@ Item {
                 source: "images/ding.png"
             }
             Text {
-                id: text
+                id: nodeNameText
                 text: nodeName
                 font.pixelSize: 20
-                width: parent.width - icon.width - (anchors.leftMargin * 2)
+                width: contentWidth
                 height: parent.height
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: icon.right
@@ -49,17 +49,30 @@ Item {
                 wrapMode: Text.WordWrap
                 color: model.hasModelChildren ? "black" : "steelblue"
             }
+            Text {
+                id: nodeAboutText
+                text: nodeAbout
+                font.pixelSize: 16
+                color: "steelblue"
+                font.italic: true
+                opacity: 0
+                width: 200
+                height: parent.height
+                anchors.verticalCenter: parent.verticalTop
+                anchors.left: nodeNameText.right
+                anchors.margins: 10
+                wrapMode: Text.WordWrap
+
+            }
 
             states: State {
                 name: "active"; when: mouseArea.containsMouse == true
                 PropertyChanges { target: icon; rotation: 90; x: 10 }
+                PropertyChanges { target: nodeAboutText; opacity: 1 }
             }
             transitions: Transition {
                 from: ""; to: "active"; reversible: true
-                ParallelAnimation {
-                    NumberAnimation { properties: "x,rotation"; duration: 500; easing.type: Easing.InOutQuad }
-                    ColorAnimation { duration: 500 }
-                }
+                NumberAnimation { properties: "x,rotation,opacity"; duration: 500; easing.type: Easing.InOutQuad }
             }
 
             MouseArea {

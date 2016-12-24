@@ -18,6 +18,7 @@
 
 #include "treecomponent.h"
 #include "menu.h"
+#include "maintreemodel.h"
 #include <QVariant>
 #include <QtDebug>
 
@@ -60,9 +61,11 @@ int TreeComponent::columnCount() const
     return 1;
 }
 
-QVariant TreeComponent::data(int)
+QVariant TreeComponent::data(int displayRole)
 {
-    return Title;
+    if(displayRole == MainTreeModel::nodeNameRole)
+        return Title;
+    return QVariant();
 }
 
 int TreeComponent::row() const

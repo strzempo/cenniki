@@ -56,7 +56,8 @@ public:
     //for qml
     enum ItemRoles
     {
-        nodeNameRole = Qt::UserRole + 1
+        nodeNameRole = Qt::UserRole + 1,
+        nodeAboutRole = Qt::UserRole + 2
     };
     QHash<int, QByteArray> roleNames() const override;
 

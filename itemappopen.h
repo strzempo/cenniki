@@ -16,22 +16,23 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **/
 
-#ifndef ITEMPDF_H
-#define ITEMPDF_H
+#ifndef ITEMAPPOPEN_H
+#define ITEMAPPOPEN_H
 
 #include "treecomponent.h"
 #include <QString>
 
-class ItemFileOpen : public TreeComponent
+class ItemAppOpen : public TreeComponent
 {
 public:
-    explicit ItemFileOpen();
-    explicit ItemFileOpen(QString title);
-    ItemFileOpen(QString title, QString fileName, TreeComponent* parent = nullptr);
+    explicit ItemAppOpen();
+    ItemAppOpen(const QString& title, const QString& appName, const QString& aboutText, TreeComponent* parent = nullptr);
     virtual void action();
+    virtual QVariant data(int displayRole);
 
 protected:
-    QString FileName;
+    QString AppName;
+    QString AboutText;
 
     friend class boost::serialization::access;
     template<class Archive>
@@ -39,10 +40,11 @@ protected:
     {
         Q_UNUSED(version)
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
-        ar & BOOST_SERIALIZATION_NVP(FileName);
+        ar & BOOST_SERIALIZATION_NVP(AppName);
+        ar & BOOST_SERIALIZATION_NVP(AboutText);
     }
 };
 
-BOOST_CLASS_EXPORT_KEY(ItemFileOpen)
+BOOST_CLASS_EXPORT_KEY(ItemAppOpen)
 
-#endif // ITEMPDF_H
+#endif // ITEMAPPOPEN_H
