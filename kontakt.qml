@@ -26,11 +26,14 @@ Rectangle {
     TextArea {
         id: textArea
         anchors.centerIn: parent
+        font.pixelSize: 18
         text:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n" +
-            "sed do eiusmod tempor incididunt ut labore et dolore magna\n" +
-            "aliqua. Ut enim ad minim veniam, quis nostrud exercitation\n" +
-            "ullamco laboris nisi ut aliquip ex ea commodo cosnsequat.\n";
+            "Aliaxis Utilities & Industry Sp. z o.o.\n" +
+            "ul. Annopol 4a, budynek C\n" +
+            "03 - 236 Warszawa\n" +
+            "NIP: 951 - 00 - 51 - 202\n" +
+            "Tel. +48 22 329 79 00\n" +
+            "marek.strzempowicz@aliaxis-ui.pl"
         selectByKeyboard: true
         selectByMouse: true
         wrapMode: "WordWrap"

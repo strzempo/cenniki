@@ -44,7 +44,7 @@ ApplicationWindow {
         color: "steelblue"
 
         Text {
-            text: "Aliaxis Utility and Industry"
+            text: "Aliaxis Utilities & Industry"
             font { family: localFont.name; pixelSize: 14 }
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
