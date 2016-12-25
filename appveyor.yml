@@ -16,7 +16,7 @@ install:
 - git submodule update
 - cmd: call "%VS120COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
 - cmd: set PATH=%PATH%;%QTDIR%\bin
-- cmd: DIR %BOOST_LIBRARYDIR%
+#- cmd: DIR %BOOST_LIBRARYDIR%
 
 build_script:
 - cmd: qmake 

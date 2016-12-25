@@ -18,7 +18,7 @@ cp C:\Qt/5.7/msvc2013/bin/Qt5QuickTemplates2.dll ./
 cp C:\Qt/5.7/msvc2013/bin/Qt5QuickControls2.dll ./
 cp C:\Qt/5.7/msvc2013/bin/libEGL.dll ./
 cp C:\Qt/5.7/msvc2013/bin/libGLESv2.dll ./
-cp C:\Qt/5.7/msvc2013/bin/d3dcoompiler_47.dll ./
+cp C:\Qt/5.7/msvc2013/bin/d3dcompiler_47.dll ./
 mkdir platforms
 cp C:\Qt/5.7/msvc2013/plugins/platforms/qwindows.dll ./platforms/
 mkdir QtQml
