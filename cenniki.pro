@@ -1,4 +1,4 @@
-QT += quick
+QT += quick widgets
 CONFIG += c++11
 
 TARGET = cenniki

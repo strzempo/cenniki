@@ -20,6 +20,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QIcon>
+#include <QtWidgets/QtWidgets>
 
 #include "maintreemodel.h"
 #include "logger/Logger.h"
@@ -35,6 +37,11 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
+    QIcon icon("qrc:/images/icon");
+    QLabel label;
+    label.setPixmap(icon.pixmap(48,48));
+    label.show();
+    app.setWindowIcon(icon);
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("mainTreeModel", &model);
