@@ -160,6 +160,7 @@ void MainTreeModel::generateSampleTree()
     std::vector<std::vector<std::vector<std::string> > > div;
     std::vector<std::vector<std::vector<std::string> > > pliki;
     vectory(menu_items, div, pliki);
+
 #ifdef PRINT
     qDebug() << "menu_items:";
     for(uint i=0; i < menu_items.size(); ++i)
@@ -184,7 +185,8 @@ void MainTreeModel::generateSampleTree()
         if(i < 4) RootComponent->add(new ItemFileOpen(title, QString::fromStdString(menu_items[0][i])));
         else RootComponent->add(new Menu(title));
     }
-    RootComponent->add(new ItemAppOpen("Kemy", "kemy.exe", "Program do sprawdzania odporności chemicznej materiałów i uszczelnień"));
+    //kemy
+    RootComponent->add(new ItemAppOpen("Kemy", "kemy/Kemy.exe", "Program do sprawdzania odporności chemicznej materiałów i uszczelnień"));
     //broszury
     for(uint i=0; i<7; i++)
         RootComponent->child(4)->add(new ItemFileOpen(QString::fromStdString(div[0][2][i]), QString::fromStdString(menu_items[1][i])));
@@ -199,10 +201,16 @@ void MainTreeModel::generateSampleTree()
    //         qDebug() << QString("\t[%1][%2][%3] %4").arg(i+1).arg(0).arg(j).arg(QString::fromStdString(div[i+1][0][j]));
             TreeComponent* cur2;
             if((i!=0 && j==0) || ((i==2 || i==4 || i==5) && j==1))
+            {
                 cur2 = new ItemFileOpen(QString::fromStdString(div[i+1][0][j]), QString::fromStdString(pliki[i+3][j][0]));
+                cur->add(cur2);
+                continue;
+            }
             else
+            {
                 cur2 = new Menu(QString::fromStdString(div[i+1][0][j]));
-            cur->add(cur2);
+                cur->add(cur2);
+            }
             if(i==0) //zawory z napędami
             {
                 //siłowniki elektryczne
@@ -214,7 +222,7 @@ void MainTreeModel::generateSampleTree()
                         cur3->add(new ItemFileOpen(QString::fromStdString(div[1][k+2][h])));
                 }
                 //siłowniki pneumatyczne
-                else if(j == 1) for(uint k=0; k<div[1][5].size()-1; ++k)
+                else if(j==1) for(uint k=0; k<div[1][5].size()-1; ++k)
                 {
                     TreeComponent* cur3 = new Menu(QString::fromStdString(div[1][5][k]));
                     cur2->add(cur3);
@@ -224,7 +232,15 @@ void MainTreeModel::generateSampleTree()
                 //rotametry i zawory bezpieczenstwa
                 else for(uint k=0; k<div[1][j+8].size()-1; ++k)
                 {
-                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[1][j+8][k]));
+                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[i+1][j+8][k]));
+                    cur2->add(cur3);
+                }
+            }
+            else
+            {
+                for(uint k=0; k<div[i+1][j].size()-1; ++k)
+                {
+                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[i+1][j][k]));
                     cur2->add(cur3);
                 }
             }
