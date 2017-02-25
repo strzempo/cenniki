@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="12">
+<RootComponent class_id="0" class_name="Menu" tracking_level="1" version="0" object_id="_0">
+	<TreeComponent class_id="1" tracking_level="0" version="0">
+		<Title>Main Menu</Title>
+	</TreeComponent>
+	<MenuItems class_id="2" tracking_level="0" version="0">
+		<count>7</count>
+		<item_version>0</item_version>
+		<item class_id="3" class_name="ItemFileOpen" tracking_level="1" version="0" object_id="_1">
+			<TreeComponent>
+				<Title>FIP spot</Title>
+			</TreeComponent>
+			<FileName>FIP_Spot.mpg</FileName>
+		</item>
+		<item class_id_reference="3" object_id="_2">
+			<TreeComponent>
+				<Title>O FIP-ie</Title>
+			</TreeComponent>
+			<FileName>about-us.pdf</FileName>
+		</item>
+		<item class_id_reference="3" object_id="_3">
+			<TreeComponent>
+				<Title>Podręcznik kształtek</Title>
+			</TreeComponent>
+			<FileName>Handbook_raccordi.pdf</FileName>
+		</item>
+		<item class_id_reference="3" object_id="_4">
+			<TreeComponent>
+				<Title>Podręcznik zaworów</Title>
+			</TreeComponent>
+			<FileName>Handbook_valvole.pdf</FileName>
+		</item>
+		<item class_id_reference="0" object_id="_5">
+			<TreeComponent>
+				<Title>Broszury</Title>
+			</TreeComponent>
+			<MenuItems>
+				<count>7</count>
+				<item_version>0</item_version>
+				<item class_id_reference="3" object_id="_6">
+					<TreeComponent>
+						<Title>VKD - Zawory kulowe DualBlock</Title>
+					</TreeComponent>
+					<FileName>Brochure_VKD.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_7">
+					<TreeComponent>
+						<Title>TKD - Zawory kulowe trójdrozne DualBlock</Title>
+					</TreeComponent>
+					<FileName>Brochure_TKD.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_8">
+					<TreeComponent>
+						<Title>MK/CP - Zawory membranowe pneumatyczne z napędem tłokowym</Title>
+					</TreeComponent>
+					<FileName>Brochure_MK-CP.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_9">
+					<TreeComponent>
+						<Title>VEE - Zawory kulowe Easyfit</Title>
+					</TreeComponent>
+					<FileName>Brochure_VEE.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_10">
+					<TreeComponent>
+						<Title>VXE - Zawory kulowe Easyfit</Title>
+					</TreeComponent>
+					<FileName>Brochure_VXE.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_11">
+					<TreeComponent>
+						<Title>System etykiet do zaworów Easyfit</Title>
+					</TreeComponent>
+					<FileName>Brochure_labelling_system.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_12">
+					<TreeComponent>
+						<Title>FS-FC - Rotametry</Title>
+					</TreeComponent>
+					<FileName>Brochure_FS_FC.pdf</FileName>
+				</item>
+			</MenuItems>
+		</item>
+		<item class_id_reference="0" object_id="_13">
+			<TreeComponent>
+				<Title>Katalogi techniczne</Title>
+			</TreeComponent>
+			<MenuItems>
+				<count>8</count>
+				<item_version>0</item_version>
+				<item class_id_reference="0" object_id="_14">
+					<TreeComponent>
+						<Title>Zawory z napędami</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>4</count>
+						<item_version>0</item_version>
+						<item class_id_reference="0" object_id="_15">
+							<TreeComponent>
+								<Title>Siłowniki Elektryczne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="0" object_id="_16">
+									<TreeComponent>
+										<Title>Zawory kulowe</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>3</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_17">
+											<TreeComponent>
+												<Title>VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem elektrycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_18">
+											<TreeComponent>
+												<Title>VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem elektrycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_19">
+											<TreeComponent>
+												<Title>TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem elektrycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+								<item class_id_reference="0" object_id="_20">
+									<TreeComponent>
+										<Title>Przepustnice</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_21">
+											<TreeComponent>
+												<Title>FE/CE</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_22">
+											<TreeComponent>
+												<Title>FK/CE</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+								<item class_id_reference="0" object_id="_23">
+									<TreeComponent>
+										<Title>Elektrozawory</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_24">
+											<TreeComponent>
+												<Title>S1-S2</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_25">
+							<TreeComponent>
+								<Title>Siłowniki Pneumatyczne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>4</count>
+								<item_version>0</item_version>
+								<item class_id_reference="0" object_id="_26">
+									<TreeComponent>
+										<Title>Zawory kulowe</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>3</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_27">
+											<TreeComponent>
+												<Title>VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem pneumstycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_28">
+											<TreeComponent>
+												<Title>VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem pneumstycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_29">
+											<TreeComponent>
+												<Title>TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem pneumstycznym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+								<item class_id_reference="0" object_id="_30">
+									<TreeComponent>
+										<Title>Przepustnice</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_31">
+											<TreeComponent>
+												<Title>FE/CP</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_32">
+											<TreeComponent>
+												<Title>FK/CP</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+								<item class_id_reference="0" object_id="_33">
+									<TreeComponent>
+										<Title>Zawory membranowe</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>7</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_34">
+											<TreeComponent>
+												<Title>VM/CP-NC - Zawór membranowy pneumatyczny normalnie zamknięty</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_35">
+											<TreeComponent>
+												<Title>VM/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_36">
+											<TreeComponent>
+												<Title>MK/CP-NC - Zawór membranowy pneumatyczny normalnie zamkniety z siłownikiem tłokowym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_37">
+											<TreeComponent>
+												<Title>MK/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty z siłownikiem tłokowym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_38">
+											<TreeComponent>
+												<Title>MK/CP-DA - Zawór membranowy pneumatyczny obustronego działania z siłownikiem tłokowym</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_39">
+											<TreeComponent>
+												<Title>DM/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty bezsprężynowy</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+										<item class_id_reference="3" object_id="_40">
+											<TreeComponent>
+												<Title>CM/CP - Zawór membranowy pneumatyczny - kompaktowy</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+								<item class_id_reference="0" object_id="_41">
+									<TreeComponent>
+										<Title>Zawory skośne</Title>
+									</TreeComponent>
+									<MenuItems>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item class_id_reference="3" object_id="_42">
+											<TreeComponent>
+												<Title>VV/CP - zawory skośne pneumatyczne</Title>
+											</TreeComponent>
+											<FileName>file.pdf</FileName>
+										</item>
+									</MenuItems>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_43">
+							<TreeComponent>
+								<Title>Zawory bezpieczeństwa</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_44">
+									<TreeComponent>
+										<Title>SV - Zawór skośny upustowy</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_45">
+							<TreeComponent>
+								<Title>Rotametry</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_46">
+									<TreeComponent>
+										<Title>FS - rotametry standartowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_47">
+									<TreeComponent>
+										<Title>FC - rotametry krótkie</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_48">
+					<TreeComponent>
+						<Title>Zawory ręczne z PVC-U</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>7</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_49">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>PVC-U_VALVES_general_info.pdf</FileName>
+						</item>
+						<item class_id_reference="0" object_id="_50">
+							<TreeComponent>
+								<Title>Zawory kulowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>7</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_51">
+									<TreeComponent>
+										<Title>VKD PVC-U - Zawory kulowe Dual Block DN 10-50</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_52">
+									<TreeComponent>
+										<Title>VKD PVC-U - Zawory kulowe Dual Block DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_53">
+									<TreeComponent>
+										<Title>TKD PVC-U - Trójdrożne zawory kulowe Dual Block</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_54">
+									<TreeComponent>
+										<Title>VEE PVC-U - Zawory kulowe serii Easyfit</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_55">
+									<TreeComponent>
+										<Title>VE PVC-U - Zawory kulowe DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_56">
+									<TreeComponent>
+										<Title>VXE PVC-U - Zawory kulowe serii Easyfit</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_57">
+									<TreeComponent>
+										<Title>VX PVC-U - Zawory kulowe serii Ergo DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_58">
+							<TreeComponent>
+								<Title>Przepustnice</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_59">
+									<TreeComponent>
+										<Title>FE PVC-U</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_60">
+									<TreeComponent>
+										<Title>FK PVC-U</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_61">
+							<TreeComponent>
+								<Title>Zawory membranowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_62">
+									<TreeComponent>
+										<Title>VM PVC-U - Zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_63">
+									<TreeComponent>
+										<Title>VM/RM-PVC-U - Mini zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_64">
+									<TreeComponent>
+										<Title>CM PVC-U - Kompaktowe zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_65">
+							<TreeComponent>
+								<Title>Zawory zwrotne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_66">
+									<TreeComponent>
+										<Title>VR PVC-U - Zawór zwrotny</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_67">
+									<TreeComponent>
+										<Title>SR PVC-U - Kulowy zawór zwrotny</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_68">
+									<TreeComponent>
+										<Title>CR PVC-U - Klapa zwrotna</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_69">
+							<TreeComponent>
+								<Title>Filtry</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_70">
+									<TreeComponent>
+										<Title>RV PVC-U - Filtry siatkowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_71">
+							<TreeComponent>
+								<Title>Pozostałe zawory</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_72">
+									<TreeComponent>
+										<Title>VA PVC-U - Zawory odpowietrzająco napowietrzające</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_73">
+									<TreeComponent>
+										<Title>VZ PVC-U - Zawory stopowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_74">
+									<TreeComponent>
+										<Title>VV PVC-U - Zawory skośne</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_75">
+					<TreeComponent>
+						<Title>Kształtki PVC-U</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>4</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_76">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>PVC-U_FITTINGS_general_info.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_77">
+							<TreeComponent>
+								<Title>Instrukcja klejenia</Title>
+							</TreeComponent>
+							<FileName>PVC-U_cementing_instructions.pdf</FileName>
+						</item>
+						<item class_id_reference="0" object_id="_78">
+							<TreeComponent>
+								<Title>System metryczny</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_79">
+									<TreeComponent>
+										<Title>Kształtki klejone</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_80">
+									<TreeComponent>
+										<Title>Kształtki przejsciowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_81">
+									<TreeComponent>
+										<Title>Kształtki gwintowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_82">
+							<TreeComponent>
+								<Title>System calowy</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_83">
+									<TreeComponent>
+										<Title>Kształtki klejone</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_84">
+									<TreeComponent>
+										<Title>Kształtki przejsciowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_85">
+					<TreeComponent>
+						<Title>System PP-H</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>8</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_86">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>PP-H_general_info.pdf</FileName>
+						</item>
+						<item class_id_reference="0" object_id="_87">
+							<TreeComponent>
+								<Title>Instrukcje zgrzewania</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_88">
+									<TreeComponent>
+										<Title>Zgrzewanie mufowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_89">
+									<TreeComponent>
+										<Title>Zgrzewanie doczołowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_90">
+							<TreeComponent>
+								<Title>Rury i kształtki</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_91">
+									<TreeComponent>
+										<Title>Rury</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_92">
+									<TreeComponent>
+										<Title>Kształtki do zgrzewania mufowego</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_93">
+									<TreeComponent>
+										<Title>Kształtki do zgrzewania doczołowego</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_94">
+							<TreeComponent>
+								<Title>Zawory kulowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_95">
+									<TreeComponent>
+										<Title>VKD PP-H - Zawory kulowe Dual Block DN 10-50</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_96">
+									<TreeComponent>
+										<Title>VKD PP-H - Zawory kulowe Dual Block DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_97">
+									<TreeComponent>
+										<Title>TKD PP-H - Trójdrożne zawory kulowe Dual Block</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_98">
+							<TreeComponent>
+								<Title>Przepustnice</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_99">
+									<TreeComponent>
+										<Title>FK PP-H</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_100">
+							<TreeComponent>
+								<Title>Zawory membranowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_101">
+									<TreeComponent>
+										<Title>VM PP-H - Zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_102">
+									<TreeComponent>
+										<Title>CM PP-H - Kompaktowe zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_103">
+							<TreeComponent>
+								<Title>Zawory zwrotne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_104">
+									<TreeComponent>
+										<Title>VR PP-H - Zawór bezpieczeństwa</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_105">
+									<TreeComponent>
+										<Title>SR PP-H - Kulowy zawór bezpieczeństwa</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_106">
+							<TreeComponent>
+								<Title>Filtry</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_107">
+									<TreeComponent>
+										<Title>RV PP-H - Filtr siatkowy</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_108">
+					<TreeComponent>
+						<Title>System PVC-C TemperFIP100</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>8</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_109">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>PVC-C_general_info.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_110">
+							<TreeComponent>
+								<Title>Instrukcje klejenia</Title>
+							</TreeComponent>
+							<FileName>PVC-C_cementing_instructions.pdf</FileName>
+						</item>
+						<item class_id_reference="0" object_id="_111">
+							<TreeComponent>
+								<Title>Rury i kształtki</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_112">
+									<TreeComponent>
+										<Title>Rury</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_113">
+									<TreeComponent>
+										<Title>Kształtki do klejenia</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_114">
+									<TreeComponent>
+										<Title>Kształtki przejściowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_115">
+							<TreeComponent>
+								<Title>Zawory kulowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>4</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_116">
+									<TreeComponent>
+										<Title>VKD PVC-C - Zawory kulowe Dual Block DN 10-50</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_117">
+									<TreeComponent>
+										<Title>VKD PVC-C - Zawory kulowe Dual Block DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_118">
+									<TreeComponent>
+										<Title>TKD PVC-C - Trójdrożne zawory kulowe Dual Block</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_119">
+									<TreeComponent>
+										<Title>VXE PVC-C - Zawory kulowe serii Easyfit</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_120">
+							<TreeComponent>
+								<Title>Przepustnice</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_121">
+									<TreeComponent>
+										<Title>FK PVC-C</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_122">
+							<TreeComponent>
+								<Title>Zawory membranowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_123">
+									<TreeComponent>
+										<Title>VM PVC-C - Zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_124">
+									<TreeComponent>
+										<Title>CM PVC-C - Kompaktowe zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_125">
+							<TreeComponent>
+								<Title>Zawory zwrotne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_126">
+									<TreeComponent>
+										<Title>SR PVC-C - Kulowy zawór zwrotny</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_127">
+							<TreeComponent>
+								<Title>Filtry</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_128">
+									<TreeComponent>
+										<Title>RV PVC-C - Filtr siatkowy</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_129">
+					<TreeComponent>
+						<Title>System PVDF</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>7</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_130">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>PVDF_general_info.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_131">
+							<TreeComponent>
+								<Title>Instrukcja zgrzewania</Title>
+							</TreeComponent>
+							<FileName>PVDF_SW_instructions.pdf</FileName>
+						</item>
+						<item class_id_reference="0" object_id="_132">
+							<TreeComponent>
+								<Title>Rury i kształtki</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_133">
+									<TreeComponent>
+										<Title>Rury</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_134">
+									<TreeComponent>
+										<Title>Kształtki do zgrzewania mufowego</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_135">
+							<TreeComponent>
+								<Title>Zawory kulowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>3</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_136">
+									<TreeComponent>
+										<Title>VKD PVDF - Zawory kulowe Dual Block DN 10-50</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_137">
+									<TreeComponent>
+										<Title>VKD PVDF - Zawory kulowe Dual Block DN 65-100</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_138">
+									<TreeComponent>
+										<Title>TKD PVDF - Trójdrożne zawory kulowe Dual Block</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_139">
+							<TreeComponent>
+								<Title>Przepustnice</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_140">
+									<TreeComponent>
+										<Title>FK PVDF</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_141">
+							<TreeComponent>
+								<Title>Zawory membranowe</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>2</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_142">
+									<TreeComponent>
+										<Title>VM PVDF - Zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_143">
+									<TreeComponent>
+										<Title>CM PVDF - Kompaktowe zawory membranowe</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+						<item class_id_reference="0" object_id="_144">
+							<TreeComponent>
+								<Title>Zawory zwrotne</Title>
+							</TreeComponent>
+							<MenuItems>
+								<count>1</count>
+								<item_version>0</item_version>
+								<item class_id_reference="3" object_id="_145">
+									<TreeComponent>
+										<Title>SR PVDF - Kulowy zawór zwrotny</Title>
+									</TreeComponent>
+									<FileName>file.pdf</FileName>
+								</item>
+							</MenuItems>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_146">
+					<TreeComponent>
+						<Title>System PE-HD</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>3</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_147">
+							<TreeComponent>
+								<Title>Kształtki doczołowe</Title>
+							</TreeComponent>
+							<FileName>Akatherm_PE100.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_148">
+							<TreeComponent>
+								<Title>Złączki elektrooporowe FRIALEN®</Title>
+							</TreeComponent>
+							<FileName>FRIALEN.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_149">
+							<TreeComponent>
+								<Title>Wytyczne dla projektantów</Title>
+							</TreeComponent>
+							<FileName>Akatherm_Projektanci.pdf</FileName>
+						</item>
+					</MenuItems>
+				</item>
+				<item class_id_reference="0" object_id="_150">
+					<TreeComponent>
+						<Title>System ABS</Title>
+					</TreeComponent>
+					<MenuItems>
+						<count>5</count>
+						<item_version>0</item_version>
+						<item class_id_reference="3" object_id="_151">
+							<TreeComponent>
+								<Title>Informacje ogólne</Title>
+							</TreeComponent>
+							<FileName>ABS_ogolnie.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_152">
+							<TreeComponent>
+								<Title>System metryczny</Title>
+							</TreeComponent>
+							<FileName>ABS_metryczny.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_153">
+							<TreeComponent>
+								<Title>System calowy</Title>
+							</TreeComponent>
+							<FileName>ABS_calowy.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_154">
+							<TreeComponent>
+								<Title>System preizolowany</Title>
+							</TreeComponent>
+							<FileName>ABS_preizolowany.pdf</FileName>
+						</item>
+						<item class_id_reference="3" object_id="_155">
+							<TreeComponent>
+								<Title>Klejenie</Title>
+							</TreeComponent>
+							<FileName>ABS_klejenie.pdf</FileName>
+						</item>
+					</MenuItems>
+				</item>
+			</MenuItems>
+		</item>
+		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_156">
+			<TreeComponent>
+				<Title>Kemy</Title>
+			</TreeComponent>
+			<AppName>kemy/Kemy.exe</AppName>
+			<AboutText>Program do sprawdzania odporności chemicznej materiałów i uszczelnień</AboutText>
+		</item>
+	</MenuItems>
+</RootComponent>
+</boost_serialization>
+

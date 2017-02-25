@@ -32,8 +32,7 @@ int main(int argc, char *argv[])
     qInfo() << "Starting application \"Cenniki\" (c) Kamil Strzempowicz";
 
     MainTreeModel model;
-    model.generateSampleTree();
-    model.save();
+    model.load();
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
