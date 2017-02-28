@@ -354,37 +354,37 @@
 									<TreeComponent>
 										<Title>VKD PVC-U - Zawory kulowe Dual Block DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PVC-U_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_52">
 									<TreeComponent>
 										<Title>VKD PVC-U - Zawory kulowe Dual Block DN 65-100</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PVC-U_65-100.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_53">
 									<TreeComponent>
 										<Title>TKD PVC-U - Trójdrożne zawory kulowe Dual Block</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/TKD_PVC-U.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_54">
 									<TreeComponent>
-										<Title>VEE PVC-U - Zawory kulowe serii Easyfit</Title>
+										<Title>VEE PVC-U - Zawory kulowe Easyfit do wody DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VEE_PVC-U_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_55">
 									<TreeComponent>
-										<Title>VE PVC-U - Zawory kulowe DN 65-100</Title>
+										<Title>VEE PVC-U - Zawory kulowe Easyfit do wody DN 65-100</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VEE_PVC-U_65-100.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_56">
 									<TreeComponent>
-										<Title>VXE PVC-U - Zawory kulowe serii Easyfit</Title>
+										<Title>VXE PVC-U - Zawory kulowe Easyfit przemysłowe DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VXE_PVC-U_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_57">
 									<TreeComponent>
@@ -1089,4 +1089,3 @@
 	</MenuItems>
 </RootComponent>
 </boost_serialization>
-
