@@ -40,5 +40,7 @@ ItemFileOpen::ItemFileOpen(QString title, QString fileName, TreeComponent *paren
 
 void ItemFileOpen::action()
 {
-    QDesktopServices::openUrl(QUrl(FileName));
+    QUrl url = QUrl(FileName, QUrl::TolerantMode);
+    qDebug() << "open URL:" << url;
+    QDesktopServices::openUrl(url);
 }
