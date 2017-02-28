@@ -457,9 +457,15 @@
 								</item>
 								<item class_id_reference="3" object_id="_67">
 									<TreeComponent>
-										<Title>SXE PVC-U - Zawory zwrotne kulowe bez sprężynki</Title>
+										<Title>SXE-SSE PVC-U - Zawory zwrotne kulowe Easyfit DN 10-50</Title>
 									</TreeComponent>
-									<FileName>katalogi/SXE_PVC-U.pdf</FileName>
+									<FileName>katalogi/SXE_SSE_DN10-50_PVC-U_EN.pdf</FileName>
+								</item>
+								<item class_id_reference="3" object_id="_671">
+									<TreeComponent>
+										<Title>SXE-SSE PVC-U - Zawory zwrotne kulowe Easyfit DN 65-100</Title>
+									</TreeComponent>
+									<FileName>katalogi/SXE_SSE_DN65-100_PVC-U_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_68">
 									<TreeComponent>
