@@ -18,6 +18,11 @@
 
 #include <fstream>
 
+#ifndef BOOST_NO_EXCEPTIONS
+#include <exception>
+#include "boost/archive/archive_exception.hpp"
+#endif
+
 #include "maintreemodel.h"
 #include "menu.h"
 #include "itemfileopen.h"
@@ -150,8 +155,19 @@ void MainTreeModel::load()
     std::ifstream ifs("layout.xml");
     assert(ifs.good());
     q_xml_iarchive ia(ifs);
-    ia >> BOOST_SERIALIZATION_NVP(RootComponent);
-    assert(RootComponent);
+    try{
+        ia >> BOOST_SERIALIZATION_NVP(RootComponent);
+        assert(RootComponent);
+    }
+    catch(boost::archive::archive_exception e){
+        qWarning() << "archive exception code" << e.code;
+        qWarning() << e.what();
+        throw;
+    }
+    catch(std::exception e){
+        delete RootComponent;
+        qCritical() << e.what();
+    }
 }
 
 void MainTreeModel::generateSampleTree()
