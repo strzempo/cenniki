@@ -424,21 +424,21 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_62">
 									<TreeComponent>
-										<Title>VM PVC-U - Zawory membranowe</Title>
+										<Title>DK PVC-U - Zawory membranowe Dialock DN 15-65</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/DK_PVC-UDN15-65_PL.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_63">
 									<TreeComponent>
 										<Title>VM/RM-PVC-U - Mini zawory membranowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VM-RM_PVC-U.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_64">
 									<TreeComponent>
 										<Title>CM PVC-U - Kompaktowe zawory membranowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/CM_PVC-U.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -451,21 +451,21 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_66">
 									<TreeComponent>
-										<Title>VR PVC-U - Zawór zwrotny</Title>
+										<Title>VR PVC-U - Zawory zwrotne skośne</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VR_PVC-U.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_67">
 									<TreeComponent>
-										<Title>SR PVC-U - Kulowy zawór zwrotny</Title>
+										<Title>SXE PVC-U - Zawory zwrotne kulowe bez sprężynki</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/SXE_PVC-U.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_68">
 									<TreeComponent>
-										<Title>CR PVC-U - Klapa zwrotna</Title>
+										<Title>CR PVC-U - Klapy zwrotne</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/CR_PVC-U.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
