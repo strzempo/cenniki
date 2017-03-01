@@ -486,7 +486,7 @@
 									<TreeComponent>
 										<Title>RV PVC-U - Filtry siatkowe</Title>
 									</TreeComponent>
-									<FileName>katalogi/RV_PVC-U.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -499,21 +499,21 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_72">
 									<TreeComponent>
-										<Title>VA PVC-U - Zawory odpowietrzająco-napowietrzające</Title>
+										<Title>VA PVC-U - Zawory odpowietrzająco napowietrzające</Title>
 									</TreeComponent>
-									<FileName>katalogi/VA_PVC-U.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_73">
 									<TreeComponent>
 										<Title>VZ PVC-U - Zawory stopowe</Title>
 									</TreeComponent>
-									<FileName>katalogi/VZ_PVC-U.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_74">
 									<TreeComponent>
 										<Title>VV PVC-U - Zawory skośne</Title>
 									</TreeComponent>
-									<FileName>katalogi/VV_PVC-U.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -530,13 +530,13 @@
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 							</TreeComponent>
-							<FileName>katalogi/PVC-U_FITTINGS_general_info.pdf</FileName>
+							<FileName>PVC-U_FITTINGS_general_info.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_77">
 							<TreeComponent>
 								<Title>Instrukcja klejenia</Title>
 							</TreeComponent>
-							<FileName>katalogi/PVC-U_cementing_instructions.pdf</FileName>
+							<FileName>PVC-U_cementing_instructions.pdf</FileName>
 						</item>
 						<item class_id_reference="0" object_id="_78">
 							<TreeComponent>
@@ -549,19 +549,19 @@
 									<TreeComponent>
 										<Title>Kształtki klejone</Title>
 									</TreeComponent>
-									<FileName>FITTINGS_ISO-UNI_PVC-U_EN.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_80">
 									<TreeComponent>
 										<Title>Kształtki przejsciowe</Title>
 									</TreeComponent>
-									<FileName>katalogi/FITTINGS_ISO-BSP_PVC-U_EN.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_81">
 									<TreeComponent>
 										<Title>Kształtki gwintowe</Title>
 									</TreeComponent>
-									<FileName>katalogi/FITTINGS_BSP_PVC-U_EN.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -576,11 +576,11 @@
 									<TreeComponent>
 										<Title>Kształtki klejone</Title>
 									</TreeComponent>
-									<FileName>katalogi/FITTINGS_BS_PVC-U_EN.pdf</FileName>
+									<FileName>file.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_84">
 									<TreeComponent>
-										<Title>Kształtki xxxxxxx</Title>
+										<Title>Kształtki przejsciowe</Title>
 									</TreeComponent>
 									<FileName>file.pdf</FileName>
 								</item>
