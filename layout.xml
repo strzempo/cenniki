@@ -612,13 +612,13 @@
 									<TreeComponent>
 										<Title>Zgrzewanie mufowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/PP-H_Socket_welding_instructions.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_89">
 									<TreeComponent>
 										<Title>Zgrzewanie doczołowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/PP-H_Butt_welding_instructions.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -633,19 +633,19 @@
 									<TreeComponent>
 										<Title>Rury</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/PIPE_PP-H_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_92">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania mufowego</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FITTINGS SW_PP-H_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_93">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania doczołowego</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FITTINGS BW_PP-H_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -658,36 +658,36 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_95">
 									<TreeComponent>
-										<Title>VKD PP-H - Zawory kulowe Dual Block DN 10-50</Title>
+										<Title>VKD PP-H - Zawory Dual Block DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PP-H_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_96">
 									<TreeComponent>
-										<Title>VKD PP-H - Zawory kulowe Dual Block DN 65-100</Title>
+										<Title>VKD PP-H - Zawory Dual Block DN 65-100</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PP-H_65-100.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_97">
 									<TreeComponent>
-										<Title>TKD PP-H - Trójdrożne zawory kulowe Dual Block</Title>
+										<Title>TKD PP-H - Zawory trójdrożne Dual Block</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/TKD_PP-H.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
 						<item class_id_reference="0" object_id="_98">
 							<TreeComponent>
-								<Title>Przepustnice</Title>
+								<Title>Przepustnice międzykołnierzowe</Title>
 							</TreeComponent>
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_99">
 									<TreeComponent>
-										<Title>FK PP-H</Title>
+										<Title>FK PP-H - Przepustnice przemysłowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FK_PP-H.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -700,15 +700,15 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_101">
 									<TreeComponent>
-										<Title>VM PP-H - Zawory membranowe</Title>
+										<Title>DK PP-H - Zawory membranowe Dialock DN 15-65</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/DK_DN15-65_PP-H_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_102">
 									<TreeComponent>
 										<Title>CM PP-H - Kompaktowe zawory membranowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/CM_PP-H.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -721,15 +721,15 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_104">
 									<TreeComponent>
-										<Title>VR PP-H - Zawór bezpieczeństwa</Title>
+										<Title>VR PP-H - Zawór zwrotny skośny</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VR-PP-H_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_105">
 									<TreeComponent>
-										<Title>SR PP-H - Kulowy zawór bezpieczeństwa</Title>
+										<Title>SR PP-H - Zawór zwrotny kulowy</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/SR_PP-H_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -744,7 +744,7 @@
 									<TreeComponent>
 										<Title>RV PP-H - Filtr siatkowy</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/RV_PP-H_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
