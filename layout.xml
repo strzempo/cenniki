@@ -580,7 +580,7 @@
 								</item>
 								<item class_id_reference="3" object_id="_84">
 									<TreeComponent>
-										<Title>Kształtki xxxxxxx</Title>
+										<Title>Do usunięcia</Title>
 									</TreeComponent>
 									<FileName>file.pdf</FileName>
 								</item>
@@ -672,7 +672,7 @@
 									<TreeComponent>
 										<Title>TKD PP-H - Zawory trójdrożne Dual Block</Title>
 									</TreeComponent>
-									<FileName>katalogi/TKD_PP-H.pdf</FileName>
+									<FileName>katalogi/TKD_PP-H_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -685,7 +685,7 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_99">
 									<TreeComponent>
-										<Title>FK PP-H - Przepustnice przemysłowe</Title>
+										<Title>FK PP-H - Przepustnice przemysłowe DN 40-400</Title>
 									</TreeComponent>
 									<FileName>katalogi/FK_PP-H.pdf</FileName>
 								</item>
@@ -721,13 +721,13 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_104">
 									<TreeComponent>
-										<Title>VR PP-H - Zawór zwrotny skośny</Title>
+										<Title>VR PP-H - Zawory zwrotne skośne</Title>
 									</TreeComponent>
 									<FileName>katalogi/VR-PP-H_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_105">
 									<TreeComponent>
-										<Title>SR PP-H - Zawór zwrotny kulowy</Title>
+										<Title>SR PP-H - Zawory zwrotne kulowe</Title>
 									</TreeComponent>
 									<FileName>katalogi/SR_PP-H_EN.pdf</FileName>
 								</item>
@@ -742,7 +742,7 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_107">
 									<TreeComponent>
-										<Title>RV PP-H - Filtr siatkowy</Title>
+										<Title>RV PP-H - Filtry siatkowe</Title>
 									</TreeComponent>
 									<FileName>katalogi/RV_PP-H_EN.pdf</FileName>
 								</item>
@@ -761,13 +761,13 @@
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 							</TreeComponent>
-							<FileName>PVC-C_general_info.pdf</FileName>
+							<FileName>katalogi/PVC-C_general_info.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_110">
 							<TreeComponent>
 								<Title>Instrukcje klejenia</Title>
 							</TreeComponent>
-							<FileName>PVC-C_cementing_instructions.pdf</FileName>
+							<FileName>katalogi/PVC-C_Solvent_welding_instructions.pdf</FileName>
 						</item>
 						<item class_id_reference="0" object_id="_111">
 							<TreeComponent>
@@ -780,19 +780,19 @@
 									<TreeComponent>
 										<Title>Rury</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/PIPE_PVC-C_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_113">
 									<TreeComponent>
 										<Title>Kształtki do klejenia</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FITTINGS_ISO-UNI_PVC-C_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_114">
 									<TreeComponent>
 										<Title>Kształtki przejściowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FITTINGS_ISO-BSP_PVC-C_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -805,42 +805,42 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_116">
 									<TreeComponent>
-										<Title>VKD PVC-C - Zawory kulowe Dual Block DN 10-50</Title>
+										<Title>VKD PVC-C - Zawory Dual Block DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_117">
 									<TreeComponent>
 										<Title>VKD PVC-C - Zawory kulowe Dual Block DN 65-100</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PVC-C_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_118">
 									<TreeComponent>
-										<Title>TKD PVC-C - Trójdrożne zawory kulowe Dual Block</Title>
+										<Title>TKD PVC-C - Zawory trójdrożne Dual Block</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/TKD_PVC-C_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_119">
 									<TreeComponent>
-										<Title>VXE PVC-C - Zawory kulowe serii Easyfit</Title>
+										<Title>VXE PVC-C - Zawory Easyfit</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VXE_PVC-C_10-50.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
 						<item class_id_reference="0" object_id="_120">
 							<TreeComponent>
-								<Title>Przepustnice</Title>
+								<Title>Przepustnice międzykołnierzowe</Title>
 							</TreeComponent>
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_121">
 									<TreeComponent>
-										<Title>FK PVC-C</Title>
+										<Title>FK PVC-C Przepustnice przemysłowe DN 40-300</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FK_PVC-C.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -853,15 +853,15 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_123">
 									<TreeComponent>
-										<Title>VM PVC-C - Zawory membranowe</Title>
+										<Title>DK PVC-C - Zawory membranowe Dialock DN 15-65</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/DK_DN15-50_PVC-C_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_124">
 									<TreeComponent>
-										<Title>CM PVC-C - Kompaktowe zawory membranowe</Title>
+										<Title>CM PVC-C - Zawory membranowe kompaktowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/CM_PVC-C_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -874,9 +874,9 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_126">
 									<TreeComponent>
-										<Title>SR PVC-C - Kulowy zawór zwrotny</Title>
+										<Title>SXE PVC-C - Zawory zwrotne kulowe DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/SXE DN10-50_PVC-C_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -889,9 +889,9 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_128">
 									<TreeComponent>
-										<Title>RV PVC-C - Filtr siatkowy</Title>
+										<Title>RV PVC-C - Filtry siatkowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/RV_PVC-C.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
