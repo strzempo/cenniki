@@ -24,13 +24,13 @@
 			<TreeComponent>
 				<Title>Podręcznik kształtek</Title>
 			</TreeComponent>
-			<FileName>Handbook_raccordi.pdf</FileName>
+			<FileName>katalogi/Fittings_handbook_09_11</FileName>
 		</item>
 		<item class_id_reference="3" object_id="_4">
 			<TreeComponent>
 				<Title>Podręcznik zaworów</Title>
 			</TreeComponent>
-			<FileName>Handbook_valvole.pdf</FileName>
+			<FileName>katalogi/Valves_Handbook_12-2016_EN</FileName>
 		</item>
 		<item class_id_reference="0" object_id="_5">
 			<TreeComponent>
@@ -43,43 +43,43 @@
 					<TreeComponent>
 						<Title>VKD - Zawory kulowe DualBlock</Title>
 					</TreeComponent>
-					<FileName>Brochure_VKD.pdf</FileName>
+					<FileName>katalogi/Brochure_VKD.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_7">
 					<TreeComponent>
-						<Title>TKD - Zawory kulowe trójdrozne DualBlock</Title>
+						<Title>TKD - Zawory trójdrożne DualBlock</Title>
 					</TreeComponent>
-					<FileName>Brochure_TKD.pdf</FileName>
+					<FileName>katalogi/Brochure_TKD.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_8">
 					<TreeComponent>
-						<Title>MK/CP - Zawory membranowe pneumatyczne z napędem tłokowym</Title>
+						<Title>VEE - Zawory Easyfit do wody DN 10-50</Title>
 					</TreeComponent>
-					<FileName>Brochure_MK-CP.pdf</FileName>
+					<FileName>katalogi/Brochure_VEE_10-50.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_9">
 					<TreeComponent>
-						<Title>VEE - Zawory kulowe Easyfit</Title>
+						<Title>VEE - Zawory Easyfit do wody DN 65-100</Title>
 					</TreeComponent>
-					<FileName>Brochure_VEE.pdf</FileName>
+					<FileName>katalogi/Brochure_VEE_65-100.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_10">
 					<TreeComponent>
-						<Title>VXE - Zawory kulowe Easyfit</Title>
+						<Title>VXE - Zawory Easyfit przemysłowe DN 10-50</Title>
 					</TreeComponent>
-					<FileName>Brochure_VXE.pdf</FileName>
+					<FileName>katalogi/Brochure_VXE_10-50.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_11">
 					<TreeComponent>
-						<Title>System etykiet do zaworów Easyfit</Title>
+						<Title>VXE - Zawory Easyfit przemysłowe DN 65-100</Title>
 					</TreeComponent>
-					<FileName>Brochure_labelling_system.pdf</FileName>
+					<FileName>katalogi/Brochure_VXE_65-100.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_12">
 					<TreeComponent>
 						<Title>FS-FC - Rotametry</Title>
 					</TreeComponent>
-					<FileName>Brochure_FS_FC.pdf</FileName>
+					<FileName>katalogi/Brochure_FS_FC.pdf</FileName>
 				</item>
 			</MenuItems>
 		</item>
