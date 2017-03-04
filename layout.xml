@@ -1055,23 +1055,23 @@
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 							</TreeComponent>
-							<FileName>ABS_ogolnie.pdf</FileName>
+							<FileName>katalogi/ABS_ogolnie.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_152">
 							<TreeComponent>
 								<Title>System metryczny</Title>
 							</TreeComponent>
-							<FileName>ABS_metryczny.pdf</FileName>
+							<FileName>katalogi/ABS_metryczny.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_153">
 							<TreeComponent>
-								<Title>System calowy</Title>
+								<Title>System calowy do usunięcia</Title>
 							</TreeComponent>
 							<FileName>ABS_calowy.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_154">
 							<TreeComponent>
-								<Title>System preizolowany</Title>
+								<Title>System preizolowany do usunięcia</Title>
 							</TreeComponent>
 							<FileName>ABS_preizolowany.pdf</FileName>
 						</item>
@@ -1079,7 +1079,7 @@
 							<TreeComponent>
 								<Title>Klejenie</Title>
 							</TreeComponent>
-							<FileName>ABS_klejenie.pdf</FileName>
+							<FileName>katalogi/ABS_klejenie.pdf</FileName>
 						</item>
 					</MenuItems>
 				</item>
@@ -1087,10 +1087,10 @@
 		</item>
 		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_156">
 			<TreeComponent>
-				<Title>Kemy</Title>
+				<Title>Odporność chemiczna</Title>
 			</TreeComponent>
 			<AppName>kemy/Kemy.exe</AppName>
-			<AboutText>Program do sprawdzania odporności chemicznej materiałów i uszczelnień</AboutText>
+			<AboutText>Link https://www.fipnet.com/chemical-resistance-guide-final/?lang=en chemicznej materiałów i uszczelnień</AboutText>
 		</item>
 	</MenuItems>
 </RootComponent>
