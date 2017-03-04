@@ -426,7 +426,7 @@
 									<TreeComponent>
 										<Title>DK PVC-U - Zawory membranowe Dialock DN 15-65</Title>
 									</TreeComponent>
-									<FileName>katalogi/DK_PVC-UDN15-65_PL.pdf</FileName>
+				    <FileName>katalogi/DK_PVC-U_DN15-65_PL.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_63">
 									<TreeComponent>
@@ -436,7 +436,7 @@
 								</item>
 								<item class_id_reference="3" object_id="_64">
 									<TreeComponent>
-										<Title>CM PVC-U - Kompaktowe zawory membranowe</Title>
+										<Title>CM PVC-U - Zawory kompaktowe DN 12-15</Title>
 									</TreeComponent>
 									<FileName>katalogi/CM_PVC-U.pdf</FileName>
 								</item>
@@ -706,7 +706,7 @@
 								</item>
 								<item class_id_reference="3" object_id="_102">
 									<TreeComponent>
-										<Title>CM PP-H - Kompaktowe zawory membranowe</Title>
+										<Title>CM PP-H - Zawory kompaktowe DN 12-15</Title>
 									</TreeComponent>
 									<FileName>katalogi/CM_PP-H.pdf</FileName>
 								</item>
@@ -859,7 +859,7 @@
 								</item>
 								<item class_id_reference="3" object_id="_124">
 									<TreeComponent>
-										<Title>CM PVC-C - Zawory membranowe kompaktowe</Title>
+										<Title>CM PVC-C - Zawory kompaktowe DN 12-15</Title>
 									</TreeComponent>
 									<FileName>katalogi/CM_PVC-C_EN.pdf</FileName>
 								</item>
@@ -908,13 +908,13 @@
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 							</TreeComponent>
-							<FileName>PVDF_general_info.pdf</FileName>
+							<FileName>katalogi/PVDF_general_info.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_131">
 							<TreeComponent>
 								<Title>Instrukcja zgrzewania</Title>
 							</TreeComponent>
-							<FileName>PVDF_SW_instructions.pdf</FileName>
+							<FileName>katalogi/PVDF_Socket_welding_instructions.pdf</FileName>
 						</item>
 						<item class_id_reference="0" object_id="_132">
 							<TreeComponent>
@@ -927,13 +927,13 @@
 									<TreeComponent>
 										<Title>Rury</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/PIPE_PVDF_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_134">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania mufowego</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FITTINGS_PVDF_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -946,36 +946,36 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_136">
 									<TreeComponent>
-										<Title>VKD PVDF - Zawory kulowe Dual Block DN 10-50</Title>
+										<Title>VKD PVDF - Zawory Dual Block DN 10-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PVDF_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_137">
 									<TreeComponent>
-										<Title>VKD PVDF - Zawory kulowe Dual Block DN 65-100</Title>
+										<Title>VKD PVDF - Zawory Dual Block DN 65-100</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/VKD_PVDF_65-100.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_138">
 									<TreeComponent>
-										<Title>TKD PVDF - Trójdrożne zawory kulowe Dual Block</Title>
+										<Title>TKD PVDF - do usunięcia</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
 						<item class_id_reference="0" object_id="_139">
 							<TreeComponent>
-								<Title>Przepustnice</Title>
+								<Title>Przepustnice międzykołnierzowe</Title>
 							</TreeComponent>
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_140">
 									<TreeComponent>
-										<Title>FK PVDF</Title>
+										<Title>FK PVDF - Przepustnice DN 40-400</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FK_PVDF.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -988,15 +988,15 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_142">
 									<TreeComponent>
-										<Title>VM PVDF - Zawory membranowe</Title>
+										<Title>DK PVDF - Zawory membranowe Dialock DN 15-65</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/DK_DN15-50_PVDF_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_143">
 									<TreeComponent>
-										<Title>CM PVDF - Kompaktowe zawory membranowe</Title>
+										<Title>CM PVDF - Zawory kompaktowe DN 12-15</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/CM_PVDF_EN.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -1009,9 +1009,9 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_145">
 									<TreeComponent>
-										<Title>SR PVDF - Kulowy zawór zwrotny</Title>
+										<Title>SR PVDF - Zawór kulowy DN 15-50</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/SR_PVDF.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -1028,17 +1028,17 @@
 							<TreeComponent>
 								<Title>Kształtki doczołowe</Title>
 							</TreeComponent>
-							<FileName>Akatherm_PE100.pdf</FileName>
+							<FileName>katalogi/PE100-Catalogue_EN_elr-rev1.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_148">
 							<TreeComponent>
 								<Title>Złączki elektrooporowe FRIALEN®</Title>
 							</TreeComponent>
-							<FileName>FRIALEN.pdf</FileName>
+							<FileName>katalogi/FRIALEN.pdf</FileName>
 						</item>
 						<item class_id_reference="3" object_id="_149">
 							<TreeComponent>
-								<Title>Wytyczne dla projektantów</Title>
+								<Title>Wytyczne do usunięcia</Title>
 							</TreeComponent>
 							<FileName>Akatherm_Projektanci.pdf</FileName>
 						</item>
