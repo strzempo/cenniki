@@ -99,7 +99,7 @@
 						<item_version>0</item_version>
 						<item class_id_reference="0" object_id="_15">
 							<TreeComponent>
-								<Title>Siłowniki Elektryczne</Title>
+								<Title>Zawory eletryczne</Title>
 							</TreeComponent>
 							<MenuItems>
 								<count>3</count>
@@ -113,57 +113,57 @@
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_17">
 											<TreeComponent>
-												<Title>VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem elektrycznym</Title>
+												<Title>VKD/CE - Zawór Dual Block DN 10-50 z siłownikiem elektrycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VKD_CE_PL_10-50.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_18">
 											<TreeComponent>
-												<Title>VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem elektrycznym</Title>
+												<Title>VKD/CE - Zawór Dual Block DN 65-100 z siłownikiem elektrycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VKD_CE_PL_65-100.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_19">
 											<TreeComponent>
-												<Title>TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem elektrycznym</Title>
+												<Title>TKD/CE - Zawór trójdrożny Dual Block z siłownikiem elektrycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/TKD_CE_PL.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
 								<item class_id_reference="0" object_id="_20">
 									<TreeComponent>
-										<Title>Przepustnice</Title>
+										<Title>Przepustnice międzykołnierzowe</Title>
 									</TreeComponent>
 									<MenuItems>
 										<count>2</count>
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_21">
 											<TreeComponent>
-												<Title>FE/CE</Title>
+												<Title>FE/CE - Przepustnica ekonomiczna DN 40-200 z napędem elektrycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/FE_CE.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_22">
 											<TreeComponent>
-												<Title>FK/CE</Title>
+												<Title>FK/CE - Przepustnica przemysłowa z napędem elektrycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/FK_CE_MS.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
 								<item class_id_reference="0" object_id="_23">
 									<TreeComponent>
-										<Title>Elektrozawory</Title>
+										<Title>Zawory elektromagnetyczne</Title>
 									</TreeComponent>
 									<MenuItems>
 										<count>1</count>
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_24">
 											<TreeComponent>
-												<Title>S1-S2</Title>
+												<Title>S1-S2 - Zawór elektromagnetyczny DN 4-15</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/S1_S2.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
@@ -171,7 +171,7 @@
 						</item>
 						<item class_id_reference="0" object_id="_25">
 							<TreeComponent>
-								<Title>Siłowniki Pneumatyczne</Title>
+								<Title>Zawory pneumatyczne</Title>
 							</TreeComponent>
 							<MenuItems>
 								<count>4</count>
@@ -185,42 +185,42 @@
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_27">
 											<TreeComponent>
-												<Title>VKD/CE - Zawór kulowy Dual Block  DN 10-50 z siłownikiem pneumstycznym</Title>
+												<Title>VKD/CP - Zawór Dual Block DN 10-50 z siłownikiem pneumatycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VKD_CP_10-50.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_28">
 											<TreeComponent>
-												<Title>VKD/CE - Zawór kulowy Dual Block  DN 65-100 z siłownikiem pneumstycznym</Title>
+												<Title>VKD/CP - Zawór Dual Bloc DN 65-100 z siłownikiem pneumatycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VKD_CP_65-100.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_29">
 											<TreeComponent>
-												<Title>TKD/CE - Trójdrożny zawór kulowy Dual Block  z siłownikiem pneumstycznym</Title>
+												<Title>TKD/CP - Zawór trójdrożny Dual Block z siłownikiem pneumatycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/TKD_CP.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
 								<item class_id_reference="0" object_id="_30">
 									<TreeComponent>
-										<Title>Przepustnice</Title>
+										<Title>Przepustnice międzykołnierzowe</Title>
 									</TreeComponent>
 									<MenuItems>
 										<count>2</count>
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_31">
 											<TreeComponent>
-												<Title>FE/CP</Title>
+												<Title>FE/CP - Przepustnica ekonomiczna DN 40-200 z napędem pneumatycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/FE_CP_PL.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_32">
 											<TreeComponent>
-												<Title>FK/CP</Title>
+												<Title>FK/CP - Przepustnica przemysłowa DN 40-400 z napędem pneumatycznym</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/FK_CP.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
@@ -233,21 +233,21 @@
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_34">
 											<TreeComponent>
-												<Title>VM/CP-NC - Zawór membranowy pneumatyczny normalnie zamknięty</Title>
+												<Title>DK/CP - Zawór Dialock DN 15-20</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/DK CP_EN.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_35">
 											<TreeComponent>
-												<Title>VM/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty</Title>
+												<Title>DKM/CP - Zawór Dialock DN 25-65</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/DKM CP_PL.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_36">
 											<TreeComponent>
-												<Title>MK/CP-NC - Zawór membranowy pneumatyczny normalnie zamkniety z siłownikiem tłokowym</Title>
+												<Title>DKP/CP - Zawór z napędem tłokowym DN 25-65</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/DKP CP_EN.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_37">
 											<TreeComponent>
