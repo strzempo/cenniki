@@ -251,40 +251,40 @@
 										</item>
 										<item class_id_reference="3" object_id="_37">
 											<TreeComponent>
-												<Title>MK/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty z siłownikiem tłokowym</Title>
+												<Title>VM/CP-NC - Zawór normalnie zamknięty DN 80-100</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VM_CP_NC.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_38">
 											<TreeComponent>
-												<Title>MK/CP-DA - Zawór membranowy pneumatyczny obustronego działania z siłownikiem tłokowym</Title>
+												<Title>VM/CP-NO - Zawór normalnie otwarty DN 80-100</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/VM_CP_NO.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_39">
 											<TreeComponent>
-												<Title>DM/CP-NO - Zawór membranowy pneumatyczny normalnie otwarty bezsprężynowy</Title>
+												<Title>DKD/CP-NO - Zawór ekonomiczny normalnie otwarty DN 15-65 </Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/DKD-CP_DN15-65_EN.pdf</FileName>
 										</item>
 										<item class_id_reference="3" object_id="_40">
 											<TreeComponent>
-												<Title>CM/CP - Zawór membranowy pneumatyczny - kompaktowy</Title>
+												<Title>CM/CP - Zawór kompaktowy DN 12-15</Title>
 											</TreeComponent>
-											<FileName>file.pdf</FileName>
+											<FileName>katalogi/CM_CP.pdf</FileName>
 										</item>
 									</MenuItems>
 								</item>
 								<item class_id_reference="0" object_id="_41">
 									<TreeComponent>
-										<Title>Zawory skośne</Title>
+										<Title>Zawory do usunięcia</Title>
 									</TreeComponent>
 									<MenuItems>
 										<count>1</count>
 										<item_version>0</item_version>
 										<item class_id_reference="3" object_id="_42">
 											<TreeComponent>
-												<Title>VV/CP - zawory skośne pneumatyczne</Title>
+												<Title>VV/CP - zawory skośne do usunięcia</Title>
 											</TreeComponent>
 											<FileName>file.pdf</FileName>
 										</item>
@@ -303,7 +303,7 @@
 									<TreeComponent>
 										<Title>SV - Zawór skośny upustowy</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/SV_PVC-U.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -316,15 +316,15 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_46">
 									<TreeComponent>
-										<Title>FS - rotametry standartowe</Title>
+										<Title>FS - Rotametry standartowe</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FS_FC.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_47">
 									<TreeComponent>
-										<Title>FC - rotametry krótkie</Title>
+										<Title>FC - Rotametry krótkie</Title>
 									</TreeComponent>
-									<FileName>file.pdf</FileName>
+									<FileName>katalogi/FS_FC.pdf</FileName>
 								</item>
 							</MenuItems>
 						</item>
@@ -339,7 +339,7 @@
 						<item_version>0</item_version>
 						<item class_id_reference="3" object_id="_49">
 							<TreeComponent>
-								<Title>Informacje ogólne</Title>
+								<Title>Informacje ogólne do usunięcia</Title>
 							</TreeComponent>
 							<FileName>PVC-U_VALVES_general_info.pdf</FileName>
 						</item>
