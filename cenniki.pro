@@ -42,3 +42,4 @@ vectory.cpp \
 FORMS =
 
 RESOURCES += qml.qrc
+RC_FILE = cenniki.rc
