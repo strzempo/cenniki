@@ -20,6 +20,7 @@
 
 #include <QUrl>
 #include <QDesktopServices>
+#include <QCoreApplication>
 
 BOOST_CLASS_EXPORT_IMPLEMENT(ItemFileOpen)
 
@@ -40,7 +41,7 @@ ItemFileOpen::ItemFileOpen(QString title, QString fileName, TreeComponent *paren
 
 void ItemFileOpen::action()
 {
-    QUrl url = QUrl(FileName, QUrl::TolerantMode);
+    QUrl url = QUrl::fromLocalFile(QString("%1/%2").arg(qApp->applicationDirPath()).arg(FileName));
     qDebug() << "open URL:" << url;
     QDesktopServices::openUrl(url);
 }
