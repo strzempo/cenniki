@@ -1083,8 +1083,8 @@
 			<TreeComponent>
 				<Title>Odporność chemiczna</Title>
 			</TreeComponent>
-			<AppName>kemy/Kemy.exe</AppName>
-			<AboutText>Link https://www.fipnet.com/chemical-resistance-guide-final/?lang=en chemicznej materiałów i uszczelnień</AboutText>
+			<AppName>https://www.fipnet.com/chemical-resistance-guide-final/?lang=en</AppName>
+			<AboutText>Aplikacja on-line o odporności chemicznej materiałów i uszczelnień</AboutText>
 		</item>
 	</MenuItems>
 </RootComponent>
