@@ -160,13 +160,13 @@ void MainTreeModel::load()
         assert(RootComponent);
     }
     catch(boost::archive::archive_exception e){
-        qWarning() << "archive exception code" << e.code;
-        qWarning() << e.what();
-        throw;
+        delete RootComponent;
+        qCritical() << "archive exception code" << e.code;
+        qFatal(e.what());
     }
     catch(std::exception e){
         delete RootComponent;
-        qCritical() << e.what();
+        qFatal(e.what());
     }
 }
 
