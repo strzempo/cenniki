@@ -6,5 +6,6 @@
         <file>images/ding.png</file>
         <file>images/background.png</file>
         <file>kontakt.qml</file>
+        <file>images/fip-darkblue.png</file>
     </qresource>
 </RCC>

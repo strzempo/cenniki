@@ -29,7 +29,7 @@ ApplicationWindow {
 
     flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
 
-    FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
+    FontLoader { id: localFont; source: "qrc:/fonts/SourceSansPro-Semibold.otf" }
 
     background: Image {
         source: "images/background.png"
