@@ -1,4 +1,4 @@
-QT += quick 
+QT += quick
 CONFIG += c++11
 
 TARGET = cenniki
@@ -42,5 +42,3 @@ vectory.cpp \
 FORMS =
 
 RESOURCES += qml.qrc
-#RC_FILE = cenniki.rc
-win32: RC_ICONS = fip_small.ico

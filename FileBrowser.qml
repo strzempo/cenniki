@@ -41,7 +41,7 @@ Item {
                 id: nodeNameText
                 text: nodeName
                 font.pixelSize: 20
-                property var w: parent.width - icon.width - anchors.leftMargin - 10
+                property int w: parent.width - icon.width - anchors.leftMargin - 10
                 width: w < contentWidth ? w : contentWidth
                 height: parent.height
                 anchors.verticalCenter: parent.verticalCenter
@@ -104,8 +104,6 @@ Item {
             NumberAnimation { property: "opacity"; from: 0; to: 1.0; duration: 1000 }
         }
 
-
-
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
             width: browser.width
@@ -127,7 +125,7 @@ Item {
                 visible: oldSectionName
                 Text {
                     id: goBack
-                    text: "⤺" + oldSectionName //" Powrót"
+                    text: "⤺" + oldSectionName
                     font.pixelSize: 20
                     color: "midnightblue"
                     anchors.fill: parent
