@@ -41,7 +41,8 @@ Item {
                 id: nodeNameText
                 text: nodeName
                 font.pixelSize: 20
-                width: contentWidth
+                property var w: parent.width - icon.width - anchors.leftMargin - 10
+                width: w < contentWidth ? w : contentWidth
                 height: parent.height
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: icon.right
