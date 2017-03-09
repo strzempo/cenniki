@@ -52,7 +52,7 @@ Item {
             }
             Text {
                 id: nodeAboutText
-                text: nodeAbout
+                text: (nodeAbout) ? nodeAbout : ""
                 font.pixelSize: 16
                 color: "steelblue"
                 font.italic: true
@@ -122,7 +122,7 @@ Item {
                 width: browser.width
                 height: 1.5 * goBack.contentHeight
                 color: "transparent"
-                visible: oldSectionName
+                visible: (oldSectionName)
                 Text {
                     id: goBack
                     text: "⤺" + oldSectionName
