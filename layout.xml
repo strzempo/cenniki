@@ -10,7 +10,7 @@
 		<item_version>0</item_version>
 		<item class_id="3" class_name="ItemFileOpen" tracking_level="1" version="0" object_id="_1">
 			<TreeComponent>
-				<Title>FIP spot®</Title>
+				<Title>FIP spot</Title>
 			</TreeComponent>
 			<FileName>FIP_Spot.mpg</FileName>
 		</item>
@@ -53,25 +53,25 @@
 				</item>
 				<item class_id_reference="3" object_id="_8">
 					<TreeComponent>
-						<Title>VEE - Zawory Easyfit do wody DN 10-50</Title>
+						<Title>VEE - Zawory Easyfit® do wody DN 10-50</Title>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_VEE_10-50.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_9">
 					<TreeComponent>
-						<Title>VEE - Zawory Easyfit do wody DN 65-100</Title>
+						<Title>VEE - Zawory Easyfit® do wody DN 65-100</Title>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_VEE_65-100.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_10">
 					<TreeComponent>
-						<Title>VXE - Zawory Easyfit przemysłowe DN 10-50</Title>
+						<Title>VXE - Zawory Easyfit® przemysłowe DN 10-50</Title>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_VXE_10-50.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_11">
 					<TreeComponent>
-						<Title>VXE - Zawory Easyfit przemysłowe DN 65-100</Title>
+						<Title>VXE - Zawory Easyfit® przemysłowe DN 65-100</Title>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_VXE_65-100.pdf</FileName>
 				</item>
@@ -370,25 +370,25 @@
 								</item>
 								<item class_id_reference="3" object_id="_54">
 									<TreeComponent>
-										<Title>VXE PVC-U - Zawory Easyfit przemysłowe DN 10-50</Title>
+										<Title>VXE PVC-U - Zawory Easyfit® przemysłowe DN 10-50</Title>
 									</TreeComponent>
 									<FileName>katalogi/VXE_PVC-U_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_55">
 									<TreeComponent>
-										<Title>VXE PVC-U - Zawory Easyfit przemysłowe DN 65-100</Title>
+										<Title>VXE PVC-U - Zawory Easyfit® przemysłowe DN 65-100</Title>
 									</TreeComponent>
 									<FileName>katalogi/VXE_PVC-U_65-100.-pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_56">
 									<TreeComponent>
-										<Title>VEE PVC-U - Zawory Easyfit do wody DN 10-50</Title>
+										<Title>VEE PVC-U - Zawory Easyfit® do wody DN 10-50</Title>
 									</TreeComponent>
 									<FileName>katalogi/VEE_PVC-U_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_57">
 									<TreeComponent>
-										<Title>VEE PVC-U - Zawory Easyfit do wody DN 65-100</Title>
+										<Title>VEE PVC-U - Zawory Easyfit® do wody DN 65-100</Title>
 									</TreeComponent>
 									<FileName>katalogi/VEE_PVC-U_65-100.pdf</FileName>
 								</item>
@@ -457,7 +457,7 @@
 								</item>
 								<item class_id_reference="3" object_id="_67">
 									<TreeComponent>
-										<Title>SXE-SSE PVC-U - Zawory zwrotne kulowe Easyfit DN 10-50</Title>
+										<Title>SXE-SSE PVC-U - Zawory zwrotne kulowe Easyfit® DN 10-50</Title>
 									</TreeComponent>
 									<FileName>katalogi/SXE_SSE_DN10-50_PVC-U_EN.pdf</FileName>
 								</item>
@@ -746,7 +746,7 @@
 				</item>
 				<item class_id_reference="0" object_id="_108">
 					<TreeComponent>
-						<Title>System PVC-C TemperFIP100</Title>
+						<Title>System PVC-C TemperFIP100®</Title>
 					</TreeComponent>
 					<MenuItems>
 						<count>8</count>
@@ -799,25 +799,25 @@
 								<item_version>0</item_version>
 								<item class_id_reference="3" object_id="_116">
 									<TreeComponent>
-										<Title>VKD PVC-C - Zawory Dual Block DN 10-50</Title>
+										<Title>VKD PVC-C - Zawory Dual Block® DN 10-50</Title>
 									</TreeComponent>
 									<FileName>katalogi/.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_117">
 									<TreeComponent>
-										<Title>VKD PVC-C - Zawory kulowe Dual Block DN 65-100</Title>
+										<Title>VKD PVC-C - Zawory kulowe Dual Block® DN 65-100</Title>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVC-C_10-50.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_118">
 									<TreeComponent>
-										<Title>TKD PVC-C - Zawory trójdrożne Dual Block</Title>
+										<Title>TKD PVC-C - Zawory trójdrożne Dual Block®</Title>
 									</TreeComponent>
 									<FileName>katalogi/TKD_PVC-C_EN.pdf</FileName>
 								</item>
 								<item class_id_reference="3" object_id="_119">
 									<TreeComponent>
-										<Title>VXE PVC-C - Zawory Easyfit</Title>
+										<Title>VXE PVC-C - Zawory Easyfit®</Title>
 									</TreeComponent>
 									<FileName>katalogi/VXE_PVC-C_10-50.pdf</FileName>
 								</item>
