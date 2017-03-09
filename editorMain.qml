@@ -20,14 +20,11 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 
 ApplicationWindow {
-    id: mainWindow
     visible: true
-    title: qsTr("Aliaxis-UI")
+    title: qsTr("Cenniki Editor")
 
     height: 730
-    width: (height - header.height +1) * 1500/1173
-
-    flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
+    width: (height +1) * 1500/1173
 
     FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
 
@@ -38,56 +35,23 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
-    header: Rectangle {
-        height: 20
-        width: parent.width
-        color: "steelblue"
-
-        Text {
-            text: "Aliaxis Utilities & Industry"
-            font { family: localFont.name; pixelSize: 14 }
-            anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            property variant clickPos: "1,1"
-
-            onPressed: {
-                clickPos  = Qt.point(mouse.x,mouse.y)
-            }
-
-            onPositionChanged: {
-                var delta = Qt.point(mouse.x-clickPos.x, mouse.y-clickPos.y)
-                mainWindow.x += delta.x;
-                mainWindow.y += delta.y;
-            }
-        }
-    }
-
-    FileBrowser {
+    Editor {
+        id: editor
         height: 600
         width: 500
         x: parent.width - width
         y: 35
     }
 
-    Loader {
-        id: ld
-        anchors.fill: parent
-    }
-
     footer: Column {
         x: 20
         Rectangle {
-            height: kontakt.contentHeight + 10
-            width: kontakt.contentWidth
+            height: dodaj.contentHeight + 10
+            width: dodaj.contentWidth
             color: "transparent"
             Text {
-                id: kontakt
-                text: "☎ Kontakt"
+                id: dodaj
+                text: "Dodaj Element"
                 color: "black"
                 font { family: localFont.name; pixelSize: 20 }
             }
@@ -97,18 +61,18 @@ ApplicationWindow {
             }
         }
         Rectangle {
-            height: zamknij.contentHeight + 10
-            width: zamknij.contentWidth
+            height: zapisz.contentHeight + 10
+            width: zapisz.contentWidth
             color: "transparent"
             Text {
-                id: zamknij
-                text: "✗   Zamknij"
+                id: zapisz
+                text: "Zapisz"
                 color: "black"
                 font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: Qt.quit()
+                onClicked: editor.mainModel.model.save()
             }
         }
     }

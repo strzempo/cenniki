@@ -1,6 +1,7 @@
 mkdir cenniki 
 cd cenniki
 cp ../release/cenniki.exe ./
+cp ../release/editor.exe ./
 cp ../layout.xml ./
 REM cp ../build/Logger/Release/logger.dll ./bin/
 REM cp ../build/MainWindow/*.qm ./bin/

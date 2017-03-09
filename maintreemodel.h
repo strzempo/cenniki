@@ -48,7 +48,7 @@ public:
     bool insertItem(const QString &title, const QModelIndex &parent);
 
     //serialization
-    void save();
+    Q_INVOKABLE void save();
     void load();
 
     //for qml

@@ -7,5 +7,7 @@
         <file>images/background.png</file>
         <file>kontakt.qml</file>
         <file>images/fip-darkblue.png</file>
+        <file>Editor.qml</file>
+        <file>editorMain.qml</file>
     </qresource>
 </RCC>

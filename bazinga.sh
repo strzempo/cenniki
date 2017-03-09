@@ -2,9 +2,14 @@
 #mkdir build
 #cp layout.xml build/
 cd build
-make clean
-rm Makefile
+make clean -j 7
+#rm Makefile
 set -e
-qmake ../cenniki.pro
+qmake DEFINES+=EDITOR TARGET=editor ../cenniki.pro
 make -j 7
-./cenniki
+#rm Makefile
+make clean -j 7
+qmake TARGET=cenniki ../cenniki.pro
+make -j 7
+#./editor
+#./cenniki

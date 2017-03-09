@@ -1,7 +1,7 @@
 QT += quick
 CONFIG += c++11
 
-TARGET = cenniki
+#TARGET = cenniki
 TEMPLATE = app
 
 #logger lib - my basic Qt logging class
