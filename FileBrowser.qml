@@ -133,7 +133,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.parentModelIndex()
+                        mainModel.rootIndex = mainModel.rootIndex.parent //mainModel.model.parent(mainModel.rootIndex)
                         sectionName = mainModel.model.sectionName(mainModel.rootIndex)
                         oldSectionName = mainModel.model.sectionName(mainModel.rootIndex.parent)
                     }
@@ -154,7 +154,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.model.rootIndex()
+                        mainModel.rootIndex = 0// mainModel.model.rootIndex()
                         sectionName = ""
                         oldSectionName = ""
                     }

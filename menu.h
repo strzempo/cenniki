@@ -42,6 +42,9 @@ protected:
     {
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(MenuItems);
+        if (Archive::is_loading::value)
+            foreach (TreeComponent* it, MenuItems)
+                it->setParent(this);
     }
 
     friend class boost::serialization::access;
