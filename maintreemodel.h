@@ -35,7 +35,7 @@ public:
 
     // Basic functionality:
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-    Q_INVOKABLE QModelIndex parent(const QModelIndex &index) const override;
+    QModelIndex parent(const QModelIndex &index) const override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -62,7 +62,6 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void invokeAction(const QModelIndex& index) const;
-    Q_INVOKABLE QModelIndex rootIndex() const;
     Q_INVOKABLE QString sectionName(const QModelIndex& index) const;
 
 private:

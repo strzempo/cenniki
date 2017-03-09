@@ -67,7 +67,6 @@ QModelIndex MainTreeModel::index(int row, int column, const QModelIndex &parent)
 
 QModelIndex MainTreeModel::parent(const QModelIndex &index) const
 {
-    qDebug() << "parent of" << index;
     if (!index.isValid())
         return QModelIndex();
 
@@ -76,7 +75,7 @@ QModelIndex MainTreeModel::parent(const QModelIndex &index) const
 
     if (parentItem == RootComponent || parentItem == nullptr)
         return QModelIndex();
-qDebug() << "is" << createIndex(parentItem->row(), 0, parentItem);
+
     return createIndex(parentItem->row(), 0, parentItem);
 }
 
@@ -287,11 +286,6 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
 void MainTreeModel::invokeAction(const QModelIndex &index) const
 {
     static_cast<TreeComponent*>(index.internalPointer())->action();
-}
-
-QModelIndex MainTreeModel::rootIndex() const
-{
-    return createIndex(0, 0, RootComponent);
 }
 
 QString MainTreeModel::sectionName(const QModelIndex &index) const
