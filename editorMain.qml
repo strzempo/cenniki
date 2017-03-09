@@ -38,13 +38,30 @@ ApplicationWindow {
     Editor {
         id: editor
         height: 600
-        width: 500
+        width: 532
         x: parent.width - width
         y: 35
     }
 
     footer: Column {
         x: 20
+    /*
+    Rectangle {
+            height: dodajMenu.contentHeight + 10
+            width: dodajMenu.contentWidth
+            color: "transparent"
+            Text {
+                id: dodajMenu
+                text: "Dodaj Menu"
+                color: "black"
+                font { family: localFont.name; pixelSize: 20 }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: editor.mainModel.model.insertMenu("nowy", editor.mainModel.rootIndex)
+            }
+        }
+    */
         Rectangle {
             height: dodaj.contentHeight + 10
             width: dodaj.contentWidth
@@ -57,7 +74,7 @@ ApplicationWindow {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: ld.source="kontakt.qml"
+                onClicked: editor.mainModel.model.insertItem("nowy", editor.mainModel.rootIndex)
             }
         }
         Rectangle {
@@ -67,7 +84,7 @@ ApplicationWindow {
             Text {
                 id: zapisz
                 text: "Zapisz"
-                color: "black"
+                color: "red"
                 font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {

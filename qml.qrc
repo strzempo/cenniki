@@ -9,5 +9,6 @@
         <file>images/fip-darkblue.png</file>
         <file>Editor.qml</file>
         <file>editorMain.qml</file>
+        <file>images/cross.png</file>
     </qresource>
 </RCC>

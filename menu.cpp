@@ -39,6 +39,11 @@ void Menu::add(TreeComponent *component)
     MenuItems.append(component);
 }
 
+void Menu::remove(TreeComponent *component)
+{
+    MenuItems.removeOne(component);
+}
+
 TreeComponent *Menu::child(int row) const
 {
     if(row < MenuItems.count())

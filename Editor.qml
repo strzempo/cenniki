@@ -27,14 +27,18 @@ Item {
         model: mainTreeModel
         delegate: Rectangle {
             color: "transparent"
-            width: view.width
             height: nodeNameText.contentHeight + 8
+            width: view.width
 
             Image {
                 id: icon
                 width: 24
                 height: width
-                source: "images/ding.png"
+                source: "images/cross.png"
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: mainModel.model.removeItem(index)
+                }
             }
             Text {
                 id: nodeNameText
@@ -48,34 +52,18 @@ Item {
                 anchors.leftMargin: 4
                 wrapMode: Text.WordWrap
                 color: model.hasModelChildren ? "black" : "steelblue"
-            }
-            Text {
-                id: nodeAboutText
-                text: (nodeAbout) ? nodeAbout : ""
-                font.pixelSize: 16
-                color: "steelblue"
-                font.italic: true
-                opacity: 0
-                width: 200
-                height: parent.height
-                anchors.verticalCenter: parent.verticalTop
-                anchors.left: nodeNameText.right
-                anchors.margins: 10
-                wrapMode: Text.WordWrap
 
-            }
-
-            MouseArea {
-                id: mouseArea
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: {
-                    if (model.hasModelChildren) {
-                        oldSectionName = sectionName
-                        sectionName = nodeName
-                        mainModel.rootIndex = mainModel.modelIndex(index)
-                    } else
-                        mainModel.model.invokeAction(mainModel.modelIndex(index))
+                MouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    onClicked: {
+                        if (model.hasModelChildren) {
+                            oldSectionName = sectionName
+                            sectionName = nodeName
+                            mainModel.rootIndex = mainModel.modelIndex(index)
+                        } else
+                            mainModel.model.invokeAction(mainModel.modelIndex(index))
+                    }
                 }
             }
         }

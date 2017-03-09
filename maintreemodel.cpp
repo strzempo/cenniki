@@ -133,9 +133,19 @@ bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
     int pos = parentItem->childCount()-1;
     pos = pos < 0 ? 0 : pos;
     beginInsertRows(parent, pos, pos);
-    parentItem->add(new ItemFileOpen(title, "", parentItem));
+    parentItem->add(new ItemFileOpen(title, "file.pdf", parentItem));
     endInsertRows();
     return true;
+}
+
+void MainTreeModel::removeItem(const QModelIndex &index)
+{
+    TreeComponent *item = getItem(index);
+    Menu* parent = static_cast<Menu*>(item->parent());
+    int row = index.row();
+    beginRemoveRows(index.parent(), row, row);
+    parent->remove(item);
+    endRemoveRows();
 }
 
 void MainTreeModel::save()

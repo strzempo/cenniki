@@ -6,7 +6,7 @@
 		<Title>Main Menu</Title>
 	</TreeComponent>
 	<MenuItems class_id="2" tracking_level="0" version="0">
-		<count>7</count>
+		<count>8</count>
 		<item_version>0</item_version>
 		<item class_id="3" class_name="ItemFileOpen" tracking_level="1" version="0" object_id="_1">
 			<TreeComponent>
@@ -88,7 +88,7 @@
 				<Title>Katalogi techniczne</Title>
 			</TreeComponent>
 			<MenuItems>
-				<count>8</count>
+				<count>9</count>
 				<item_version>0</item_version>
 				<item class_id_reference="0" object_id="_14">
 					<TreeComponent>
@@ -1077,14 +1077,26 @@
 						</item>
 					</MenuItems>
 				</item>
+				<item class_id_reference="3" object_id="_156">
+					<TreeComponent>
+						<Title>nowy</Title>
+					</TreeComponent>
+					<FileName></FileName>
+				</item>
 			</MenuItems>
 		</item>
-		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_156">
+		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_157">
 			<TreeComponent>
 				<Title>Odporność chemiczna</Title>
 			</TreeComponent>
 			<AppName>https://www.fipnet.com/chemical-resistance-guide-final/?lang=en</AppName>
 			<AboutText>Aplikacja on-line o odporności chemicznej materiałów i uszczelnień</AboutText>
+		</item>
+		<item class_id_reference="3" object_id="_158">
+			<TreeComponent>
+				<Title>nowy</Title>
+			</TreeComponent>
+			<FileName></FileName>
 		</item>
 	</MenuItems>
 </RootComponent>
