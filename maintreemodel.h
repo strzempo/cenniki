@@ -51,8 +51,6 @@ public:
     void save();
     void load();
 
-    void generateSampleTree();
-
     //for qml
     enum ItemRoles
     {

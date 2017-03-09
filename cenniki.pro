@@ -36,7 +36,6 @@ SOURCES += \
     treecomponent.cpp \
     itemfileopen.cpp \
     menu.cpp \
-vectory.cpp \
     itemappopen.cpp
 
 FORMS =
