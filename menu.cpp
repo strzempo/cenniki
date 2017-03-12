@@ -39,9 +39,13 @@ void Menu::add(TreeComponent *component)
     MenuItems.append(component);
 }
 
-void Menu::remove(TreeComponent *component)
+void Menu::remove(int n)
 {
-    MenuItems.removeOne(component);
+    if(n < MenuItems.count())
+        MenuItems.removeAt(n);
+    else
+        qWarning() << "Removing non existant row" << n << "from menu" << Title;
+
 }
 
 TreeComponent *Menu::child(int row) const

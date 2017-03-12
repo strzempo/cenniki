@@ -1,6 +1,8 @@
 QT += quick
 CONFIG += c++11
 
+TARGET = editor
+DEFINES += EDITOR
 #TARGET = cenniki
 TEMPLATE = app
 

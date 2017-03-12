@@ -140,11 +140,21 @@ bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
 
 void MainTreeModel::removeItem(const QModelIndex &index)
 {
-    TreeComponent *item = getItem(index);
-    Menu* parent = static_cast<Menu*>(item->parent());
+    if( !index.isValid() )
+    {
+        qWarning() << "invalid index passed";
+        return;
+    }
+
+    QModelIndex parentIndex = index.parent();
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
     int row = index.row();
-    beginRemoveRows(index.parent(), row, row);
-    parent->remove(item);
+    beginRemoveRows(parentIndex, row, row);
+    parent->remove(row);
     endRemoveRows();
 }
 

@@ -30,7 +30,7 @@ public:
     virtual ~Menu();
 
     virtual void add(TreeComponent* component);
-    virtual void remove(TreeComponent* component);
+    virtual void remove(int n);
     virtual TreeComponent* child(int row) const;
     virtual int childCount() const;
 
