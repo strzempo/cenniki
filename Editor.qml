@@ -24,44 +24,112 @@ Item {
     property string oldSectionName
     property var mainModel: DelegateModel {
         model: mainTreeModel
-        delegate: Rectangle {
-            color: "transparent"
-            height: nodeNameText.contentHeight + 8
-            width: view.width
+        delegate: MouseArea {
+            id: dragArea
+            property bool held: false
+/*
+            onClicked: console.log("area clicked")
+            onDoubleClicked: console.log("area double clicked")
+            onEntered: console.log("mouse entered the area")
+            onExited: console.log("mouse left the area")
+            onPressAndHold: console.log("mouse held")
+            onReleased: console.log("mouse released")
+*/
+            //property int visualIndex: DelegateModel.itemsIndex
+            drag.target: held ? itemRect : undefined
+            drag.axis: Drag.YAxis
 
-            Image {
-                id: icon
-                width: 24
-                height: width
-                source: "images/cross.png"
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: mainModel.model.removeItem(mainModel.rootIndex, mainModel.modelIndex(index))
+            onPressAndHold: held = true
+            onReleased: held = false
+            anchors { left: parent.left; right: parent.right }
+            //width: view.width
+            height: itemRect.height
+/*
+            DropArea {
+                anchors { fill: parent; margins: 5 }
+                onEntered: visualModel.items.move(drag.source.visualIndex, delegateRoot.visualIndex)
+            }
+*/
+
+            DropArea {
+                anchors { fill: parent; margins: 10 }
+
+                onEntered: {
+                    visualModel.items.move(
+                            drag.source.DelegateModel.itemsIndex,
+                            dragArea.DelegateModel.itemsIndex)
                 }
             }
-            Text {
-                id: nodeNameText
-                text: nodeName
-                font.pixelSize: 20
-                property int w: parent.width - icon.width - anchors.leftMargin - 10
-                width: w < contentWidth ? w : contentWidth
-                height: parent.height
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: icon.right
-                anchors.leftMargin: 4
-                wrapMode: Text.WordWrap
-                color: model.hasModelChildren ? "black" : "steelblue"
+            Rectangle {
+                id: itemRect
+                color: dragArea.held ? "lightgrey" : "transparent"
+                Behavior on color { ColorAnimation { duration: 200; easing.type: Easing.InOutQuad } }
+                border.width: 2
+                border.color: "lightsteelblue"
+               // anchors.fill: parent
+                width: dragArea.width
+                height: nodeNameText.contentHeight + 8
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
 
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    onClicked: {
-                        if (model.hasModelChildren) {
-                            oldSectionName = sectionName
-                            sectionName = nodeName
-                            mainModel.rootIndex = mainModel.modelIndex(index)
-                        } else
-                            mainModel.model.invokeAction(mainModel.modelIndex(index))
+                Drag.active: dragArea.held
+                Drag.source: dragArea
+                Drag.hotSpot.x: width / 2
+                Drag.hotspot.y: height / 2
+
+                states: [
+                State {
+                        when: dragArea.held
+                        ParentChange {
+                            target: itemRect
+                            parent: view
+                        }
+                        AnchorChanges {
+                            target: itemRect
+                            anchors.horizontalCenter: undefined
+                            anchors.verticalCenter: undefined
+                        }
+
+                    }
+
+                ]
+
+                Image {
+                    id: icon
+                    width: 24
+                    height: width
+                    source: "images/cross.png"
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: mainModel.model.removeItem(mainModel.rootIndex, mainModel.modelIndex(index))
+                    }
+                }
+                Text {
+                    id: nodeNameText
+                    text: nodeName
+                    font.pixelSize: 20
+                    property int w: parent.width - icon.width - anchors.leftMargin - 10
+                    width: w < contentWidth ? w : contentWidth
+                    height: parent.height
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: icon.right
+                    anchors.leftMargin: 4
+                    wrapMode: Text.WordWrap
+                    color: model.hasModelChildren ? "black" : "steelblue"
+
+                    MouseArea {
+                        id: mouseArea
+                        anchors.fill: parent
+                        onClicked: {
+                            if (model.hasModelChildren) {
+                                oldSectionName = sectionName
+                                sectionName = nodeName
+                                mainModel.rootIndex = mainModel.modelIndex(index)
+                            } else
+                                mainModel.model.invokeAction(mainModel.modelIndex(index))
+                        }
                     }
                 }
             }
