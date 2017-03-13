@@ -120,8 +120,9 @@ Qt::ItemFlags MainTreeModel::flags(const QModelIndex &index) const
 bool MainTreeModel::insertMenu(const QString& title, const QModelIndex &parent)
 {
     TreeComponent *parentItem = getItem(parent);
-    int pos = parentItem->childCount();
-    beginInsertRows(parent, pos, pos);
+    int row = parentItem->childCount();
+    qDebug() << "inserting item on row" << row << "in menu" << parentItem->title();
+    beginInsertRows(parent, row, row);
     parentItem->add(new Menu(title, parentItem));
     endInsertRows();
     return true;
@@ -130,9 +131,9 @@ bool MainTreeModel::insertMenu(const QString& title, const QModelIndex &parent)
 bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
 {
     TreeComponent *parentItem = getItem(parent);
-    int pos = parentItem->childCount()-1;
-    pos = pos < 0 ? 0 : pos;
-    beginInsertRows(parent, pos, pos);
+    int row = parentItem->childCount();
+    qDebug() << "inserting item on row" << row << "in menu" << parentItem->title();
+    beginInsertRows(parent, row, row);
     parentItem->add(new ItemFileOpen(title, "file.pdf", parentItem));
     endInsertRows();
     return true;
@@ -153,6 +154,26 @@ void MainTreeModel::removeItem(const QModelIndex &index)
     else
         parent = static_cast<Menu*>(RootComponent);
     int row = index.row();
+    qDebug() << "removing item on row" << row << "in menu" << parent->title();
+    beginRemoveRows(parentIndex, row, row);
+    parent->remove(row);
+    endRemoveRows();
+}
+
+void MainTreeModel::removeItem(const QModelIndex &parentIndex, const QModelIndex &index)
+{
+    if( !index.isValid() )
+    {
+        qWarning() << "invalid index passed";
+        return;
+    }
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+    int row = index.row();
+    qDebug() << "removing item on row" << row << "in menu" << parent->title();
     beginRemoveRows(parentIndex, row, row);
     parent->remove(row);
     endRemoveRows();

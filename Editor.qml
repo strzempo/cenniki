@@ -23,7 +23,6 @@ Item {
     property string sectionName
     property string oldSectionName
     property var mainModel: DelegateModel {
-        //property var mainMenuIndex: rootIndex
         model: mainTreeModel
         delegate: Rectangle {
             color: "transparent"
@@ -37,7 +36,7 @@ Item {
                 source: "images/cross.png"
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: mainModel.model.removeItem(mainModel.modelIndex(index))
+                    onClicked: mainModel.model.removeItem(mainModel.rootIndex, mainModel.modelIndex(index))
                 }
             }
             Text {
