@@ -26,6 +26,9 @@ Item {
         model: mainTreeModel
         delegate: MouseArea {
             id: dragArea
+            anchors { left: parent.left; right: parent.right }
+            //width: view.width
+            height: itemRect.height
             property bool held: false
 /*
             onClicked: console.log("area clicked")
@@ -41,9 +44,14 @@ Item {
 
             onPressAndHold: held = true
             onReleased: held = false
-            anchors { left: parent.left; right: parent.right }
-            //width: view.width
-            height: itemRect.height
+            onClicked: {
+                if (model.hasModelChildren) {
+                    oldSectionName = sectionName
+                    sectionName = nodeName
+                    mainModel.rootIndex = mainModel.modelIndex(index)
+                } else
+                    mainModel.model.invokeAction(mainModel.modelIndex(index))
+            }
 /*
             DropArea {
                 anchors { fill: parent; margins: 5 }
@@ -76,8 +84,8 @@ Item {
 
                 Drag.active: dragArea.held
                 Drag.source: dragArea
-                Drag.hotSpot.x: width / 2
-                Drag.hotspot.y: height / 2
+       //         Drag.hotSpot.x: width / 2
+       //         Drag.hotspot.y: height / 2
 
                 states: [
                 State {
@@ -118,9 +126,10 @@ Item {
                     anchors.leftMargin: 4
                     wrapMode: Text.WordWrap
                     color: model.hasModelChildren ? "black" : "steelblue"
-
+/*
                     MouseArea {
                         id: mouseArea
+                        propagateComposedEvents: true
                         anchors.fill: parent
                         onClicked: {
                             if (model.hasModelChildren) {
@@ -131,6 +140,7 @@ Item {
                                 mainModel.model.invokeAction(mainModel.modelIndex(index))
                         }
                     }
+  */
                 }
             }
         }
