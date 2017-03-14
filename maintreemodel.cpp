@@ -179,6 +179,13 @@ void MainTreeModel::removeItem(const QModelIndex &parentIndex, const QModelIndex
     endRemoveRows();
 }
 
+bool MainTreeModel::isMenu(const QModelIndex &item) const
+{
+    if(!item.isValid())
+        return true;
+    return static_cast<TreeComponent*>(getItem(item))->isMenu();
+}
+
 void MainTreeModel::save()
 {
     std::ofstream ofs("layout.xml");

@@ -36,6 +36,8 @@ public:
 
     virtual int findRowOf(TreeComponent* child) const;
 
+    virtual bool isMenu() const override;
+
 protected:
    QList<TreeComponent*> MenuItems;
     template<class Archive>

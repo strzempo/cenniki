@@ -100,3 +100,8 @@ void TreeComponent::setParent(TreeComponent *parent)
 {
     Parent = parent;
 }
+
+bool TreeComponent::isMenu() const
+{
+    return false;
+}

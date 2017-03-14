@@ -48,6 +48,7 @@ public:
     Q_INVOKABLE bool insertItem(const QString &title, const QModelIndex &parent);
     void removeItem(const QModelIndex& index);
     Q_INVOKABLE void removeItem(const QModelIndex& parentIndex, const QModelIndex& index);
+    Q_INVOKABLE bool isMenu(const QModelIndex& item) const;
 
     //serialization
     Q_INVOKABLE void save();

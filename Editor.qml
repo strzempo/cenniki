@@ -20,16 +20,22 @@ import QtQuick 2.7
 import QtQml.Models 2.2
 Item {
     id: editor
+
     property string sectionName
     property string oldSectionName
-    property var mainModel: DelegateModel {
-        model: mainTreeModel
-        delegate: MouseArea {
+ //   property var mainModel: DelegateModel {
+ //       model: mainTreeModel
+    Component {
+        id: dragDelegate
+
+        MouseArea {
             id: dragArea
+
+            property bool held: false
+
             anchors { left: parent.left; right: parent.right }
             //width: view.width
             height: itemRect.height
-            property bool held: false
 /*
             onClicked: console.log("area clicked")
             onDoubleClicked: console.log("area double clicked")
@@ -45,12 +51,12 @@ Item {
             onPressAndHold: held = true
             onReleased: held = false
             onClicked: {
-                if (model.hasModelChildren) {
+                if (visualModel.model.isMenu(visualModel.modelIndex(index))) {
                     oldSectionName = sectionName
                     sectionName = nodeName
-                    mainModel.rootIndex = mainModel.modelIndex(index)
+                    visualModel.rootIndex = visualModel.modelIndex(index)
                 } else
-                    mainModel.model.invokeAction(mainModel.modelIndex(index))
+                    visualModel.model.invokeAction(visualModel.modelIndex(index))
             }
 /*
             DropArea {
@@ -60,7 +66,7 @@ Item {
 */
 
             DropArea {
-                anchors { fill: parent; margins: 10 }
+                anchors { fill: parent; margins: 2 }
 
                 onEntered: {
                     visualModel.items.move(
@@ -84,8 +90,9 @@ Item {
 
                 Drag.active: dragArea.held
                 Drag.source: dragArea
-       //         Drag.hotSpot.x: width / 2
-       //         Drag.hotspot.y: height / 2
+                Drag.hotSpot.x: width / 2
+                Drag.hotSpot.y: height / 2
+
 
                 states: [
                 State {
@@ -145,10 +152,20 @@ Item {
             }
         }
     }
+
+    DelegateModel {
+        id: visualModel
+        model: mainTreeModel
+        delegate: dragDelegate
+    }
+
     ListView {
         id: view
         anchors.fill: parent
-        model: mainModel
+        model: visualModel
+
+        spacing: 4
+        cacheBuffer: 50
 
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
@@ -179,9 +196,9 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.rootIndex.parent
-                        sectionName = mainModel.model.sectionName(mainModel.rootIndex)
-                        oldSectionName = mainModel.model.sectionName(mainModel.rootIndex.parent)
+                        visualModel.rootIndex = visualModel.rootIndex.parent
+                        sectionName = visualModel.model.sectionName(visualModel.rootIndex)
+                        oldSectionName = visualModel.model.sectionName(visualModel.rootIndex.parent)
                     }
                 }
             }
@@ -200,7 +217,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = 0
+                        visualModel.rootIndex = 0
                         sectionName = ""
                         oldSectionName = ""
                     }

@@ -47,6 +47,8 @@ public:
     virtual void action();
     virtual void setParent(TreeComponent *parent);
 
+    virtual bool isMenu() const;
+
 protected:
     TreeComponent* Parent;
     QString Title;
