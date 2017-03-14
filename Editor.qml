@@ -21,44 +21,22 @@ import QtQml.Models 2.2
 Item {
     id: editor
 
+    property var currentParent: visualModel.rootIndex
     property string sectionName
     property string oldSectionName
- //   property var mainModel: DelegateModel {
- //       model: mainTreeModel
+
     Component {
         id: dragDelegate
 
         MouseArea {
             id: dragArea
+            anchors { left: parent.left; right: parent.right }
+            height: itemRect.height
+
+            property bool itIsMenu
+            Component.onCompleted: itIsMenu = visualModel.model.isMenu(visualModel.modelIndex(index))
 
             property bool held: false
-
-            anchors { left: parent.left; right: parent.right }
-            //width: view.width
-            height: itemRect.height
-/*
-            onClicked: console.log("area clicked")
-            onDoubleClicked: console.log("area double clicked")
-            onEntered: console.log("mouse entered the area")
-            onExited: console.log("mouse left the area")
-            onPressAndHold: console.log("mouse held")
-            onReleased: console.log("mouse released")
-*/
-            //property int visualIndex: DelegateModel.itemsIndex
-            drag.target: held ? itemRect : undefined
-            drag.axis: Drag.YAxis
-
-            onPressAndHold: held = true
-            onReleased: held = false
-            onClicked: {
-                if (visualModel.model.isMenu(visualModel.modelIndex(index))) {
-                    oldSectionName = sectionName
-                    sectionName = nodeName
-                    visualModel.rootIndex = visualModel.modelIndex(index)
-                } else
-                    visualModel.model.invokeAction(visualModel.modelIndex(index))
-            }
-
             onHeldChanged: {
                 if (held == false)
                 {
@@ -66,33 +44,37 @@ Item {
                         console.log(visualModel.modelIndex(index))
                         console.log(dragArea.DelegateModel.itemsIndex)
                 }
-  //              }
-    //                itemRect.Drag.start();
-      //          else {
-        //            itemRect.Drag.drop();
             }
 
+            drag.target: held ? itemRect : undefined
+            drag.axis: Drag.YAxis
+
+            onPressAndHold: held = true
+            onReleased: held = false
+            onClicked: {
+                if (itIsMenu) {
+                    oldSectionName = sectionName
+                    sectionName = nodeName
+                    visualModel.rootIndex = visualModel.modelIndex(index)
+                } else
+                    visualModel.model.invokeAction(visualModel.modelIndex(index))
+            }
 
             DropArea {
                 anchors { fill: parent; margins: 2 }
-
                 onEntered: {
                     visualModel.items.move(
                             drag.source.DelegateModel.itemsIndex,
                             dragArea.DelegateModel.itemsIndex)
                 }
-                onDropped: {
-                            console.log(drag.source.DelegateModel.index)
-                            console.log(drag.source.DelegateModel.itemsIndex)
-                }
             }
+
             Rectangle {
                 id: itemRect
                 color: dragArea.held ? "lightgrey" : "transparent"
                 Behavior on color { ColorAnimation { duration: 200; easing.type: Easing.InOutQuad } }
                 border.width: 2
                 border.color: "lightsteelblue"
-               // anchors.fill: parent
                 width: dragArea.width
                 height: nodeNameText.contentHeight + 8
                 anchors {
@@ -101,7 +83,6 @@ Item {
                 }
 
                 Drag.active: dragArea.held
-//                Drag.dragType: Drag.Automatic
                 Drag.source: dragArea
                 Drag.hotSpot.x: width / 2
                 Drag.hotSpot.y: height / 2
@@ -118,7 +99,6 @@ Item {
                             anchors.horizontalCenter: undefined
                             anchors.verticalCenter: undefined
                         }
-
                     }
                 ]
 
@@ -129,9 +109,10 @@ Item {
                     source: "images/cross.png"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: mainModel.model.removeItem(mainModel.rootIndex, mainModel.modelIndex(index))
+                        onClicked: visualModel.model.removeItem(visualModel.rootIndex, visualModel.modelIndex(index))
                     }
                 }
+
                 Text {
                     id: nodeNameText
                     text: nodeName
@@ -143,22 +124,7 @@ Item {
                     anchors.left: icon.right
                     anchors.leftMargin: 4
                     wrapMode: Text.WordWrap
-                    color: model.hasModelChildren ? "black" : "steelblue"
-/*
-                    MouseArea {
-                        id: mouseArea
-                        propagateComposedEvents: true
-                        anchors.fill: parent
-                        onClicked: {
-                            if (model.hasModelChildren) {
-                                oldSectionName = sectionName
-                                sectionName = nodeName
-                                mainModel.rootIndex = mainModel.modelIndex(index)
-                            } else
-                                mainModel.model.invokeAction(mainModel.modelIndex(index))
-                        }
-                    }
-  */
+                    color: itIsMenu ? "black" : "steelblue"
                 }
             }
         }
@@ -208,7 +174,7 @@ Item {
                     anchors.fill: parent
                     onClicked: {
                         visualModel.rootIndex = visualModel.rootIndex.parent
-                        sectionName = visualModel.model.sectionName(visualModel.rootIndex)
+                        sectionName = oldSectionName
                         oldSectionName = visualModel.model.sectionName(visualModel.rootIndex.parent)
                     }
                 }

@@ -45,8 +45,8 @@ ApplicationWindow {
 
     footer: Column {
         x: 20
-    /*
-    Rectangle {
+
+        Rectangle {
             height: dodajMenu.contentHeight + 10
             width: dodajMenu.contentWidth
             color: "transparent"
@@ -58,10 +58,10 @@ ApplicationWindow {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: editor.mainModel.model.insertMenu("nowy", editor.mainModel.rootIndex)
+                onClicked: mainTreeModel.insertMenu("nowe Menu", editor.currentParent)
             }
         }
-    */
+
         Rectangle {
             height: dodaj.contentHeight + 10
             width: dodaj.contentWidth
@@ -74,7 +74,7 @@ ApplicationWindow {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: editor.mainModel.model.insertItem("nowy", editor.mainModel.rootIndex)
+                onClicked: mainTreeModel.insertItem("nowy element", editor.currentParent)
             }
         }
         Rectangle {
@@ -89,7 +89,7 @@ ApplicationWindow {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: editor.mainModel.model.save()
+                onClicked: mainTreeModel.save()
             }
         }
     }
