@@ -58,12 +58,20 @@ Item {
                 } else
                     visualModel.model.invokeAction(visualModel.modelIndex(index))
             }
-/*
-            DropArea {
-                anchors { fill: parent; margins: 5 }
-                onEntered: visualModel.items.move(drag.source.visualIndex, delegateRoot.visualIndex)
+
+            onHeldChanged: {
+                if (held == false)
+                {
+                        console.log(index)
+                        console.log(visualModel.modelIndex(index))
+                        console.log(dragArea.DelegateModel.itemsIndex)
+                }
+  //              }
+    //                itemRect.Drag.start();
+      //          else {
+        //            itemRect.Drag.drop();
             }
-*/
+
 
             DropArea {
                 anchors { fill: parent; margins: 2 }
@@ -72,6 +80,10 @@ Item {
                     visualModel.items.move(
                             drag.source.DelegateModel.itemsIndex,
                             dragArea.DelegateModel.itemsIndex)
+                }
+                onDropped: {
+                            console.log(drag.source.DelegateModel.index)
+                            console.log(drag.source.DelegateModel.itemsIndex)
                 }
             }
             Rectangle {
@@ -89,13 +101,13 @@ Item {
                 }
 
                 Drag.active: dragArea.held
+//                Drag.dragType: Drag.Automatic
                 Drag.source: dragArea
                 Drag.hotSpot.x: width / 2
                 Drag.hotSpot.y: height / 2
 
-
                 states: [
-                State {
+                    State {
                         when: dragArea.held
                         ParentChange {
                             target: itemRect
@@ -108,7 +120,6 @@ Item {
                         }
 
                     }
-
                 ]
 
                 Image {
