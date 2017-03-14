@@ -49,20 +49,27 @@ public:
 
     virtual bool isMenu() const;
 
+    int getSequenceNumber() const;
+    void setSequenceNumber(int value);
+
 protected:
     TreeComponent* Parent;
     QString Title;
+    int SequenceNumber;
 
     template<class Archive>
-    void serialize(Archive & ar, const unsigned int /*version*/)
+    void serialize(Archive & ar, const unsigned int version)
     {
         ar & BOOST_SERIALIZATION_NVP(Title);
+        if(version > 0)
+            ar & BOOST_SERIALIZATION_NVP(SequenceNumber);
         qDebug() << "serialize TreeComponent:" << Title;
     }
 
     friend class boost::serialization::access;
 };
 
+BOOST_CLASS_VERSION(TreeComponent, 1)
 BOOST_SERIALIZATION_ASSUME_ABSTRACT(TreeComponent)
 
 #endif // TREECOMPONENT_H

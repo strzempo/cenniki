@@ -186,6 +186,28 @@ bool MainTreeModel::isMenu(const QModelIndex &item) const
     return static_cast<TreeComponent*>(getItem(item))->isMenu();
 }
 
+void MainTreeModel::reorder(const QModelIndex &parentIndex, int oldPos, int newPos)
+{
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+
+    int rowCount = parent->childCount();
+    beginResetModel();
+    if(oldPos > newPos)
+    {
+        for(int i=0; i < rowCount; ++i)
+        {
+            TreeComponent* item = parent->child(i);
+
+        }
+    }
+
+
+}
+
 void MainTreeModel::save()
 {
     std::ofstream ofs("layout.xml");
