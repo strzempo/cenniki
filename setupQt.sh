@@ -15,6 +15,9 @@ elif [ $QTVER = "57" ] ; then
     sudo add-apt-repository -y ppa:beineri/opt-qt571-trusty
     sudo apt-get -qq update
     sudo apt-get install -y qt57base qt57declarative # qt57quickcontrols qt57quickcontrols2
+ls -lh /opt
+ls -lh /opt/qt57
+ls -lh /opt/qt57/bin
     QTDIR="/opt/qt57" && PATH="$QTDIR/bin:$PATH"
     source /opt/qt57/bin/qt57-env.sh
 else
