@@ -179,6 +179,69 @@ void MainTreeModel::removeItem(const QModelIndex &parentIndex, const QModelIndex
     endRemoveRows();
 }
 
+bool MainTreeModel::isMenu(const QModelIndex &item) const
+{
+    if(!item.isValid())
+        return true;
+    return static_cast<TreeComponent*>(getItem(item))->isMenu();
+}
+
+void MainTreeModel::reorder(const QModelIndex &parentIndex, int oldPos, int newPos)
+{
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+
+    int rowCount = parent->childCount();
+#ifdef VERBOSE
+    qDebug() << "pre-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
+
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        int curPos = item->getSequenceNumber();
+        int destPos = curPos;
+        if(curPos == oldPos)
+            destPos = newPos;
+        else if(oldPos < newPos && curPos > oldPos && curPos <= newPos)
+            destPos--;
+        else if(oldPos > newPos && curPos < oldPos && curPos >= newPos)
+            destPos++;
+        item->setSequenceNumber(destPos);
+    }
+
+#ifdef VERBOSE
+    qDebug() << "post-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
+}
+
+void MainTreeModel::reorder(const QModelIndex &parentIndex, const QModelIndex &index, int newPos)
+{
+    if(!index.isValid())
+    {
+        qWarning() << "invalid index";
+        return;
+    }
+    int oldPos = static_cast<TreeComponent*>(index.internalPointer())->getSequenceNumber();
+    if (oldPos != newPos)
+        reorder(parentIndex, oldPos, newPos);
+}
+
 void MainTreeModel::save()
 {
     std::ofstream ofs("layout.xml");
@@ -215,6 +278,7 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[nodeNameRole] = "nodeName";
     roles[nodeAboutRole] = "nodeAbout";
+    roles[nodeSequenceRole] = "nodeSequence";
     return roles;
 }
 

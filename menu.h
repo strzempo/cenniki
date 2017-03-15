@@ -36,21 +36,34 @@ public:
 
     virtual int findRowOf(TreeComponent* child) const;
 
+    virtual bool isMenu() const override;
+
 protected:
    QList<TreeComponent*> MenuItems;
     template<class Archive>
-    void serialize(Archive & ar, const unsigned int /*version*/)
+    void serialize(Archive & ar, const unsigned int version)
     {
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(MenuItems);
         if (Archive::is_loading::value)
+        {
+            int i=0;
             foreach (TreeComponent* it, MenuItems)
+            {
                 it->setParent(this);
+                if(version < 1)
+                    it->setSequenceNumber(i++);
+#ifdef VERBOSE
+                qDebug() << it->getSequenceNumber();
+#endif
+            }
+        }
     }
 
     friend class boost::serialization::access;
 };
 
+BOOST_CLASS_VERSION(Menu, 1)
 BOOST_CLASS_EXPORT_KEY(Menu)
 
 #endif // TREECOMPOSITE_H

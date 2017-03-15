@@ -65,3 +65,8 @@ int Menu::findRowOf(TreeComponent *child) const
     return MenuItems.indexOf(child);
 }
 
+bool Menu::isMenu() const
+{
+    return true;
+}
+
