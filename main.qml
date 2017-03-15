@@ -29,8 +29,6 @@ ApplicationWindow {
 
     flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
 
-    FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
-
     background: Image {
         source: "images/background.png"
         verticalAlignment: Image.AlignBottom
@@ -39,21 +37,21 @@ ApplicationWindow {
     }
 
     header: Rectangle {
-        height: 20
+        height: 24
         width: parent.width
         color: "steelblue"
 
-        Text {
+        MyText {
             text: "Aliaxis Utilities & Industry"
-            font { family: localFont.name; pixelSize: 14 }
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+            font.pixelSize: 16
         }
 
         MouseArea {
             anchors.fill: parent
-            property variant clickPos: "1,1"
+            property var clickPos: "1,1"
 
             onPressed: {
                 clickPos  = Qt.point(mouse.x,mouse.y)
@@ -76,7 +74,7 @@ ApplicationWindow {
 
     Loader {
         id: ld
-        anchors.fill: parent
+        anchors.centerIn: parent
     }
 
     footer: Column {
@@ -85,11 +83,10 @@ ApplicationWindow {
             height: kontakt.contentHeight + 10
             width: kontakt.contentWidth
             color: "transparent"
-            Text {
+            MyText {
                 id: kontakt
                 text: "☎ Kontakt"
                 color: "black"
-                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
@@ -100,11 +97,10 @@ ApplicationWindow {
             height: zamknij.contentHeight + 10
             width: zamknij.contentWidth
             color: "transparent"
-            Text {
+            MyText {
                 id: zamknij
-                text: "✗   Zamknij"
+                text: " ✗  Zamknij"
                 color: "black"
-                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent

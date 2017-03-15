@@ -10,5 +10,6 @@
         <file>Editor.qml</file>
         <file>editorMain.qml</file>
         <file>images/cross.png</file>
+        <file>MyText.qml</file>
     </qresource>
 </RCC>

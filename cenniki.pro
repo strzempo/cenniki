@@ -3,7 +3,7 @@ CONFIG += c++11
 
 #TARGET = editor
 #DEFINES += EDITOR
-#TARGET = cenniki
+TARGET = cenniki
 TEMPLATE = app
 
 #logger lib - my basic Qt logging class

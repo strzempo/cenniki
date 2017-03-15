@@ -37,10 +37,10 @@ Item {
                 height: width
                 source: "images/ding.png"
             }
-            Text {
+            MyText {
                 id: nodeNameText
                 text: nodeName
-                font.pixelSize: 20
+
                 property int w: parent.width - icon.width - anchors.leftMargin - 10
                 width: w < contentWidth ? w : contentWidth
                 height: parent.height
@@ -50,7 +50,7 @@ Item {
                 wrapMode: Text.WordWrap
                 color: model.hasModelChildren ? "black" : "steelblue"
             }
-            Text {
+            MyText {
                 id: nodeAboutText
                 text: (nodeAbout) ? nodeAbout : ""
                 font.pixelSize: 16
@@ -109,7 +109,7 @@ Item {
             width: browser.width
             height: 1.5 * sectionNameText.contentHeight
             color: "transparent"
-            Text {
+            MyText {
                 id: sectionNameText
                 text: sectionName
                 font.pixelSize: 24
@@ -123,11 +123,9 @@ Item {
                 height: 1.5 * goBack.contentHeight
                 color: "transparent"
                 visible: (oldSectionName)
-                Text {
+                MyText {
                     id: goBack
                     text: "⤺" + oldSectionName
-                    font.pixelSize: 20
-                    color: "midnightblue"
                     anchors.fill: parent
                 }
                 MouseArea {
@@ -144,11 +142,9 @@ Item {
                 height: 1.5 * goMenu.contentHeight
                 color: "transparent"
                 visible: sectionName
-                Text {
+                MyText {
                     id: goMenu
                     text: "↶ Menu Główne"
-                    font.pixelSize: 20
-                    color: "darkblue"
                     anchors.fill: parent
                 }
                 MouseArea {
