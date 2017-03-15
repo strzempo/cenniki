@@ -13,7 +13,9 @@ env:
 before_script:
 - source setupQt.sh  
 - sudo apt-get install -y clang libboost-serialization-dev 
-
+- ls -lh /usr/lib
+- ls -lh /usr/lib64
+- ls -lh /usr/lib/boost
 script:
 - qmake CONFIG+=release DEFINES+=EDITOR TARGET=editor cenniki.pro
 - make
