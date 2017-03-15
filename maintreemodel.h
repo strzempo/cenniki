@@ -49,7 +49,8 @@ public:
     void removeItem(const QModelIndex& index);
     Q_INVOKABLE void removeItem(const QModelIndex& parentIndex, const QModelIndex& index);
     Q_INVOKABLE bool isMenu(const QModelIndex& item) const;
-    Q_INVOKABLE void reorder(const QModelIndex& parentIndex, int oldPos, int newPos);
+    void reorder(const QModelIndex& parentIndex, int oldPos, int newPos);
+    Q_INVOKABLE void reorder(const QModelIndex& parentIndex, const QModelIndex& index, int newPos);
 
     //serialization
     Q_INVOKABLE void save();

@@ -63,7 +63,9 @@ protected:
         ar & BOOST_SERIALIZATION_NVP(Title);
         if(version > 0)
             ar & BOOST_SERIALIZATION_NVP(SequenceNumber);
+#ifdef VERBOSE
         qDebug() << "serialize TreeComponent:" << Title;
+#endif
     }
 
     friend class boost::serialization::access;

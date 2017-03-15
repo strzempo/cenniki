@@ -195,17 +195,51 @@ void MainTreeModel::reorder(const QModelIndex &parentIndex, int oldPos, int newP
         parent = static_cast<Menu*>(RootComponent);
 
     int rowCount = parent->childCount();
-    beginResetModel();
-    if(oldPos > newPos)
+#ifdef VERBOSE
+    qDebug() << "pre-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
     {
-        for(int i=0; i < rowCount; ++i)
-        {
-            TreeComponent* item = parent->child(i);
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
 
-        }
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        int curPos = item->getSequenceNumber();
+        int destPos = curPos;
+        if(curPos == oldPos)
+            destPos = newPos;
+        else if(oldPos < newPos && curPos > oldPos && curPos <= newPos)
+            destPos--;
+        else if(oldPos > newPos && curPos < oldPos && curPos >= newPos)
+            destPos++;
+        item->setSequenceNumber(destPos);
     }
 
+#ifdef VERBOSE
+    qDebug() << "post-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
+}
 
+void MainTreeModel::reorder(const QModelIndex &parentIndex, const QModelIndex &index, int newPos)
+{
+    if(!index.isValid())
+    {
+        qWarning() << "invalid index";
+        return;
+    }
+    int oldPos = static_cast<TreeComponent*>(index.internalPointer())->getSequenceNumber();
+    if (oldPos != newPos)
+        reorder(parentIndex, oldPos, newPos);
 }
 
 void MainTreeModel::save()
@@ -244,6 +278,7 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[nodeNameRole] = "nodeName";
     roles[nodeAboutRole] = "nodeAbout";
+    roles[nodeSequenceRole] = "nodeSequence";
     return roles;
 }
 

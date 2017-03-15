@@ -53,7 +53,9 @@ protected:
                 it->setParent(this);
                 if(version < 1)
                     it->setSequenceNumber(i++);
+#ifdef VERBOSE
                 qDebug() << it->getSequenceNumber();
+#endif
             }
         }
     }

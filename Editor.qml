@@ -39,11 +39,7 @@ Item {
             property bool held: false
             onHeldChanged: {
                 if (held == false)
-                {
-                        console.log(index)
-                        console.log(visualModel.modelIndex(index))
-                        console.log(dragArea.DelegateModel.itemsIndex)
-                }
+                    mainTreeModel.reorder(visualModel.rootIndex, visualModel.modelIndex(index), dragArea.DelegateModel.itemsIndex)
             }
 
             drag.target: held ? itemRect : undefined
@@ -134,6 +130,43 @@ Item {
         id: visualModel
         model: mainTreeModel
         delegate: dragDelegate
+
+
+        function insertPosition(item) {
+            var lower = 0
+            var upper = items.count
+            while (lower < upper) {
+                var middle = Math.floor(lower + (upper - lower) / 2)
+                var result = item.model.nodeSequence < items.get(middle).model.nodeSequence
+                if (result) {
+                    upper = middle
+                } else {
+                    lower = middle + 1
+                }
+            }
+            return lower
+        }
+        function sort()
+        {
+            while (unsortedItems.count > 0) {
+                var item = unsortedItems.get(0)
+                var index = insertPosition(item)
+
+                item.groups = "items"
+                items.move(item.itemsIndex, index)
+            }
+        }
+
+        items.includeByDefault: false
+        groups: VisualDataGroup {
+            id: unsortedItems
+            name: "unsorted"
+
+            includeByDefault: true
+            onChanged: {
+                visualModel.sort()
+            }
+        }
     }
 
     ListView {
