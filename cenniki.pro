@@ -3,8 +3,8 @@ CONFIG += c++11
 
 #TARGET = editor
 #DEFINES += EDITOR
-TARGET = cenniki
-TEMPLATE = app
+#TARGET = cenniki
+#TEMPLATE = app
 
 #logger lib - my basic Qt logging class
 include($$PWD/logger/logger.pri)
