@@ -29,12 +29,12 @@ public:
     explicit Menu(QString title, TreeComponent *parent = nullptr);
     virtual ~Menu();
 
-    virtual void add(TreeComponent* component);
+    virtual void add(TreeComponent* component) override;
     virtual void remove(int n);
-    virtual TreeComponent* child(int row) const;
-    virtual int childCount() const;
+    virtual TreeComponent* child(int row) const override;
+    virtual int childCount() const override;
 
-    virtual int findRowOf(TreeComponent* child) const;
+    virtual int findRowOf(TreeComponent* child) const override;
 
     virtual bool isMenu() const override;
 

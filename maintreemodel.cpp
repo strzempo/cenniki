@@ -265,11 +265,11 @@ void MainTreeModel::load()
     catch(boost::archive::archive_exception e){
         delete RootComponent;
         qCritical() << "archive exception code" << e.code;
-        qFatal(e.what());
+        qFatal("Exception: %s", e.what());
     }
     catch(std::exception e){
         delete RootComponent;
-        qFatal(e.what());
+        qFatal("Exception: %s", e.what());
     }
 }
 

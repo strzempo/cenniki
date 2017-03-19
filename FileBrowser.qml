@@ -20,7 +20,8 @@ import QtQuick 2.7
 import QtQml.Models 2.2
 
 Item {
-    id: browser
+    id: root
+
     property string sectionName
     property string oldSectionName
     property var mainModel: DelegateModel {
@@ -106,7 +107,7 @@ Item {
 
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
-            width: browser.width
+            width: root.width
             height: 1.5 * sectionNameText.contentHeight
             color: "transparent"
             MyText {
@@ -119,7 +120,7 @@ Item {
         }
         footer: Column {
             Rectangle {
-                width: browser.width
+                width: root.width
                 height: 1.5 * goBack.contentHeight
                 color: "transparent"
                 visible: (oldSectionName)
@@ -138,7 +139,7 @@ Item {
                 }
             }
             Rectangle {
-                width: browser.width
+                width: root.width
                 height: 1.5 * goMenu.contentHeight
                 color: "transparent"
                 visible: sectionName

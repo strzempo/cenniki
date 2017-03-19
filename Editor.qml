@@ -19,7 +19,7 @@
 import QtQuick 2.7
 import QtQml.Models 2.2
 Item {
-    id: editor
+    id: root
 
     property var currentParent: visualModel.rootIndex
     property string sectionName
@@ -109,10 +109,9 @@ Item {
                     }
                 }
 
-                Text {
+                MyText {
                     id: nodeNameText
                     text: nodeName
-                    font.pixelSize: 20
                     property int w: parent.width - icon.width - anchors.leftMargin - 10
                     width: w < contentWidth ? w : contentWidth
                     height: parent.height
@@ -179,10 +178,10 @@ Item {
 
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
-            width: editor.width
+            width: root.width
             height: 1.5 * sectionNameText.contentHeight
             color: "transparent"
-            Text {
+            MyText {
                 id: sectionNameText
                 text: sectionName
                 font.pixelSize: 24
@@ -192,15 +191,13 @@ Item {
         }
         footer: Column {
             Rectangle {
-                width: editor.width
+                width: root.width
                 height: 1.5 * goBack.contentHeight
                 color: "transparent"
                 visible: (oldSectionName)
-                Text {
+                MyText {
                     id: goBack
                     text: "⤺" + oldSectionName
-                    font.pixelSize: 20
-                    color: "midnightblue"
                     anchors.fill: parent
                 }
                 MouseArea {
@@ -213,15 +210,13 @@ Item {
                 }
             }
             Rectangle {
-                width: editor.width
+                width: root.width
                 height: 1.5 * goMenu.contentHeight
                 color: "transparent"
                 visible: sectionName
-                Text {
+                MyText {
                     id: goMenu
                     text: "↶ Menu Główne"
-                    font.pixelSize: 20
-                    color: "darkblue"
                     anchors.fill: parent
                 }
                 MouseArea {
