@@ -20,7 +20,8 @@ import QtQuick 2.7
 import QtQml.Models 2.2
 
 Item {
-    id: browser
+    id: root
+
     property string sectionName
     property string oldSectionName
     property var mainModel: DelegateModel {
@@ -37,11 +38,12 @@ Item {
                 height: width
                 source: "images/ding.png"
             }
-            Text {
+            MyText {
                 id: nodeNameText
                 text: nodeName
-                font.pixelSize: 20
-                width: contentWidth
+
+                property int w: parent.width - icon.width - anchors.leftMargin - 10
+                width: w < contentWidth ? w : contentWidth
                 height: parent.height
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: icon.right
@@ -49,9 +51,9 @@ Item {
                 wrapMode: Text.WordWrap
                 color: model.hasModelChildren ? "black" : "steelblue"
             }
-            Text {
+            MyText {
                 id: nodeAboutText
-                text: nodeAbout
+                text: (nodeAbout) ? nodeAbout : ""
                 font.pixelSize: 16
                 color: "steelblue"
                 font.italic: true
@@ -103,14 +105,12 @@ Item {
             NumberAnimation { property: "opacity"; from: 0; to: 1.0; duration: 1000 }
         }
 
-
-
         headerPositioning: ListView.OverlayHeader
         header: Rectangle {
-            width: browser.width
+            width: root.width
             height: 1.5 * sectionNameText.contentHeight
             color: "transparent"
-            Text {
+            MyText {
                 id: sectionNameText
                 text: sectionName
                 font.pixelSize: 24
@@ -120,42 +120,38 @@ Item {
         }
         footer: Column {
             Rectangle {
-                width: browser.width
+                width: root.width
                 height: 1.5 * goBack.contentHeight
                 color: "transparent"
-                visible: oldSectionName
-                Text {
+                visible: (oldSectionName)
+                MyText {
                     id: goBack
-                    text: "⤺" + oldSectionName //" Powrót"
-                    font.pixelSize: 20
-                    color: "midnightblue"
+                    text: "⤺" + oldSectionName
                     anchors.fill: parent
                 }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.parentModelIndex()
+                        mainModel.rootIndex = mainModel.rootIndex.parent
                         sectionName = mainModel.model.sectionName(mainModel.rootIndex)
                         oldSectionName = mainModel.model.sectionName(mainModel.rootIndex.parent)
                     }
                 }
             }
             Rectangle {
-                width: browser.width
+                width: root.width
                 height: 1.5 * goMenu.contentHeight
                 color: "transparent"
                 visible: sectionName
-                Text {
+                MyText {
                     id: goMenu
                     text: "↶ Menu Główne"
-                    font.pixelSize: 20
-                    color: "darkblue"
                     anchors.fill: parent
                 }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.model.rootIndex()
+                        mainModel.rootIndex = 0
                         sectionName = ""
                         oldSectionName = ""
                     }

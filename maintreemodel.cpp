@@ -18,12 +18,16 @@
 
 #include <fstream>
 
+#ifndef BOOST_NO_EXCEPTIONS
+#include <exception>
+#include "boost/archive/archive_exception.hpp"
+#endif
+
 #include "maintreemodel.h"
 #include "menu.h"
 #include "itemfileopen.h"
 #include "serialization.h"
 #include "itemappopen.h"
-#include "vectory.cpp"
 
 MainTreeModel::MainTreeModel(QObject *parent)
     : QAbstractItemModel(parent)
@@ -116,8 +120,9 @@ Qt::ItemFlags MainTreeModel::flags(const QModelIndex &index) const
 bool MainTreeModel::insertMenu(const QString& title, const QModelIndex &parent)
 {
     TreeComponent *parentItem = getItem(parent);
-    int pos = parentItem->childCount();
-    beginInsertRows(parent, pos, pos);
+    int row = parentItem->childCount();
+    qDebug() << "inserting item on row" << row << "in menu" << parentItem->title();
+    beginInsertRows(parent, row, row);
     parentItem->add(new Menu(title, parentItem));
     endInsertRows();
     return true;
@@ -126,12 +131,115 @@ bool MainTreeModel::insertMenu(const QString& title, const QModelIndex &parent)
 bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
 {
     TreeComponent *parentItem = getItem(parent);
-    int pos = parentItem->childCount()-1;
-    pos = pos < 0 ? 0 : pos;
-    beginInsertRows(parent, pos, pos);
-    parentItem->add(new ItemFileOpen(title, "", parentItem));
+    int row = parentItem->childCount();
+    qDebug() << "inserting item on row" << row << "in menu" << parentItem->title();
+    beginInsertRows(parent, row, row);
+    parentItem->add(new ItemFileOpen(title, "file.pdf", parentItem));
     endInsertRows();
     return true;
+}
+
+void MainTreeModel::removeItem(const QModelIndex &index)
+{
+    if( !index.isValid() )
+    {
+        qWarning() << "invalid index passed";
+        return;
+    }
+
+    QModelIndex parentIndex = index.parent();
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+    int row = index.row();
+    qDebug() << "removing item on row" << row << "in menu" << parent->title();
+    beginRemoveRows(parentIndex, row, row);
+    parent->remove(row);
+    endRemoveRows();
+}
+
+void MainTreeModel::removeItem(const QModelIndex &parentIndex, const QModelIndex &index)
+{
+    if( !index.isValid() )
+    {
+        qWarning() << "invalid index passed";
+        return;
+    }
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+    int row = index.row();
+    qDebug() << "removing item on row" << row << "in menu" << parent->title();
+    beginRemoveRows(parentIndex, row, row);
+    parent->remove(row);
+    endRemoveRows();
+}
+
+bool MainTreeModel::isMenu(const QModelIndex &item) const
+{
+    if(!item.isValid())
+        return true;
+    return static_cast<TreeComponent*>(getItem(item))->isMenu();
+}
+
+void MainTreeModel::reorder(const QModelIndex &parentIndex, int oldPos, int newPos)
+{
+    Menu* parent;
+    if(parentIndex.isValid())
+        parent = static_cast<Menu*>(parentIndex.internalPointer());
+    else
+        parent = static_cast<Menu*>(RootComponent);
+
+    int rowCount = parent->childCount();
+#ifdef VERBOSE
+    qDebug() << "pre-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
+
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        int curPos = item->getSequenceNumber();
+        int destPos = curPos;
+        if(curPos == oldPos)
+            destPos = newPos;
+        else if(oldPos < newPos && curPos > oldPos && curPos <= newPos)
+            destPos--;
+        else if(oldPos > newPos && curPos < oldPos && curPos >= newPos)
+            destPos++;
+        item->setSequenceNumber(destPos);
+    }
+
+#ifdef VERBOSE
+    qDebug() << "post-move";
+    qDebug() << "number | item title";
+    for(int i=0; i < rowCount; ++i)
+    {
+        TreeComponent* item = parent->child(i);
+        qDebug() << item->getSequenceNumber() << "\t|" << item->title();
+    }
+#endif
+}
+
+void MainTreeModel::reorder(const QModelIndex &parentIndex, const QModelIndex &index, int newPos)
+{
+    if(!index.isValid())
+    {
+        qWarning() << "invalid index";
+        return;
+    }
+    int oldPos = static_cast<TreeComponent*>(index.internalPointer())->getSequenceNumber();
+    if (oldPos != newPos)
+        reorder(parentIndex, oldPos, newPos);
 }
 
 void MainTreeModel::save()
@@ -150,112 +258,18 @@ void MainTreeModel::load()
     std::ifstream ifs("layout.xml");
     assert(ifs.good());
     q_xml_iarchive ia(ifs);
-    ia >> BOOST_SERIALIZATION_NVP(RootComponent);
-    assert(RootComponent);
-}
-
-void MainTreeModel::generateSampleTree()
-{
-    std::vector<std::vector<std::string> > menu_items;
-    std::vector<std::vector<std::vector<std::string> > > div;
-    std::vector<std::vector<std::vector<std::string> > > pliki;
-    vectory(menu_items, div, pliki);
-
-#ifdef PRINT
-    qDebug() << "menu_items:";
-    for(uint i=0; i < menu_items.size(); ++i)
-        for(uint j=0; j<menu_items[i].size(); ++j)
-            qDebug() << QString("[%1][%2] %3").arg(i).arg(j).arg(QString::fromStdString(menu_items[i][j]));
-    qDebug() << "div:";
-    for(uint i=0; i < div.size(); ++i)
-        for(uint j=0; j<div[i].size(); ++j)
-            for(uint k=0; k<div[i][j].size(); ++k)
-                qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(div[i][j][k]));
-    qDebug() << "pliki:";
-    for(uint i=0; i < pliki.size(); ++i)
-        for(uint j=0; j<pliki[i].size(); ++j)
-            for(uint k=0; k<pliki[i][j].size(); ++k)
-                qDebug() << QString("[%1][%2][%3] %4").arg(i).arg(j).arg(k).arg(QString::fromStdString(pliki[i][j][k]));
-#endif
-    //Main menu
-    RootComponent = new Menu(tr("Main Menu"));
-    for(uint i=0; i<6; ++i)
-    {
-        QString title = QString::fromStdString(div[0][0][i]);
-        if(i < 4) RootComponent->add(new ItemFileOpen(title, QString::fromStdString(menu_items[0][i])));
-        else RootComponent->add(new Menu(title));
+    try{
+        ia >> BOOST_SERIALIZATION_NVP(RootComponent);
+        assert(RootComponent);
     }
-    //kemy
-    RootComponent->add(new ItemAppOpen("Kemy", "kemy/Kemy.exe", "Program do sprawdzania odporności chemicznej materiałów i uszczelnień"));
-    //broszury
-    for(uint i=0; i<7; i++)
-        RootComponent->child(4)->add(new ItemFileOpen(QString::fromStdString(div[0][2][i]), QString::fromStdString(menu_items[1][i])));
-    //katalogi
-    for(uint i=0; i<8; ++i)
-    {
-     //   qDebug() << QString("[%1] %4").arg(i).arg(QString::fromStdString(div[0][1][i]));
-        Menu* cur = new Menu(QString::fromStdString(div[0][1][i]));
-        RootComponent->child(5)->add(cur);
-        if(i < 6) for(uint j=0; j<div[i+1][0].size(); ++j)
-        {
-   //         qDebug() << QString("\t[%1][%2][%3] %4").arg(i+1).arg(0).arg(j).arg(QString::fromStdString(div[i+1][0][j]));
-            TreeComponent* cur2;
-            if((i!=0 && j==0) || ((i==2 || i==4 || i==5) && j==1))
-            {
-                cur2 = new ItemFileOpen(QString::fromStdString(div[i+1][0][j]), QString::fromStdString(pliki[i+3][j][0]));
-                cur->add(cur2);
-                continue;
-            }
-            else
-            {
-                cur2 = new Menu(QString::fromStdString(div[i+1][0][j]));
-                cur->add(cur2);
-            }
-            if(i==0) //zawory z napędami
-            {
-                //siłowniki elektryczne
-                if(j==0) for(uint k=0; k<div[1][1].size()-1; ++k)
-                {
-                    TreeComponent* cur3 = new Menu(QString::fromStdString(div[1][1][k]));
-                    cur2->add(cur3);
-                    for(uint h=0; h<div[1][k+2].size()-1; ++h)
-                        cur3->add(new ItemFileOpen(QString::fromStdString(div[1][k+2][h])));
-                }
-                //siłowniki pneumatyczne
-                else if(j==1) for(uint k=0; k<div[1][5].size()-1; ++k)
-                {
-                    TreeComponent* cur3 = new Menu(QString::fromStdString(div[1][5][k]));
-                    cur2->add(cur3);
-                    for(uint h=0; h<div[1][k+6].size()-1; ++h)
-                        cur3->add(new ItemFileOpen(QString::fromStdString(div[1][k+6][h])));
-                }
-                //rotametry i zawory bezpieczenstwa
-                else for(uint k=0; k<div[1][j+8].size()-1; ++k)
-                {
-                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[i+1][j+8][k]));
-                    cur2->add(cur3);
-                }
-            }
-            else
-            {
-                for(uint k=0; k<div[i+1][j].size()-1; ++k)
-                {
-                    TreeComponent* cur3 = new ItemFileOpen(QString::fromStdString(div[i+1][j][k]));
-                    cur2->add(cur3);
-                }
-            }
-        }
-        else if(i==6) for(uint j=0; j < div[0][3].size(); ++j)
-        {
-       //     qDebug() << QString("\t[%1][%2][%3] %4").arg(0).arg(3).arg(j).arg(QString::fromStdString(div[0][3][j]));
-            cur->add(new ItemFileOpen(QString::fromStdString(div[0][3][j]), QString::fromStdString(pliki[9][0][j])));
-        }
-        else if(i==7) for(uint j=0; j < div[0][4].size(); ++j)
-        {
-         //   qDebug() << QString("\t[%1][%2][%3] %4").arg(0).arg(4).arg(j).arg(QString::fromStdString(div[0][4][j]));
-            cur->add(new ItemFileOpen(QString::fromStdString(div[0][4][j]), QString::fromStdString(pliki[10][0][j])));
-        }
-
+    catch(boost::archive::archive_exception e){
+        delete RootComponent;
+        qCritical() << "archive exception code" << e.code;
+        qFatal("Exception: %s", e.what());
+    }
+    catch(std::exception e){
+        delete RootComponent;
+        qFatal("Exception: %s", e.what());
     }
 }
 
@@ -264,17 +278,13 @@ QHash<int, QByteArray> MainTreeModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[nodeNameRole] = "nodeName";
     roles[nodeAboutRole] = "nodeAbout";
+    roles[nodeSequenceRole] = "nodeSequence";
     return roles;
 }
 
 void MainTreeModel::invokeAction(const QModelIndex &index) const
 {
     static_cast<TreeComponent*>(index.internalPointer())->action();
-}
-
-QModelIndex MainTreeModel::rootIndex() const
-{
-    return createIndex(0, 0, RootComponent);
 }
 
 QString MainTreeModel::sectionName(const QModelIndex &index) const

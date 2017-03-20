@@ -33,6 +33,7 @@ TreeComponent::TreeComponent(QString title, TreeComponent *parent)
 {
     Parent = parent;
     Title = title;
+    SequenceNumber = parent->childCount();
 }
 
 TreeComponent::~TreeComponent()
@@ -65,6 +66,8 @@ QVariant TreeComponent::data(int displayRole)
 {
     if(displayRole == MainTreeModel::nodeNameRole)
         return Title;
+    else if(displayRole == MainTreeModel::nodeSequenceRole)
+        return SequenceNumber;
     return QVariant();
 }
 
@@ -99,4 +102,19 @@ void TreeComponent::action()
 void TreeComponent::setParent(TreeComponent *parent)
 {
     Parent = parent;
+}
+
+bool TreeComponent::isMenu() const
+{
+    return false;
+}
+
+int TreeComponent::getSequenceNumber() const
+{
+    return SequenceNumber;
+}
+
+void TreeComponent::setSequenceNumber(int value)
+{
+    SequenceNumber = value;
 }

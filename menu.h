@@ -29,24 +29,41 @@ public:
     explicit Menu(QString title, TreeComponent *parent = nullptr);
     virtual ~Menu();
 
-    virtual void add(TreeComponent* component);
-    virtual TreeComponent* child(int row) const;
-    virtual int childCount() const;
+    virtual void add(TreeComponent* component) override;
+    virtual void remove(int n);
+    virtual TreeComponent* child(int row) const override;
+    virtual int childCount() const override;
 
-    virtual int findRowOf(TreeComponent* child) const;
+    virtual int findRowOf(TreeComponent* child) const override;
+
+    virtual bool isMenu() const override;
 
 protected:
    QList<TreeComponent*> MenuItems;
     template<class Archive>
-    void serialize(Archive & ar, const unsigned int /*version*/)
+    void serialize(Archive & ar, const unsigned int version)
     {
         ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TreeComponent);
         ar & BOOST_SERIALIZATION_NVP(MenuItems);
+        if (Archive::is_loading::value)
+        {
+            int i=0;
+            foreach (TreeComponent* it, MenuItems)
+            {
+                it->setParent(this);
+                if(version < 1)
+                    it->setSequenceNumber(i++);
+#ifdef VERBOSE
+                qDebug() << it->getSequenceNumber();
+#endif
+            }
+        }
     }
 
     friend class boost::serialization::access;
 };
 
+BOOST_CLASS_VERSION(Menu, 1)
 BOOST_CLASS_EXPORT_KEY(Menu)
 
 #endif // TREECOMPOSITE_H

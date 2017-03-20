@@ -19,7 +19,10 @@ install:
 #- cmd: DIR %BOOST_LIBRARYDIR%
 
 build_script:
-- cmd: qmake 
+- cmd: qmake CONFIG+=release DEFINES+=EDITOR TARGET=editor cenniki.pro
+- cmd: nmake /NOLOGO
+- cmd: nmake clean /NOLOGO
+- cmd: qmake CONFIG+=release TARGET=cenniki cenniki.pro
 - cmd: nmake /NOLOGO
 
 after_build:

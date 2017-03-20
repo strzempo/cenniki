@@ -20,14 +20,13 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 
 ApplicationWindow {
-    id: mainWindow
     visible: true
-    title: qsTr("Aliaxis-UI")
+    title: qsTr("Cenniki Editor")
 
     height: 730
-    width: (height - header.height +1) * 1500/1173
+    width: (height +1) * 1500/1173
 
-    flags: Qt.FramelessWindowHint | Qt.MSWindowsFixedSizeDialogHint
+    FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
 
     background: Image {
         source: "images/background.png"
@@ -36,75 +35,61 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
-    header: Rectangle {
-        height: 24
-        width: parent.width
-        color: "steelblue"
-
-        MyText {
-            text: "Aliaxis Utilities & Industry"
-            anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pixelSize: 16
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            property var clickPos: "1,1"
-
-            onPressed: {
-                clickPos  = Qt.point(mouse.x,mouse.y)
-            }
-
-            onPositionChanged: {
-                var delta = Qt.point(mouse.x-clickPos.x, mouse.y-clickPos.y)
-                mainWindow.x += delta.x;
-                mainWindow.y += delta.y;
-            }
-        }
-    }
-
-    FileBrowser {
+    Editor {
+        id: editor
         height: 600
-        width: 500
+        width: 532
         x: parent.width - width
         y: 35
     }
 
-    Loader {
-        id: ld
-        anchors.centerIn: parent
-    }
-
     footer: Column {
         x: 20
+
         Rectangle {
-            height: kontakt.contentHeight + 10
-            width: kontakt.contentWidth
+            height: dodajMenu.contentHeight + 10
+            width: dodajMenu.contentWidth
             color: "transparent"
-            MyText {
-                id: kontakt
-                text: "☎ Kontakt"
+            Text {
+                id: dodajMenu
+                text: "Dodaj Menu"
                 color: "black"
+                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: ld.source="kontakt.qml"
+                onClicked: mainTreeModel.insertMenu("nowe Menu", editor.currentParent)
+            }
+        }
+
+        Rectangle {
+            height: dodaj.contentHeight + 10
+            width: dodaj.contentWidth
+            color: "transparent"
+            Text {
+                id: dodaj
+                text: "Dodaj Element"
+                color: "black"
+                font { family: localFont.name; pixelSize: 20 }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: mainTreeModel.insertItem("nowy element", editor.currentParent)
             }
         }
         Rectangle {
-            height: zamknij.contentHeight + 10
-            width: zamknij.contentWidth
+            height: zapisz.contentHeight + 10
+            width: zapisz.contentWidth
             color: "transparent"
-            MyText {
-                id: zamknij
-                text: " ✗  Zamknij"
-                color: "black"
+            Text {
+                id: zapisz
+                text: "Zapisz"
+                color: "red"
+                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: Qt.quit()
+                onClicked: mainTreeModel.save()
             }
         }
     }

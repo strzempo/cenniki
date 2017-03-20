@@ -6,6 +6,10 @@
         <file>images/ding.png</file>
         <file>images/background.png</file>
         <file>kontakt.qml</file>
-        <file alias="icon">images/fip_small.ico</file>
+        <file>images/fip-darkblue.png</file>
+        <file>Editor.qml</file>
+        <file>editorMain.qml</file>
+        <file>images/cross.png</file>
+        <file>MyText.qml</file>
     </qresource>
 </RCC>

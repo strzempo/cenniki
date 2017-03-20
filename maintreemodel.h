@@ -44,25 +44,28 @@ public:
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     //editing
-    bool insertMenu(const QString &title, const QModelIndex &parent);
-    bool insertItem(const QString &title, const QModelIndex &parent);
+    Q_INVOKABLE bool insertMenu(const QString &title, const QModelIndex &parent);
+    Q_INVOKABLE bool insertItem(const QString &title, const QModelIndex &parent);
+    void removeItem(const QModelIndex& index);
+    Q_INVOKABLE void removeItem(const QModelIndex& parentIndex, const QModelIndex& index);
+    Q_INVOKABLE bool isMenu(const QModelIndex& item) const;
+    void reorder(const QModelIndex& parentIndex, int oldPos, int newPos);
+    Q_INVOKABLE void reorder(const QModelIndex& parentIndex, const QModelIndex& index, int newPos);
 
     //serialization
-    void save();
+    Q_INVOKABLE void save();
     void load();
-
-    void generateSampleTree();
 
     //for qml
     enum ItemRoles
     {
         nodeNameRole = Qt::UserRole + 1,
-        nodeAboutRole = Qt::UserRole + 2
+        nodeAboutRole,
+        nodeSequenceRole
     };
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void invokeAction(const QModelIndex& index) const;
-    Q_INVOKABLE QModelIndex rootIndex() const;
     Q_INVOKABLE QString sectionName(const QModelIndex& index) const;
 
 private:

@@ -7,14 +7,18 @@ compiler:
 - clang
 - gcc
 env:
-- QTVER=53
 - QTVER=57
 #install:
 #- if [ "$CXX" = "g++" ]; then g++ -v; else clang -v; fi
 before_script:
 - source setupQt.sh  
 - sudo apt-get install -y clang libboost-serialization-dev 
-
+- ls -lh /usr/lib
+- ls -lh /usr/lib64
+- ls -lh /usr/lib/boost
 script:
-- qmake
+- qmake CONFIG+=release DEFINES+=EDITOR TARGET=editor cenniki.pro
+- make
+- make clean
+- qmake CONFIG+=release TARGET=cenniki cenniki.pro
 - make

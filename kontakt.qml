@@ -20,13 +20,18 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 
 Rectangle {
-    width: 100
-    height: 100
-    color: "lightgray"
+    width: 450
+    height: 350
+    color: "lightblue"
+    opacity: 0.95
+    //radius: 10
+
+    FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
+
     TextArea {
         id: textArea
-        anchors.centerIn: parent
-        font.pixelSize: 18
+        anchors.fill: parent
+        font { family: localFont.name; pixelSize: 18 }
         text:
             "Aliaxis Utilities & Industry Sp. z o.o.\n" +
             "ul. Annopol 4a, budynek C\n" +
@@ -37,8 +42,6 @@ Rectangle {
         selectByKeyboard: true
         selectByMouse: true
         wrapMode: "WordWrap"
-        width: parent.width
-        height: parent.height
     }
     Rectangle {
         color: "steelBlue"
@@ -48,10 +51,11 @@ Rectangle {
         anchors.top: parent.top
         anchors.margins: 10
 
-        Text {
+        MyText {
             id: kopiuj
             anchors.centerIn: parent
             text: "Kopiuj"
+            color: "black"
         }
 
         MouseArea {
@@ -68,7 +72,7 @@ Rectangle {
         height: zamknij.contentHeight + 8
         width: zamknij.contentWidth
         color: "transparent"
-        Text {
+        MyText {
             id: zamknij
             text: "✗   Zamknij"
             color: "black"

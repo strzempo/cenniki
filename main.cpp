@@ -22,7 +22,6 @@
 #include <QQmlContext>
 #include <QIcon>
 
-
 #include "maintreemodel.h"
 #include "logger/Logger.h"
 
@@ -36,12 +35,16 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
-    QIcon icon("qrc:/images/icon");
-    
+    QIcon ico(":/images/fip-darkblue.png");
+    app.setWindowIcon(ico);
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("mainTreeModel", &model);
-    engine.load(QUrl(QLatin1String("qrc:/main.qml")));
 
+#ifdef EDITOR
+    engine.load(QUrl(QLatin1String("qrc:/editorMain.qml")));
+#else
+    engine.load(QUrl(QLatin1String("qrc:/main.qml")));
+#endif
     return app.exec();
 }
