@@ -65,7 +65,7 @@ ApplicationWindow {
         }
     }
 
-    FileBrowser {
+    Viewer {
         height: 600
         width: 500
         x: parent.width - width
@@ -90,7 +90,7 @@ ApplicationWindow {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: ld.source="kontakt.qml"
+                onClicked: ld.source="Kontakt.qml"
             }
         }
         Rectangle {
