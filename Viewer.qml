@@ -152,6 +152,8 @@ Item {
         spacing: 4
         cacheBuffer: 50
 
+         ScrollBar.vertical: ScrollBar { }
+
         remove: Transition {
             NumberAnimation { property: "opacity"; from: 1.0; to: 0; duration: 500 }
         }
