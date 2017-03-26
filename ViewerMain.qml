@@ -66,7 +66,7 @@ ApplicationWindow {
     }
 
     Viewer {
-        height: 400
+        height: 350
         width: 500
         x: parent.width - width
         y: 35
