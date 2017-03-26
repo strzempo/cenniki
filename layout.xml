@@ -90,35 +90,35 @@
 				<item class_id_reference="3" object_id="_12">
 					<TreeComponent>
 						<Title>FS/FC - Rotametry</Title>
-						<SequenceNumber>8</SequenceNumber>
+						<SequenceNumber>10</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_FS_FC.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_13">
 					<TreeComponent>
 						<Title>DK - Zawory membranowe Dialock®</Title>
-						<SequenceNumber>6</SequenceNumber>
+						<SequenceNumber>7</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Broszura_FIP_DK_PL.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_14">
 					<TreeComponent>
 						<Title>         - Śrubunki</Title>
-						<SequenceNumber>8</SequenceNumber>
+						<SequenceNumber>10</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_Unions.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_15">
 					<TreeComponent>
 						<Title>S12/S22 - Zawory elektromagnetyczne DN 4-15</Title>
-						<SequenceNumber>9</SequenceNumber>
+						<SequenceNumber>8</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_S1-S2.pdf</FileName>
 				</item>
 				<item class_id_reference="3" object_id="_16">
 					<TreeComponent>
 						<Title>SXE/SSE - Zawory zwrotne Easyfit®</Title>
-						<SequenceNumber>10</SequenceNumber>
+						<SequenceNumber>6</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_SXE-SSE.pdf</FileName>
 				</item>
@@ -228,7 +228,7 @@
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<MenuItems>
-								<count>4</count>
+								<count>3</count>
 								<item_version>0</item_version>
 								<item class_id_reference="0" object_id="_30">
 									<TreeComponent>
@@ -344,26 +344,9 @@
 										</item>
 									</MenuItems>
 								</item>
-								<item class_id_reference="0" object_id="_45">
-									<TreeComponent>
-										<Title>Zawory do usunięcia</Title>
-										<SequenceNumber>3</SequenceNumber>
-									</TreeComponent>
-									<MenuItems>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item class_id_reference="3" object_id="_46">
-											<TreeComponent>
-												<Title>VV/CP - zawory skośne do usunięcia</Title>
-												<SequenceNumber>0</SequenceNumber>
-											</TreeComponent>
-											<FileName>file.pdf</FileName>
-										</item>
-									</MenuItems>
-								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_47">
+						<item class_id_reference="0" object_id="_45">
 							<TreeComponent>
 								<Title>Zawory bezpieczeństwa</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -371,7 +354,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_48">
+								<item class_id_reference="3" object_id="_46">
 									<TreeComponent>
 										<Title>SV - Zawór skośny upustowy</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -380,7 +363,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_49">
+						<item class_id_reference="0" object_id="_47">
 							<TreeComponent>
 								<Title>Rotametry</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -388,14 +371,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_50">
+								<item class_id_reference="3" object_id="_48">
 									<TreeComponent>
 										<Title>FS - Rotametry standartowe</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FS_FC.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_51">
+								<item class_id_reference="3" object_id="_49">
 									<TreeComponent>
 										<Title>FC - Rotametry krótkie</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -406,7 +389,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_52">
+				<item class_id_reference="0" object_id="_50">
 					<TreeComponent>
 						<Title>Zawory ręczne z PVC-U</Title>
 						<SequenceNumber>1</SequenceNumber>
@@ -414,7 +397,7 @@
 					<MenuItems>
 						<count>6</count>
 						<item_version>0</item_version>
-						<item class_id_reference="0" object_id="_53">
+						<item class_id_reference="0" object_id="_51">
 							<TreeComponent>
 								<Title>Zawory kulowe</Title>
 								<SequenceNumber>1</SequenceNumber>
@@ -422,56 +405,56 @@
 							<MenuItems>
 								<count>8</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_54">
+								<item class_id_reference="3" object_id="_52">
 									<TreeComponent>
 										<Title>VKD PVC-U - Zawory DualBlock® DN 10-50</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVC-U_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_55">
+								<item class_id_reference="3" object_id="_53">
 									<TreeComponent>
 										<Title>VKD PVC-U - Zawory DualBlock® DN 65-100</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVC-U_65-100.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_56">
+								<item class_id_reference="3" object_id="_54">
 									<TreeComponent>
 										<Title>TKD PVC-U - Zawory trójdrożne DualBlock®</Title>
 										<SequenceNumber>3</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/TKD_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_57">
+								<item class_id_reference="3" object_id="_55">
 									<TreeComponent>
 										<Title>VXE PVC-U - Zawory Easyfit® przemysłowe DN 10-50</Title>
 										<SequenceNumber>4</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VXE_PVC-U_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_58">
+								<item class_id_reference="3" object_id="_56">
 									<TreeComponent>
 										<Title>VXE PVC-U - Zawory Easyfit® przemysłowe DN 65-100</Title>
 										<SequenceNumber>5</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VXE_DN65-100_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_59">
+								<item class_id_reference="3" object_id="_57">
 									<TreeComponent>
 										<Title>VEE PVC-U - Zawory Easyfit® do wody DN 10-50</Title>
 										<SequenceNumber>6</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VEE_PVC-U_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_60">
+								<item class_id_reference="3" object_id="_58">
 									<TreeComponent>
 										<Title>VEE PVC-U - Zawory Easyfit® do wody DN 65-100</Title>
 										<SequenceNumber>7</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VEE_DN65-100_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_61">
+								<item class_id_reference="3" object_id="_59">
 									<TreeComponent>
 										<Title>VKR - Zawory regulacyjne DualBlock®</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -480,7 +463,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_62">
+						<item class_id_reference="0" object_id="_60">
 							<TreeComponent>
 								<Title>Przepustnice międzykołnierzowe</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -488,14 +471,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_63">
+								<item class_id_reference="3" object_id="_61">
 									<TreeComponent>
 										<Title>FE PVC-U - Przepustnice do wody DN 40-200</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FE_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_64">
+								<item class_id_reference="3" object_id="_62">
 									<TreeComponent>
 										<Title>FK PVC-U - Przepustnice przemysłowe DN 40-400</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -504,7 +487,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_65">
+						<item class_id_reference="0" object_id="_63">
 							<TreeComponent>
 								<Title>Zawory membranowe</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -512,28 +495,28 @@
 							<MenuItems>
 								<count>4</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_66">
+								<item class_id_reference="3" object_id="_64">
 									<TreeComponent>
 										<Title>DK PVC-U - Zawory membranowe Dialock DN 15-65</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/DK_PVC-U_DN15-65_PL.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_67">
+								<item class_id_reference="3" object_id="_65">
 									<TreeComponent>
 										<Title>VM/RM-PVC-U - Mini zawory membranowe</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VM-RM_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_68">
+								<item class_id_reference="3" object_id="_66">
 									<TreeComponent>
 										<Title>CM PVC-U - Zawory kompaktowe DN 12-15</Title>
 										<SequenceNumber>2</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/CM_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_69">
+								<item class_id_reference="3" object_id="_67">
 									<TreeComponent>
 										<Title>nowy element</Title>
 										<SequenceNumber>3</SequenceNumber>
@@ -542,7 +525,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_70">
+						<item class_id_reference="0" object_id="_68">
 							<TreeComponent>
 								<Title>Zawory zwrotne</Title>
 								<SequenceNumber>4</SequenceNumber>
@@ -550,21 +533,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_71">
+								<item class_id_reference="3" object_id="_69">
 									<TreeComponent>
 										<Title>VR PVC-U - Zawory zwrotne skośne</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VR_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_72">
+								<item class_id_reference="3" object_id="_70">
 									<TreeComponent>
 										<Title>SXE-SSE PVC-U - Zawory zwrotne kulowe Easyfit® DN 10-50</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/SXE_SSE_DN10-50_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_73">
+								<item class_id_reference="3" object_id="_71">
 									<TreeComponent>
 										<Title>CR PVC-U - Klapy zwrotne</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -573,7 +556,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_74">
+						<item class_id_reference="0" object_id="_72">
 							<TreeComponent>
 								<Title>Filtry</Title>
 								<SequenceNumber>5</SequenceNumber>
@@ -581,7 +564,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_75">
+								<item class_id_reference="3" object_id="_73">
 									<TreeComponent>
 										<Title>RV PVC-U - Filtry siatkowe</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -590,7 +573,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_76">
+						<item class_id_reference="0" object_id="_74">
 							<TreeComponent>
 								<Title>Pozostałe zawory</Title>
 								<SequenceNumber>6</SequenceNumber>
@@ -598,21 +581,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_77">
+								<item class_id_reference="3" object_id="_75">
 									<TreeComponent>
 										<Title>VA PVC-U - Zawory odpowietrzająco-napowietrzające</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VA_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_78">
+								<item class_id_reference="3" object_id="_76">
 									<TreeComponent>
 										<Title>VZ PVC-U - Zawory stopowe</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VZ_PVC-U.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_79">
+								<item class_id_reference="3" object_id="_77">
 									<TreeComponent>
 										<Title>VV PVC-U - Zawory skośne</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -623,7 +606,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_80">
+				<item class_id_reference="0" object_id="_78">
 					<TreeComponent>
 						<Title>Kształtki PVC-U</Title>
 						<SequenceNumber>2</SequenceNumber>
@@ -631,21 +614,21 @@
 					<MenuItems>
 						<count>4</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_81">
+						<item class_id_reference="3" object_id="_79">
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVC-U_FITTINGS_general_info.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_82">
+						<item class_id_reference="3" object_id="_80">
 							<TreeComponent>
 								<Title>Instrukcja klejenia</Title>
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVC-U_cementing_instructions.pdf</FileName>
 						</item>
-						<item class_id_reference="0" object_id="_83">
+						<item class_id_reference="0" object_id="_81">
 							<TreeComponent>
 								<Title>System metryczny</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -653,21 +636,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_84">
+								<item class_id_reference="3" object_id="_82">
 									<TreeComponent>
 										<Title>Kształtki klejone</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>FITTINGS_ISO-UNI_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_85">
+								<item class_id_reference="3" object_id="_83">
 									<TreeComponent>
 										<Title>Kształtki przejsciowe</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FITTINGS_ISO-BSP_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_86">
+								<item class_id_reference="3" object_id="_84">
 									<TreeComponent>
 										<Title>Kształtki gwintowe</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -676,7 +659,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_87">
+						<item class_id_reference="0" object_id="_85">
 							<TreeComponent>
 								<Title>System calowy</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -684,14 +667,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_88">
+								<item class_id_reference="3" object_id="_86">
 									<TreeComponent>
 										<Title>Kształtki klejone</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FITTINGS_BS_PVC-U_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_89">
+								<item class_id_reference="3" object_id="_87">
 									<TreeComponent>
 										<Title>Do usunięcia</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -702,7 +685,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_90">
+				<item class_id_reference="0" object_id="_88">
 					<TreeComponent>
 						<Title>System PP-H</Title>
 						<SequenceNumber>3</SequenceNumber>
@@ -710,14 +693,14 @@
 					<MenuItems>
 						<count>8</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_91">
+						<item class_id_reference="3" object_id="_89">
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>PP-H_general_info.pdf</FileName>
 						</item>
-						<item class_id_reference="0" object_id="_92">
+						<item class_id_reference="0" object_id="_90">
 							<TreeComponent>
 								<Title>Instrukcje zgrzewania</Title>
 								<SequenceNumber>1</SequenceNumber>
@@ -725,14 +708,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_93">
+								<item class_id_reference="3" object_id="_91">
 									<TreeComponent>
 										<Title>Zgrzewanie mufowe</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/PP-H_Socket_welding_instructions.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_94">
+								<item class_id_reference="3" object_id="_92">
 									<TreeComponent>
 										<Title>Zgrzewanie doczołowe</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -741,7 +724,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_95">
+						<item class_id_reference="0" object_id="_93">
 							<TreeComponent>
 								<Title>Rury i kształtki</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -749,21 +732,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_96">
+								<item class_id_reference="3" object_id="_94">
 									<TreeComponent>
 										<Title>Rury</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/PIPE_PP-H_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_97">
+								<item class_id_reference="3" object_id="_95">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania mufowego</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FITTINGS SW_PP-H_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_98">
+								<item class_id_reference="3" object_id="_96">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania doczołowego</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -772,7 +755,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_99">
+						<item class_id_reference="0" object_id="_97">
 							<TreeComponent>
 								<Title>Zawory kulowe</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -780,21 +763,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_100">
+								<item class_id_reference="3" object_id="_98">
 									<TreeComponent>
 										<Title>VKD PP-H - Zawory Dual Block DN 10-50</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PP-H_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_101">
+								<item class_id_reference="3" object_id="_99">
 									<TreeComponent>
 										<Title>VKD PP-H - Zawory Dual Block DN 65-100</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PP-H_65-100.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_102">
+								<item class_id_reference="3" object_id="_100">
 									<TreeComponent>
 										<Title>TKD PP-H - Zawory trójdrożne Dual Block</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -803,7 +786,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_103">
+						<item class_id_reference="0" object_id="_101">
 							<TreeComponent>
 								<Title>Przepustnice międzykołnierzowe</Title>
 								<SequenceNumber>4</SequenceNumber>
@@ -811,7 +794,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_104">
+								<item class_id_reference="3" object_id="_102">
 									<TreeComponent>
 										<Title>FK PP-H - Przepustnice przemysłowe DN 40-400</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -820,7 +803,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_105">
+						<item class_id_reference="0" object_id="_103">
 							<TreeComponent>
 								<Title>Zawory membranowe</Title>
 								<SequenceNumber>5</SequenceNumber>
@@ -828,21 +811,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_106">
+								<item class_id_reference="3" object_id="_104">
 									<TreeComponent>
 										<Title>DK PP-H - Zawory membranowe Dialock DN 15-65</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/DK_DN15-65_PP-H_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_107">
+								<item class_id_reference="3" object_id="_105">
 									<TreeComponent>
 										<Title>CM PP-H - Zawory kompaktowe DN 12-15</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/CM_PP-H.pdf</FileName>
 								</item>
-								<item class_id_reference="0" object_id="_108">
+								<item class_id_reference="0" object_id="_106">
 									<TreeComponent>
 										<Title>nowe Menu</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -854,7 +837,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_109">
+						<item class_id_reference="0" object_id="_107">
 							<TreeComponent>
 								<Title>Zawory zwrotne</Title>
 								<SequenceNumber>6</SequenceNumber>
@@ -862,14 +845,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_110">
+								<item class_id_reference="3" object_id="_108">
 									<TreeComponent>
 										<Title>VR PP-H - Zawory zwrotne skośne</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VR-PP-H_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_111">
+								<item class_id_reference="3" object_id="_109">
 									<TreeComponent>
 										<Title>SR PP-H - Zawory zwrotne kulowe</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -878,7 +861,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_112">
+						<item class_id_reference="0" object_id="_110">
 							<TreeComponent>
 								<Title>Filtry</Title>
 								<SequenceNumber>7</SequenceNumber>
@@ -886,7 +869,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_113">
+								<item class_id_reference="3" object_id="_111">
 									<TreeComponent>
 										<Title>RV PP-H - Filtry siatkowe</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -897,7 +880,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_114">
+				<item class_id_reference="0" object_id="_112">
 					<TreeComponent>
 						<Title>System PVC-C TemperFIP100®</Title>
 						<SequenceNumber>4</SequenceNumber>
@@ -905,21 +888,21 @@
 					<MenuItems>
 						<count>8</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_115">
+						<item class_id_reference="3" object_id="_113">
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVC-C_general_info.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_116">
+						<item class_id_reference="3" object_id="_114">
 							<TreeComponent>
 								<Title>Instrukcje klejenia</Title>
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVC-C_Solvent_welding_instructions.pdf</FileName>
 						</item>
-						<item class_id_reference="0" object_id="_117">
+						<item class_id_reference="0" object_id="_115">
 							<TreeComponent>
 								<Title>Rury i kształtki</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -927,21 +910,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_118">
+								<item class_id_reference="3" object_id="_116">
 									<TreeComponent>
 										<Title>Rury</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/PIPE_PVC-C_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_119">
+								<item class_id_reference="3" object_id="_117">
 									<TreeComponent>
 										<Title>Kształtki do klejenia</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/FITTINGS_ISO-UNI_PVC-C_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_120">
+								<item class_id_reference="3" object_id="_118">
 									<TreeComponent>
 										<Title>Kształtki przejściowe</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -950,7 +933,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_121">
+						<item class_id_reference="0" object_id="_119">
 							<TreeComponent>
 								<Title>Zawory kulowe</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -958,28 +941,28 @@
 							<MenuItems>
 								<count>4</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_122">
+								<item class_id_reference="3" object_id="_120">
 									<TreeComponent>
 										<Title>VKD PVC-C - Zawory Dual Block® DN 10-50</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_123">
+								<item class_id_reference="3" object_id="_121">
 									<TreeComponent>
 										<Title>VKD PVC-C - Zawory kulowe Dual Block® DN 65-100</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVC-C_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_124">
+								<item class_id_reference="3" object_id="_122">
 									<TreeComponent>
 										<Title>TKD PVC-C - Zawory trójdrożne Dual Block®</Title>
 										<SequenceNumber>2</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/TKD_PVC-C_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_125">
+								<item class_id_reference="3" object_id="_123">
 									<TreeComponent>
 										<Title>VXE PVC-C - Zawory Easyfit®</Title>
 										<SequenceNumber>3</SequenceNumber>
@@ -988,7 +971,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_126">
+						<item class_id_reference="0" object_id="_124">
 							<TreeComponent>
 								<Title>Przepustnice międzykołnierzowe</Title>
 								<SequenceNumber>4</SequenceNumber>
@@ -996,7 +979,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_127">
+								<item class_id_reference="3" object_id="_125">
 									<TreeComponent>
 										<Title>FK PVC-C Przepustnice przemysłowe DN 40-300</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -1005,7 +988,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_128">
+						<item class_id_reference="0" object_id="_126">
 							<TreeComponent>
 								<Title>Zawory membranowe</Title>
 								<SequenceNumber>5</SequenceNumber>
@@ -1013,14 +996,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_129">
+								<item class_id_reference="3" object_id="_127">
 									<TreeComponent>
 										<Title>DK PVC-C - Zawory membranowe Dialock DN 15-65</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/DK_DN15-50_PVC-C_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_130">
+								<item class_id_reference="3" object_id="_128">
 									<TreeComponent>
 										<Title>CM PVC-C - Zawory kompaktowe DN 12-15</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -1029,7 +1012,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_131">
+						<item class_id_reference="0" object_id="_129">
 							<TreeComponent>
 								<Title>Zawory zwrotne</Title>
 								<SequenceNumber>6</SequenceNumber>
@@ -1037,7 +1020,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_132">
+								<item class_id_reference="3" object_id="_130">
 									<TreeComponent>
 										<Title>SXE PVC-C - Zawory zwrotne kulowe DN 10-50</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -1046,7 +1029,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_133">
+						<item class_id_reference="0" object_id="_131">
 							<TreeComponent>
 								<Title>Filtry</Title>
 								<SequenceNumber>7</SequenceNumber>
@@ -1054,7 +1037,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_134">
+								<item class_id_reference="3" object_id="_132">
 									<TreeComponent>
 										<Title>RV PVC-C - Filtry siatkowe</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -1065,7 +1048,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_135">
+				<item class_id_reference="0" object_id="_133">
 					<TreeComponent>
 						<Title>System PVDF</Title>
 						<SequenceNumber>5</SequenceNumber>
@@ -1073,21 +1056,21 @@
 					<MenuItems>
 						<count>7</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_136">
+						<item class_id_reference="3" object_id="_134">
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVDF_general_info.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_137">
+						<item class_id_reference="3" object_id="_135">
 							<TreeComponent>
 								<Title>Instrukcja zgrzewania</Title>
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PVDF_Socket_welding_instructions.pdf</FileName>
 						</item>
-						<item class_id_reference="0" object_id="_138">
+						<item class_id_reference="0" object_id="_136">
 							<TreeComponent>
 								<Title>Rury i kształtki</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -1095,14 +1078,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_139">
+								<item class_id_reference="3" object_id="_137">
 									<TreeComponent>
 										<Title>Rury</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/PIPE_PVDF_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_140">
+								<item class_id_reference="3" object_id="_138">
 									<TreeComponent>
 										<Title>Kształtki do zgrzewania mufowego</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -1111,7 +1094,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_141">
+						<item class_id_reference="0" object_id="_139">
 							<TreeComponent>
 								<Title>Zawory kulowe</Title>
 								<SequenceNumber>3</SequenceNumber>
@@ -1119,21 +1102,21 @@
 							<MenuItems>
 								<count>3</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_142">
+								<item class_id_reference="3" object_id="_140">
 									<TreeComponent>
 										<Title>VKD PVDF - Zawory Dual Block DN 10-50</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVDF_10-50.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_143">
+								<item class_id_reference="3" object_id="_141">
 									<TreeComponent>
 										<Title>VKD PVDF - Zawory Dual Block DN 65-100</Title>
 										<SequenceNumber>1</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/VKD_PVDF_65-100.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_144">
+								<item class_id_reference="3" object_id="_142">
 									<TreeComponent>
 										<Title>TKD PVDF - do usunięcia</Title>
 										<SequenceNumber>2</SequenceNumber>
@@ -1142,7 +1125,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_145">
+						<item class_id_reference="0" object_id="_143">
 							<TreeComponent>
 								<Title>Przepustnice międzykołnierzowe</Title>
 								<SequenceNumber>4</SequenceNumber>
@@ -1150,7 +1133,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_146">
+								<item class_id_reference="3" object_id="_144">
 									<TreeComponent>
 										<Title>FK PVDF - Przepustnice DN 40-400</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -1159,7 +1142,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_147">
+						<item class_id_reference="0" object_id="_145">
 							<TreeComponent>
 								<Title>Zawory membranowe</Title>
 								<SequenceNumber>5</SequenceNumber>
@@ -1167,14 +1150,14 @@
 							<MenuItems>
 								<count>2</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_148">
+								<item class_id_reference="3" object_id="_146">
 									<TreeComponent>
 										<Title>DK PVDF - Zawory membranowe Dialock DN 15-65</Title>
 										<SequenceNumber>0</SequenceNumber>
 									</TreeComponent>
 									<FileName>katalogi/DK_DN15-50_PVDF_EN.pdf</FileName>
 								</item>
-								<item class_id_reference="3" object_id="_149">
+								<item class_id_reference="3" object_id="_147">
 									<TreeComponent>
 										<Title>CM PVDF - Zawory kompaktowe DN 12-15</Title>
 										<SequenceNumber>1</SequenceNumber>
@@ -1183,7 +1166,7 @@
 								</item>
 							</MenuItems>
 						</item>
-						<item class_id_reference="0" object_id="_150">
+						<item class_id_reference="0" object_id="_148">
 							<TreeComponent>
 								<Title>Zawory zwrotne</Title>
 								<SequenceNumber>6</SequenceNumber>
@@ -1191,7 +1174,7 @@
 							<MenuItems>
 								<count>1</count>
 								<item_version>0</item_version>
-								<item class_id_reference="3" object_id="_151">
+								<item class_id_reference="3" object_id="_149">
 									<TreeComponent>
 										<Title>SR PVDF - Zawór kulowy DN 15-50</Title>
 										<SequenceNumber>0</SequenceNumber>
@@ -1202,7 +1185,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_152">
+				<item class_id_reference="0" object_id="_150">
 					<TreeComponent>
 						<Title>System PE-HD</Title>
 						<SequenceNumber>6</SequenceNumber>
@@ -1210,21 +1193,21 @@
 					<MenuItems>
 						<count>3</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_153">
+						<item class_id_reference="3" object_id="_151">
 							<TreeComponent>
 								<Title>Kształtki doczołowe</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/PE100-Catalogue_EN_elr-rev1.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_154">
+						<item class_id_reference="3" object_id="_152">
 							<TreeComponent>
 								<Title>Złączki elektrooporowe FRIALEN®</Title>
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/FRIALEN.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_155">
+						<item class_id_reference="3" object_id="_153">
 							<TreeComponent>
 								<Title>Wytyczne do usunięcia</Title>
 								<SequenceNumber>2</SequenceNumber>
@@ -1233,7 +1216,7 @@
 						</item>
 					</MenuItems>
 				</item>
-				<item class_id_reference="0" object_id="_156">
+				<item class_id_reference="0" object_id="_154">
 					<TreeComponent>
 						<Title>System ABS</Title>
 						<SequenceNumber>7</SequenceNumber>
@@ -1241,35 +1224,35 @@
 					<MenuItems>
 						<count>5</count>
 						<item_version>0</item_version>
-						<item class_id_reference="3" object_id="_157">
+						<item class_id_reference="3" object_id="_155">
 							<TreeComponent>
 								<Title>Informacje ogólne</Title>
 								<SequenceNumber>0</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/ABS_ogolnie.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_158">
+						<item class_id_reference="3" object_id="_156">
 							<TreeComponent>
 								<Title>System metryczny</Title>
 								<SequenceNumber>1</SequenceNumber>
 							</TreeComponent>
 							<FileName>katalogi/ABS_metryczny.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_159">
+						<item class_id_reference="3" object_id="_157">
 							<TreeComponent>
 								<Title>System calowy do usunięcia</Title>
 								<SequenceNumber>2</SequenceNumber>
 							</TreeComponent>
 							<FileName>ABS_calowy.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_160">
+						<item class_id_reference="3" object_id="_158">
 							<TreeComponent>
 								<Title>System preizolowany do usunięcia</Title>
 								<SequenceNumber>3</SequenceNumber>
 							</TreeComponent>
 							<FileName>ABS_preizolowany.pdf</FileName>
 						</item>
-						<item class_id_reference="3" object_id="_161">
+						<item class_id_reference="3" object_id="_159">
 							<TreeComponent>
 								<Title>Klejenie</Title>
 								<SequenceNumber>4</SequenceNumber>
@@ -1280,7 +1263,7 @@
 				</item>
 			</MenuItems>
 		</item>
-		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_162">
+		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_160">
 			<TreeComponent>
 				<Title>Odporność chemiczna</Title>
 				<SequenceNumber>6</SequenceNumber>
@@ -1291,3 +1274,4 @@
 	</MenuItems>
 </RootComponent>
 </boost_serialization>
+
