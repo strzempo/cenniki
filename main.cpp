@@ -42,9 +42,9 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("mainTreeModel", &model);
 
 #ifdef EDITOR
-    engine.load(QUrl(QLatin1String("qrc:/editorMain.qml")));
+    engine.load(QUrl(QLatin1String("qrc:/EditorMain.qml")));
 #else
-    engine.load(QUrl(QLatin1String("qrc:/main.qml")));
+    engine.load(QUrl(QLatin1String("qrc:/ViewerMain.qml")));
 #endif
     return app.exec();
 }

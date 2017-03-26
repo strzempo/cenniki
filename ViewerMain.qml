@@ -65,8 +65,8 @@ ApplicationWindow {
         }
     }
 
-    FileBrowser {
-        height: 600
+    Viewer {
+        height: 400
         width: 500
         x: parent.width - width
         y: 35
@@ -86,11 +86,10 @@ ApplicationWindow {
             MyText {
                 id: kontakt
                 text: "☎ Kontakt"
-                color: "black"
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: ld.source="kontakt.qml"
+                onClicked: ld.source="Kontakt.qml"
             }
         }
         Rectangle {
@@ -100,7 +99,6 @@ ApplicationWindow {
             MyText {
                 id: zamknij
                 text: " ✗  Zamknij"
-                color: "black"
             }
             MouseArea {
                 anchors.fill: parent

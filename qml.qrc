@@ -1,14 +1,14 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>FileBrowser.qml</file>
+        <file>ViewerMain.qml</file>
+        <file>Viewer.qml</file>
         <file>fonts/SourceSansPro-Semibold.otf</file>
         <file>images/ding.png</file>
         <file>images/background.png</file>
-        <file>kontakt.qml</file>
+        <file>Kontakt.qml</file>
         <file>images/fip-darkblue.png</file>
         <file>Editor.qml</file>
-        <file>editorMain.qml</file>
+        <file>EditorMain.qml</file>
         <file>images/cross.png</file>
         <file>MyText.qml</file>
     </qresource>

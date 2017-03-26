@@ -22,14 +22,21 @@ import QtQml.Models 2.2
 Item {
     id: root
 
+    property var currentParent: visualModel.rootIndex
     property string sectionName
     property string oldSectionName
-    property var mainModel: DelegateModel {
-        property var mainMenuIndex: rootIndex
-        model: mainTreeModel
-        delegate: Rectangle {
+
+    Component {
+        id: dragDelegate
+
+        Rectangle {
+            id: itemRect
+
+            property bool itIsMenu
+            Component.onCompleted: itIsMenu = visualModel.model.isMenu(visualModel.modelIndex(index))
+
             color: "transparent"
-            width: view.width
+            anchors { left: parent.left; right: parent.right }
             height: nodeNameText.contentHeight + 8
 
             Image {
@@ -77,25 +84,73 @@ Item {
                 NumberAnimation { properties: "x,rotation,opacity"; duration: 500; easing.type: Easing.InOutQuad }
             }
 
+
             MouseArea {
                 id: mouseArea
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: {
-                    if (model.hasModelChildren) {
+                    if (itIsMenu) {
                         oldSectionName = sectionName
                         sectionName = nodeName
-                        mainModel.rootIndex = mainModel.modelIndex(index)
+                        visualModel.rootIndex = visualModel.modelIndex(index)
                     } else
-                        mainModel.model.invokeAction(mainModel.modelIndex(index))
+                        visualModel.model.invokeAction(visualModel.modelIndex(index))
                 }
             }
         }
     }
+
+    DelegateModel {
+        id: visualModel
+        model: mainTreeModel
+        delegate: dragDelegate
+
+
+        function insertPosition(item) {
+            var lower = 0
+            var upper = items.count
+            while (lower < upper) {
+                var middle = Math.floor(lower + (upper - lower) / 2)
+                var result = item.model.nodeSequence < items.get(middle).model.nodeSequence
+                if (result) {
+                    upper = middle
+                } else {
+                    lower = middle + 1
+                }
+            }
+            return lower
+        }
+        function sort()
+        {
+            while (unsortedItems.count > 0) {
+                var item = unsortedItems.get(0)
+                var index = insertPosition(item)
+
+                item.groups = "items"
+                items.move(item.itemsIndex, index)
+            }
+        }
+
+        items.includeByDefault: false
+        groups: VisualDataGroup {
+            id: unsortedItems
+            name: "unsorted"
+
+            includeByDefault: true
+            onChanged: {
+                visualModel.sort()
+            }
+        }
+    }
+
     ListView {
         id: view
         anchors.fill: parent
-        model: mainModel
+        model: visualModel
+
+        spacing: 4
+        cacheBuffer: 50
 
         remove: Transition {
             NumberAnimation { property: "opacity"; from: 1.0; to: 0; duration: 500 }
@@ -132,9 +187,9 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = mainModel.rootIndex.parent
-                        sectionName = mainModel.model.sectionName(mainModel.rootIndex)
-                        oldSectionName = mainModel.model.sectionName(mainModel.rootIndex.parent)
+                        visualModel.rootIndex = visualModel.rootIndex.parent
+                        sectionName = oldSectionName
+                        oldSectionName = visualModel.model.sectionName(visualModel.rootIndex.parent)
                     }
                 }
             }
@@ -151,7 +206,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        mainModel.rootIndex = 0
+                        visualModel.rootIndex = 0
                         sectionName = ""
                         oldSectionName = ""
                     }

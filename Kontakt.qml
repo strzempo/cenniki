@@ -20,7 +20,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 
 Rectangle {
-    width: 450
+    width: 550
     height: 350
     color: "lightblue"
     opacity: 0.95
@@ -43,40 +43,69 @@ Rectangle {
         selectByMouse: true
         wrapMode: "WordWrap"
     }
+
     Rectangle {
+        id: copyAll
         color: "steelBlue"
-        width: 70
-        height: 1.5 * kopiuj.contentHeight
+        width: 180
+        height: 1.5 * copyAllText.contentHeight
         anchors.right: parent.right
         anchors.top: parent.top
-        anchors.margins: 10
+        anchors.margins: 15
 
         MyText {
-            id: kopiuj
+            id: copyAllText
             anchors.centerIn: parent
-            text: "Kopiuj"
+            text: "Kopiuj wszystko"
             color: "black"
         }
 
         MouseArea {
             anchors.fill: parent
-            onClicked: {textArea.copy(); textArea.deselect() }
+            onClicked: {
+                textArea.selectAll()
+                textArea.copy()
+                textArea.deselect()
+            }
+        }
+    }
+
+    Rectangle {
+        id: copyPart
+        color: "steelBlue"
+        width: 180
+        height: 1.5 * copyPartText.contentHeight
+        anchors.right: parent.right
+        anchors.top: copyAll.bottom
+        anchors.margins: 15
+
+        MyText {
+            id: copyPartText
+            anchors.centerIn: parent
+            text: "Kopiuj zaznaczenie"
+            color: "black"
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                textArea.copy()
+                textArea.deselect()
+            }
         }
     }
 
     Rectangle {
         anchors.left: parent.left
-        anchors.leftMargin: 10
+        anchors.leftMargin: 20
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 10
+        anchors.bottomMargin: 20
         height: zamknij.contentHeight + 8
         width: zamknij.contentWidth
         color: "transparent"
         MyText {
             id: zamknij
-            text: "✗   Zamknij"
-            color: "black"
-            font { family: localFont.name; pixelSize: 20 }
+            text: " ✗  Zamknij"
         }
         MouseArea {
             anchors.fill: parent
