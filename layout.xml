@@ -7,7 +7,7 @@
 		<SequenceNumber>33</SequenceNumber>
 	</TreeComponent>
 	<MenuItems class_id="2" tracking_level="0" version="0">
-		<count>8</count>
+		<count>9</count>
 		<item_version>0</item_version>
 		<item class_id="3" class_name="ItemFileOpen" tracking_level="1" version="0" object_id="_1">
 			<TreeComponent>
@@ -103,7 +103,7 @@
 				</item>
 				<item class_id_reference="3" object_id="_14">
 					<TreeComponent>
-						<Title>         - Śrubunki</Title>
+						<Title>- Śrubunki</Title>
 						<SequenceNumber>10</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Brochure_Unions.pdf</FileName>
@@ -1254,7 +1254,6 @@
 			<AppName>https://www.fipnet.com/chemical-resistance-guide-final/?lang=en</AppName>
 			<AboutText>Aplikacja on-line do doboru materiałów i uszczelnień</AboutText>
 		</item>
-		
 		<item class_id_reference="3" object_id="_159">
 			<TreeComponent>
 				<Title>Biblioteki CAD</Title>
@@ -1262,6 +1261,38 @@
 			</TreeComponent>
 			<FileName>katalogi/file.pdf</FileName>
 		</item>
+		<item class_id_reference="0" object_id="_160">
+			<TreeComponent>
+				<Title>Urządzenia pomiarowe</Title>
+				<SequenceNumber>8</SequenceNumber>
+			</TreeComponent>
+			<MenuItems>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item class_id_reference="3" object_id="_161">
+					<TreeComponent>
+						<Title>Przepływomierze</Title>
+						<SequenceNumber>0</SequenceNumber>
+					</TreeComponent>
+					<FileName>katalogi/Przepływomierze.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_162">
+					<TreeComponent>
+						<Title>Mierniki pH/ORP</Title>
+						<SequenceNumber>1</SequenceNumber>
+					</TreeComponent>
+					<FileName>katalogi/pH-ORP.pdf</FileName>
+				</item>
+				<item class_id_reference="3" object_id="_163">
+					<TreeComponent>
+						<Title>Konduktometry</Title>
+						<SequenceNumber>2</SequenceNumber>
+					</TreeComponent>
+					<FileName>katalogi/Konduktometry.pdf</FileName>
+				</item>
+			</MenuItems>
+		</item>
 	</MenuItems>
 </RootComponent>
 </boost_serialization>
+
