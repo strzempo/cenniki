@@ -18,6 +18,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.0
+import QtQml.Models 2.2
 
 ApplicationWindow {
     id: mainWindow
@@ -65,11 +66,28 @@ ApplicationWindow {
         }
     }
 
+    Rectangle {
+        id: sectionHeader
+        x: view.x
+        y: 35
+        width: view.width
+        height: sectionHeaderText.height * 1.5
+        color: "transparent"
+        MyText {
+            id: sectionHeaderText
+            text: view.sectionName
+            font.pixelSize: 24
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+
     Viewer {
-        height: 350
+        id: view
+        height: 365
         width: 500
         x: parent.width - width
-        y: 35
+        anchors.top: sectionHeader.bottom
     }
 
     Loader {
@@ -78,9 +96,52 @@ ApplicationWindow {
     }
 
     footer: Column {
-        x: 20
+        anchors.bottomMargin: 25
+        x: 50
+        spacing: 8
+
         Rectangle {
-            height: kontakt.contentHeight + 10
+            width: goBack.contentWidth
+            height: goBack.contentHeight
+            color: "transparent"
+            visible: view.oldSectionName
+            MyText {
+                id: goBack
+                text: "⤺" + view.oldSectionName
+                anchors.fill: parent
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    view.currentRootIndex = view.currentRootIndex.parent
+                    view.sectionName = view.oldSectionName
+                    view.oldSectionName = mainTreeModel.sectionName(view.currentRootIndex.parent)
+                }
+            }
+        }
+
+        Rectangle {
+            width: goMenu.contentWidth
+            height: goMenu.contentHeight
+            color: "transparent"
+            visible: view.sectionName
+            MyText {
+                id: goMenu
+                text: "↶ Menu Główne"
+                anchors.fill: parent
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    view.currentRootIndex = 0
+                    view.sectionName = ""
+                    view.oldSectionName = ""
+                }
+            }
+        }
+
+        Rectangle {
+            height: kontakt.contentHeight
             width: kontakt.contentWidth
             color: "transparent"
             MyText {
@@ -92,8 +153,9 @@ ApplicationWindow {
                 onClicked: ld.source="Kontakt.qml"
             }
         }
+
         Rectangle {
-            height: zamknij.contentHeight + 10
+            height: zamknij.contentHeight
             width: zamknij.contentWidth
             color: "transparent"
             MyText {
