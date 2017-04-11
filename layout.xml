@@ -1246,51 +1246,36 @@
 				</item>
 			</MenuItems>
 		</item>
-		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_158">
-			<TreeComponent>
-				<Title>Odporność chemiczna</Title>
-				<SequenceNumber>6</SequenceNumber>
-			</TreeComponent>
-			<AppName>https://www.fipnet.com/chemical-resistance-guide-final/?lang=en</AppName>
-			<AboutText>Aplikacja on-line do doboru materiałów i uszczelnień</AboutText>
-		</item>
-		<item class_id_reference="3" object_id="_159">
-			<TreeComponent>
-				<Title>Biblioteki CAD</Title>
-				<SequenceNumber>7</SequenceNumber>
-			</TreeComponent>
-			<FileName>katalogi/file.pdf</FileName>
-		</item>
-		<item class_id_reference="0" object_id="_160">
+		<item class_id_reference="0" object_id="_158">
 			<TreeComponent>
 				<Title>Urządzenia pomiarowe</Title>
-				<SequenceNumber>8</SequenceNumber>
+				<SequenceNumber>6</SequenceNumber>
 			</TreeComponent>
 			<MenuItems>
 				<count>4</count>
 				<item_version>0</item_version>
-				<item class_id_reference="3" object_id="_161">
+				<item class_id_reference="3" object_id="_159">
 					<TreeComponent>
 						<Title>Przepływomierze</Title>
 						<SequenceNumber>0</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Przepływomierze.pdf</FileName>
 				</item>
-				<item class_id_reference="3" object_id="_162">
+				<item class_id_reference="3" object_id="_160">
 					<TreeComponent>
 						<Title>Mierniki pH/ORP</Title>
 						<SequenceNumber>1</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/pH-ORP.pdf</FileName>
 				</item>
-				<item class_id_reference="3" object_id="_163">
+				<item class_id_reference="3" object_id="_161">
 					<TreeComponent>
 						<Title>Konduktometry</Title>
 						<SequenceNumber>2</SequenceNumber>
 					</TreeComponent>
 					<FileName>katalogi/Konduktometry.pdf</FileName>
 				</item>
-				<item class_id_reference="3" object_id="_164">
+				<item class_id_reference="3" object_id="_162">
 					<TreeComponent>
 						<Title>Rotametry</Title>
 						<SequenceNumber>3</SequenceNumber>
@@ -1298,6 +1283,22 @@
 					<FileName>katalogi/FS_FC.pdf</FileName>
 				</item>
 			</MenuItems>
+		</item>
+		<item class_id="4" class_name="ItemAppOpen" tracking_level="1" version="0" object_id="_163">
+			<TreeComponent>
+				<Title>Odporność chemiczna</Title>
+				<SequenceNumber>7</SequenceNumber>
+			</TreeComponent>
+			<AppName>https://www.fipnet.com/chemical-resistance-guide-final/?lang=en</AppName>
+			<AboutText>Oznacz pole wyboru &quot;I Agree&quot; - wymagane połączenie internetowe</AboutText>
+		</item>
+		<item class_id_reference="4" object_id="_164">
+			<TreeComponent>
+				<Title>Biblioteki CAD</Title>
+				<SequenceNumber>9</SequenceNumber>
+			</TreeComponent>
+			<AppName>http://www.tracepartsonline.net/</AppName>
+			<AboutText>Portal z bibliotekami CAD - wymagane połączenie internetowe</AboutText>
 		</item>
 	</MenuItems>
 </RootComponent>
