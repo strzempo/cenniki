@@ -23,7 +23,7 @@ import QtQuick.Controls 2.0
 Item {
     id: root
 
-    property var currentParent: visualModel.rootIndex
+    property alias currentRootIndex: visualModel.rootIndex
     property string sectionName
     property string oldSectionName
 
@@ -38,7 +38,7 @@ Item {
 
             color: "transparent"
             anchors { left: parent.left; right: parent.right }
-            height: nodeNameText.contentHeight + 8
+            height: nodeNameText.contentHeight
 
             Image {
                 id: icon
@@ -94,9 +94,9 @@ Item {
                     if (itIsMenu) {
                         oldSectionName = sectionName
                         sectionName = nodeName
-                        visualModel.rootIndex = visualModel.modelIndex(index)
+                        currentRootIndex = visualModel.modelIndex(index)
                     } else
-                        visualModel.model.invokeAction(visualModel.modelIndex(index))
+                        mainTreeModel.invokeAction(visualModel.modelIndex(index))
                 }
             }
         }
@@ -150,10 +150,13 @@ Item {
         anchors.fill: parent
         model: visualModel
 
-        spacing: 4
+        spacing: 8
         cacheBuffer: 50
+        clip: true
 
-         ScrollBar.vertical: ScrollBar { }
+        ScrollBar.vertical: ScrollBar {
+            contentItem.opacity: 1
+        }
 
         remove: Transition {
             NumberAnimation { property: "opacity"; from: 1.0; to: 0; duration: 500 }
@@ -161,60 +164,6 @@ Item {
 
         add: Transition {
             NumberAnimation { property: "opacity"; from: 0; to: 1.0; duration: 1000 }
-        }
-
-        headerPositioning: ListView.OverlayHeader
-        header: Rectangle {
-            width: root.width
-            height: 1.5 * sectionNameText.contentHeight
-            color: "transparent"
-            MyText {
-                id: sectionNameText
-                text: sectionName
-                font.pixelSize: 24
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
-        }
-        footer: Column {
-            Rectangle {
-                width: root.width
-                height: 1.5 * goBack.contentHeight
-                color: "transparent"
-                visible: (oldSectionName)
-                MyText {
-                    id: goBack
-                    text: "⤺" + oldSectionName
-                    anchors.fill: parent
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        visualModel.rootIndex = visualModel.rootIndex.parent
-                        sectionName = oldSectionName
-                        oldSectionName = visualModel.model.sectionName(visualModel.rootIndex.parent)
-                    }
-                }
-            }
-            Rectangle {
-                width: root.width
-                height: 1.5 * goMenu.contentHeight
-                color: "transparent"
-                visible: sectionName
-                MyText {
-                    id: goMenu
-                    text: "↶ Menu Główne"
-                    anchors.fill: parent
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        visualModel.rootIndex = 0
-                        sectionName = ""
-                        oldSectionName = ""
-                    }
-                }
-            }
         }
     }
 }

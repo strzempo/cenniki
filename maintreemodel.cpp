@@ -139,6 +139,18 @@ bool MainTreeModel::insertItem(const QString& title, const QModelIndex &parent)
     return true;
 }
 
+bool MainTreeModel::insertLink(const QString &title, const QString& url, const QString &opis, const QModelIndex &parent)
+{
+    TreeComponent *parentItem = getItem(parent);
+    int row = parentItem->childCount();
+    qDebug() << "inserting link on row" << row << "in menu" << parentItem->title();
+    beginInsertRows(parent, row, row);
+    parentItem->add(new ItemAppOpen(title, url, opis, parentItem));
+    endInsertRows();
+    return true;
+
+}
+
 void MainTreeModel::removeItem(const QModelIndex &index)
 {
     if( !index.isValid() )

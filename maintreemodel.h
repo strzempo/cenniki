@@ -46,6 +46,7 @@ public:
     //editing
     Q_INVOKABLE bool insertMenu(const QString &title, const QModelIndex &parent);
     Q_INVOKABLE bool insertItem(const QString &title, const QModelIndex &parent);
+    Q_INVOKABLE bool insertLink(const QString &title, const QString &url, const QString& opis, const QModelIndex &parent);
     void removeItem(const QModelIndex& index);
     Q_INVOKABLE void removeItem(const QModelIndex& parentIndex, const QModelIndex& index);
     Q_INVOKABLE bool isMenu(const QModelIndex& item) const;

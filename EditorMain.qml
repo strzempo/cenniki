@@ -44,17 +44,15 @@ ApplicationWindow {
     }
 
     footer: Column {
-        x: 20
+        x: 50
 
         Rectangle {
             height: dodajMenu.contentHeight + 10
             width: dodajMenu.contentWidth
             color: "transparent"
-            Text {
+            MyText {
                 id: dodajMenu
                 text: "Dodaj Menu"
-                color: "black"
-                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
@@ -66,26 +64,38 @@ ApplicationWindow {
             height: dodaj.contentHeight + 10
             width: dodaj.contentWidth
             color: "transparent"
-            Text {
+            MyText {
                 id: dodaj
                 text: "Dodaj Element"
-                color: "black"
-                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
                 onClicked: mainTreeModel.insertItem("nowy element", editor.currentParent)
             }
         }
+
+        Rectangle {
+            height: dodajLink.contentHeight + 10
+            width: dodajLink.contentWidth
+            color: "transparent"
+            MyText {
+                id: dodajLink
+                text: "Dodaj Link"
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: mainTreeModel.insertLink("nowy link", "http://google.com", "opis linku", editor.currentParent)
+            }
+        }
+
         Rectangle {
             height: zapisz.contentHeight + 10
             width: zapisz.contentWidth
             color: "transparent"
-            Text {
+            MyText {
                 id: zapisz
                 text: "Zapisz"
                 color: "red"
-                font { family: localFont.name; pixelSize: 20 }
             }
             MouseArea {
                 anchors.fill: parent
