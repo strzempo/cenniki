@@ -8,5 +8,5 @@ Text {
         family: localFont.name
         pixelSize: 20
     }
-    color: "black"
+    color: "white"
 }
