@@ -57,7 +57,7 @@ Item {
                 anchors.left: icon.right
                 anchors.leftMargin: 4
                 wrapMode: Text.WordWrap
-                color: model.hasModelChildren ? "skyblue" : "steelblue"
+                color: model.hasModelChildren ? "royalblue" : "steelblue"
             }
             MyText {
                 id: nodeAboutText
