@@ -29,13 +29,12 @@ Rectangle {
     FontLoader { id: localFont; source: "fonts/SourceSansPro-Semibold.otf" }
 
     TextArea {
+    textColor: "steelblue"
         id: textArea
         anchors.fill: parent
         font {
           family: localFont.name
-          pixelSize: 18
-          color: "steelblue"
-           }
+          pixelSize: 18}
         text:
             "Aliaxis Utilities & Industry Sp. z o.o.\n" +
             "ul. Annopol 4a, budynek C\n" +
