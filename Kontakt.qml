@@ -31,7 +31,11 @@ Rectangle {
     TextArea {
         id: textArea
         anchors.fill: parent
-        font { family: localFont.name; pixelSize: 18 }
+        font {
+          family: localFont.name
+          pixelSize: 18
+          color: "steelblue"
+           }
         text:
             "Aliaxis Utilities & Industry Sp. z o.o.\n" +
             "ul. Annopol 4a, budynek C\n" +
